@@ -13,6 +13,10 @@ body {
     box-shadow: 10px 8px #030723;
 }
 
+.btnnn:hover {
+    box-shadow: 4px 3px #030723;
+}
+
 .bayangan {
     box-shadow: 25px 20px #030723;
 }

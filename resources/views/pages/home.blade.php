@@ -10,9 +10,9 @@
             <p class="mt-1 block text-4xl font-bold text-secondary lg:text-5xl">Dia<span class="text-primary">Care</span>.
             </p>
           </h1>
-          <h2 class="mb-5 mt-2 text-lg font-light text-primary lg:text-2xl">A place that provides all about Diabetes
+          <h2 class="mb-2 mt-2 text-lg font-light text-primary lg:text-2xl">A place that provides all about Diabetes
             Mellitus.</h2>
-          <div class="mb-5 flex items-center">
+          <div class="mb-2 flex items-center">
             <h2 class="mb-1 text-lg font-light text-primary lg:text-2xl">You can &ZeroWidthSpace;</h2>
             <h2 class="typewrite"></h2>
           </div>
