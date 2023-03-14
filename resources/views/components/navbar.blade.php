@@ -2,8 +2,8 @@
   <div class="container">
     <div class="flex items-center justify-between relative">
       <div class="px-4">
-        <a href="#" class="font-semibold text-lg text-primary block py-6">
-          <span class="text-secondary">Dia</span>Care
+        <a href="/" class="font-semibold text-lg text-secondary block py-6">
+          Dia<span class="text-primary">Care</span>.
         </a>
       </div>
       <div class="flex items-center px-4">
@@ -15,19 +15,19 @@
         <nav id="nav-menu" class="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none">
           <ul class="block lg:flex">
             <li class="group">
-              <a href="#" class="text-base text-dark py-2 mx-8 flex group-hover:text-secondary">Home</a>
+              <a href="/" class="text-base text-dark py-2 mx-8 flex group-hover:text-secondary">Home</a>
             </li>
             <li class="group">
-              <a href="#" class="text-base text-dark py-2 mx-8 flex group-hover:text-secondary">Diagnose</a>
+              <a href="/diagnose" class="text-base text-dark py-2 mx-8 flex group-hover:text-secondary">Diagnose</a>
             </li>
             <li class="group">
-              <a href="#" class="text-base text-dark py-2 mx-8 flex group-hover:text-secondary">Discussion</a>
+              <a href="/discussion" class="text-base text-dark py-2 mx-8 flex group-hover:text-secondary">Discussion</a>
             </li>
             <li class="group">
-              <a href="#" class="text-base text-dark py-2 mx-8 flex group-hover:text-secondary">Medicines</a>
+              <a href="/medicines" class="text-base text-dark py-2 mx-8 flex group-hover:text-secondary">Medicines</a>
             </li>
             <li class="group">
-              <a href="#" class="text-base text-dark py-2 mx-8 flex group-hover:text-secondary">About</a>
+              <a href="/about" class="text-base text-dark py-2 mx-8 flex group-hover:text-secondary">About</a>
             </li>
           </ul>
         </nav>

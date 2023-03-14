@@ -9,6 +9,18 @@ body {
     background-color: #f4f4f8;
 }
 
+.btnn:hover {
+    box-shadow: 10px 8px #030723;
+}
+
+.bayangan {
+    box-shadow: 25px 20px #030723;
+}
+
+.bayangan_field {
+    box-shadow: 4px 3px #030723;
+}
+
 .navbar-fixed {
     @apply fixed z-[999] bg-white bg-opacity-70;
     backdrop-filter: blur(5px);
@@ -29,4 +41,27 @@ body {
 
 .hamburger-active > span:nth-child(3) {
     @apply -rotate-45;
+}
+
+.typewrite{
+    position: relative;
+    font-size: 18px;
+}
+
+.typewrite::after{
+    content: '';
+    width: 1px;
+    border-right: 2px solid black;
+    height: 100%;
+    margin-left: 0.5rem;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%{
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
