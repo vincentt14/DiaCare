@@ -5,7 +5,7 @@
         <ul>
           <h2 class="mb-5 text-4xl font-bold text-white selection:bg-blue-500 selection:text-blue-100">Dia<span
               class="text-secondary">Care</span>.</h2>
-          <h3 class="mb-2 text-2xl font-bold text-white selection:bg-blue-500 selection:text-blue-100">CEO
+          <h3 class="mb-2 text-2xl font-bold text-white selection:bg-blue-500 selection:text-blue-100">Founder
           </h3>
           <p class="text-slate-400 selection:bg-blue-500 selection:text-blue-100">Vincent</p>
           <p class="text-slate-400 selection:bg-blue-500 selection:text-blue-100">00000037401</p>
@@ -45,7 +45,7 @@
         <ul class="text-slate-400">
           <h3 class="mb-5 text-xl font-semibold text-white selection:bg-blue-500 selection:text-blue-100">About</h3>
           <li>
-            <a href="/about" target="blank"
+            <a href="/about"
               class="mb-2 inline-block text-base selection:bg-blue-500 selection:text-blue-100 hover:text-blue-500">
               DiaCare
             </a>
@@ -53,7 +53,7 @@
           <li>
             <a href="https://vincentt14.github.io/" target="blank"
               class="mb-2 inline-block text-base selection:bg-blue-500 selection:text-blue-100 hover:text-blue-500">
-              Creator's Website
+              Founder
             </a>
           </li>
         </ul>
