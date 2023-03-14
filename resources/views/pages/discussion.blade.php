@@ -14,4 +14,10 @@
       @yield('section')
     </div>
   </section>
+
+  <script>
+    document.addEventListener('trix-file-accept', function(e){
+      e.preventDefault();
+    })
+  </script>
 @endsection
