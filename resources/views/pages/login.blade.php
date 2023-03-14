@@ -4,7 +4,7 @@
   <section class="pt-28 pb-24 lg:pt-36 lg:pb-32">
     <div class="container">
       <div class="w-full px-4">
-        <div class="mx-auto mb-10 max-w-xl text-center">
+        <div class="mx-auto mb-6 max-w-xl text-center">
           <h2 class="text-3xl font-bold text-primary lg:text-3xl">Login</h2>
         </div>
       </div>
@@ -34,7 +34,7 @@
             </button>
           </div>
         </form>
-        <div class="mt-3 w-full px-4">
+        <div class="mt-4 w-full px-4">
           <p>Don't Have an Account? <span class="text-secondary"><a href="/register">Register</a></span> </p>
         </div>
       </div>
