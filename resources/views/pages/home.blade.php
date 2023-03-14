@@ -12,8 +12,8 @@
           </h1>
           <h2 class="mb-5 mt-2 text-lg font-light text-primary lg:text-2xl">A place that provides all about Diabetes
             Mellitus.</h2>
-          <div class="flex items-center my-2">
-            <h2 class="title text-lg font-light text-primary lg:text-2xl mb-1">You can &ZeroWidthSpace;</h2>
+          <div class="mb-5 flex items-center">
+            <h2 class="mb-1 text-lg font-light text-primary lg:text-2xl">You can &ZeroWidthSpace;</h2>
             <h2 class="typewrite"></h2>
           </div>
           <p class="mb-10 max-w-md text-slate-500">
@@ -47,14 +47,12 @@
       <div class="w-full px-4">
         <div class="mb-16 max-w-xl">
           <h4 class="mb-2 text-lg font-semibold text-secondary">What is</h4>
-          <h2 class="mt-1 mb-4 text-4xl font-bold text-primary lg:text-5xl">Diabetes Mellitus?</h2>
+          <h2 class="mt-1 mb-4 text-4xl font-bold text-primary lg:text-5xl">Diabetes?</h2>
           <p class="text-md font-mono font-medium text-slate-500 lg:text-lg">
-            View book detail by clicking <span class="font-bold text-secondary">the book title</span>
+            Also called: <span class=" text-secondary">diabetes mellitus</span>
           </p>
-          {{-- <SearchInput keyword={keyword} keywordChange={onKeywordChangeHandler} /> --}}
         </div>
       </div>
     </div>
-    {{-- <BookList books={filteredBooks} /> --}}
   </section>
 @endsection

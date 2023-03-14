@@ -29,7 +29,7 @@ const typeWriterEffect = () => {
     let currentText = "";
     let currentWord = "";
 
-    let timeOut = 400;
+    let timeOut = 200;
 
     let isDeleting = false;
 
@@ -43,15 +43,15 @@ const typeWriterEffect = () => {
         } else {
             currentText = currentWord.slice(0, ++letterCount);
         }
-        document.querySelector(".typewrite").textContent = currentText;
 
-        timeOut = isDeleting ? 200 : 400;
+        document.querySelector(".typewrite").textContent = currentText;
+        timeOut = isDeleting ? 100 : 200;
 
         if (!isDeleting && currentText.length === currentWord.length) {
-            timeOut = 2000;
+            timeOut = 800;
             isDeleting = true;
         } else if (isDeleting && currentText.length === 0) {
-            timeOut = 1000;
+            timeOut = 800;
             isDeleting = false;
             wordCount++
         }
