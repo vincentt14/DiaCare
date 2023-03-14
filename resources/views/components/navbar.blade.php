@@ -28,11 +28,12 @@
               <a href="/medicines" class="text-dark mx-8 flex py-2 text-base group-hover:text-secondary">Medicines</a>
             </li>
             <li class="group">
-              <a href="/about" class="text-dark mx-8 flex py-2 text-base group-hover:text-secondary mb-3 lg:mb-0">About</a>
+              <a href="/about"
+                class="text-dark mx-8 mb-3 flex py-2 text-base group-hover:text-secondary lg:mb-0">About</a>
             </li>
             <li class="group">
               <button
-                class="btnnn rounded-sm border-2 border-black bg-black py-2 px-5 text-white duration-300 ease-out hover:bg-white hover:text-black ml-5">
+                class="btnnn ml-5 rounded-sm border-2 border-black bg-black py-2 px-5 text-white duration-300 ease-out hover:bg-white hover:text-black">
                 <a href="/login">Login</a>
               </button>
             </li>

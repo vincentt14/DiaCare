@@ -49,7 +49,7 @@
           <h4 class="mb-2 text-lg font-semibold text-secondary">What is</h4>
           <h2 class="mt-1 mb-4 text-4xl font-bold text-primary lg:text-5xl">Diabetes?</h2>
           <p class="text-md font-mono font-medium text-slate-500 lg:text-lg">
-            Also called: <span class=" text-secondary">diabetes mellitus</span>
+            Also called: <span class="text-secondary">diabetes mellitus</span>
           </p>
         </div>
       </div>

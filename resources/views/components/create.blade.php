@@ -13,7 +13,7 @@
             <a href="/discussion">Back</a>
           </button>
         </div>
-        <form class="mt-5" method="post" action="/">
+        <form class="mt-5" method="post" action="/view">
           <div class="w-full lg:mx-auto">
             <div class="mb-4 w-full px-4">
               <label for="title" class="text-base font-bold text-primary lg:text-xl">
@@ -21,7 +21,7 @@
               </label>
               <input type="text" id="title"
                 class="w-full rounded-sm border border-[#BBBBBB] bg-white p-3 focus:outline-none focus:ring focus:ring-blue-500"
-                required autofocus/>
+                required autofocus />
             </div>
             <div class="mb-10 w-full px-4">
               <label for="content" class="text-base font-bold text-primary lg:text-xl">

@@ -53,7 +53,7 @@ const typeWriterEffect = () => {
         } else if (isDeleting && currentText.length === 0) {
             timeOut = 800;
             isDeleting = false;
-            wordCount++
+            wordCount++;
         }
 
         setTimeout(type, timeOut);

@@ -13,12 +13,13 @@
           <h2 class="mb-5 mt-2 text-lg font-light text-primary lg:text-2xl">A place that provides all about Diabetes
             Mellitus.</h2>
           <p class="mb-5 max-w-md text-xl font-light text-slate-500">
-            <span class="text-primary">DiaCare</span> is a web-based <span class="text-secondary">diagnose
-              application</span> to help people diagnose diabetes mellitus disease.
+            <span class="text-primary">DiaCare</span> is a <span class="text-primary">web-based</span> <span
+              class="text-secondary">diagnose
+              application</span> to help people <span class="text-primary">diagnose diabetes mellitus disease</span>.
           </p>
           <p class="mb-5 max-w-md text-xl font-light text-slate-500"> <span class="text-primary">This application also
               provides</span> a <span class="text-secondary">discussion forum</span> for users to be able to <span
-              class="text-primary">discuss diseases</span>.
+              class="text-primary">discuss together about the disease they are suffering from</span>.
           </p>
           <p class="mb-10 max-w-md text-xl font-light text-slate-500">There is also <span
               class="text-secondary">information</span> about diabetes as a <span class="text-primary">whole along with

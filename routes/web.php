@@ -17,22 +17,26 @@ Route::get('/', function () {
     return view('pages.home');
 });
 
-Route::get('/medicines', function(){
+Route::get('/medicines', function () {
     return view('pages.medicines');
 });
 
-Route::get('/about', function(){
+Route::get('/about', function () {
     return view('pages.about');
 });
 
-Route::get('/login', function(){
-    return view('pages.login');
-});
-
-Route::get('/discussion', function(){
+Route::get('/discussion', function () {
     return view('components.view');
 });
 
-Route::get('/create', function(){
+Route::get('/create', function () {
     return view('components.create');
+});
+
+Route::get('/login', function () {
+    return view('pages.login');
+});
+
+Route::get('/register', function () {
+    return view('pages.register');
 });
