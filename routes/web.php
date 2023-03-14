@@ -24,3 +24,7 @@ Route::get('/discussion', function(){
 Route::get('/medicines', function(){
     return view('pages.medicines');
 });
+
+Route::get('/about', function(){
+    return view('pages.about');
+});
