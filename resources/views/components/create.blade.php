@@ -1,4 +1,4 @@
-@extends('pages.discussion')
+{{-- @extends('pages.discussion')
 
 @section('section')
   <div class="w-full self-center px-4">
@@ -50,4 +50,4 @@
       </div>
     </div>
   </div>
-@endsection
+@endsection --}}

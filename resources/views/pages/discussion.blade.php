@@ -1,4 +1,4 @@
-@extends('layouts.app')
+{{-- @extends('layouts.app')
 
 @section('content')
   <section class="pt-28 pb-24 lg:pt-36 lg:pb-32">
@@ -20,4 +20,4 @@
       e.preventDefault();
     })
   </script>
-@endsection
+@endsection --}}
