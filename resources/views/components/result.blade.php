@@ -25,7 +25,7 @@
         <div class="w-full rounded-sm border border-[#BBBBBB] bg-white p-3">
           <div class="m-3">
             <p class="font-base mb-3 text-lg text-primary lg:text-2xl">Diabetes Mellitus 1</p>
-            <p class="text-lg font-light text-primary">Type 1 diabetes is thought to be caused by an autoimmune reaction (the body attacks itself by mistake). This reaction stops your body from making insulin. Approximately 5-10% of the people who have diabetes have type 1. Symptoms of type 1 diabetes often develop quickly. It’s usually diagnosed in children, teens, and young adults. If you have type 1 diabetes, you’ll need to take insulin every day to survive. Currently, no one knows how to prevent type 1 diabetes.</p>
+            <p class="text-lg font-light text-primary text-justify">Type 1 diabetes is thought to be caused by an autoimmune reaction (the body attacks itself by mistake). This reaction stops your body from making insulin. Approximately 5-10% of the people who have diabetes have type 1. Symptoms of type 1 diabetes often develop quickly. It’s usually diagnosed in children, teens, and young adults. If you have type 1 diabetes, you’ll need to take insulin every day to survive. Currently, no one knows how to prevent type 1 diabetes.</p>
           </div>
         </div>
       </div>

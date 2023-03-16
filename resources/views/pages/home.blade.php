@@ -23,7 +23,7 @@
           <div class="flex flex-col md:flex-row">
             <button
               class="btnn mb-5 rounded-sm border-2 border-black bg-black py-3 px-8 text-white duration-300 ease-out hover:bg-white hover:text-black focus:outline-none focus:ring focus:ring-blue-500 md:mb-16 lg:mb-20">
-              <a href="#what">What is Diabetes?</a>
+              <a href="#definition">What is Diabetes?</a>
             </button>
             <button
               class="btnn mb-16 rounded-sm border-2 border-black bg-black py-3 px-8 text-white duration-300 ease-out hover:bg-white hover:text-black focus:outline-none focus:ring focus:ring-blue-500 md:ml-10 lg:mb-20">
@@ -42,7 +42,7 @@
       </div>
     </div>
   </section>
-  <section id="what" class="bg-[#f2f6fc] pb-16 pt-32 lg:pb-28">
+  <section id="definition" class="bg-[#f2f6fc] pb-16 pt-32 lg:pb-28">
     <div class="container">
       <div class="w-full px-4">
         <div class="mb-5 max-w-xl">
@@ -52,7 +52,7 @@
             Also called: <span class="text-secondary">diabetes mellitus</span>
           </p>
         </div>
-        <p class="text-lg font-light text-primary">Diabetes is a chronic (long-lasting) health condition that
+        <p class="text-lg font-light text-primary text-justify">Diabetes is a chronic (long-lasting) health condition that
           affects how your body turns food into energy. <br></br>
 
           Your body breaks down most of the food you eat into sugar (glucose) and releases it into your bloodstream. When
@@ -64,6 +64,22 @@
           that can cause serious health problems, such as heart disease, vision loss, and kidney disease.
         <p>
       </div>
+      <div class="container">
+        <div class="mt-10 grid grid-cols-3">
+          <button class= "mb-6 border-2 bg-black py-3 px-3 text-white rounded-sm" id="pilihan1">
+            <span class="text-xs md:text-base">Type 1</span>
+          </button>
+          <button class= "mb-6 border-2 bg-black py-3 px-3 text-white rounded-sm" id="pilihan2">
+            <span class="text-xs md:text-base">Type 2</span>
+          </button>
+          <button class= "mb-6 border-2 bg-black py-3 px-3 text-white rounded-sm" id="pilihan3">
+            <span class="text-xs md:text-base">Gestational</span>
+          </button>
+        </div>
+        <p class="text-lg font-light text-primary text-justify">Type 1 diabetes is thought to be caused by an autoimmune reaction (the body attacks itself by mistake). This reaction stops your body from making insulin. Approximately 5-10% of the people who have diabetes have type 1. Symptoms of type 1 diabetes often develop quickly. It’s usually diagnosed in children, teens, and young adults. If you have type 1 diabetes, you’ll need to take insulin every day to survive. Currently, no one knows how to prevent type 1 diabetes.
+        <p>
+      </div>
+      
     </div>
   </section>
 @endsection
