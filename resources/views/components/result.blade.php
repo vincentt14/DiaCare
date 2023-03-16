@@ -1,7 +1,7 @@
 <div class="w-full self-center px-4">
 
   <h1 class="text-2xl font-bold text-primary lg:text-3xl">
-    Last diagnose <span class="text-secondary">history</span>.
+    Lastest diagnose <span class="text-secondary">history</span>.
   </h1>
   <div class="mt-5">
     <div
@@ -15,7 +15,7 @@
           <p class="text-base">2023</p>
         </div>
       </div>
-      <div class="font-base text-2xl text-primary md:flex md:items-center md:justify-center">
+      <div class="font-base text-lg md:text-xl text-primary md:flex md:items-center md:justify-center">
         Result : <span class="text-secondary"> Diabetes Mellitus 1</span>
       </div>
     </div>
@@ -25,7 +25,7 @@
         <div class="w-full rounded-sm border border-[#BBBBBB] bg-white p-3">
           <div class="m-3">
             <p class="font-base mb-3 text-lg text-primary lg:text-2xl">Diabetes Mellitus 1</p>
-            <p class="text-lg font-light text-primary lg:text-2xl">Diabetes dengan tipe 1 adalah</p>
+            <p class="text-lg font-light text-primary">Type 1 diabetes is thought to be caused by an autoimmune reaction (the body attacks itself by mistake). This reaction stops your body from making insulin. Approximately 5-10% of the people who have diabetes have type 1. Symptoms of type 1 diabetes often develop quickly. It’s usually diagnosed in children, teens, and young adults. If you have type 1 diabetes, you’ll need to take insulin every day to survive. Currently, no one knows how to prevent type 1 diabetes.</p>
           </div>
         </div>
       </div>

@@ -45,13 +45,24 @@
   <section id="what" class="bg-[#f2f6fc] pb-16 pt-32 lg:pb-28">
     <div class="container">
       <div class="w-full px-4">
-        <div class="mb-16 max-w-xl">
+        <div class="mb-5 max-w-xl">
           <h4 class="mb-2 text-lg font-semibold text-secondary">What is</h4>
           <h2 class="mt-1 mb-4 text-4xl font-bold text-primary lg:text-5xl">Diabetes?</h2>
           <p class="text-md font-mono font-medium text-slate-500 lg:text-lg">
             Also called: <span class="text-secondary">diabetes mellitus</span>
           </p>
         </div>
+        <p class="text-lg font-light text-primary">Diabetes is a chronic (long-lasting) health condition that
+          affects how your body turns food into energy. <br></br>
+
+          Your body breaks down most of the food you eat into sugar (glucose) and releases it into your bloodstream. When
+          your blood sugar goes up, it signals your pancreas to release insulin. Insulin acts like a key to let the blood
+          sugar into your body’s cells for use as energy. <br></br>
+
+          With diabetes, your body doesn’t make enough insulin or can’t use it as well as it should. When there isn’t
+          enough insulin or cells stop responding to insulin, too much blood sugar stays in your bloodstream. Over time,
+          that can cause serious health problems, such as heart disease, vision loss, and kidney disease.
+        <p>
       </div>
     </div>
   </section>
