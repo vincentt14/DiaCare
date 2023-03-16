@@ -52,7 +52,7 @@
             Also called: <span class="text-secondary">diabetes mellitus</span>
           </p>
         </div>
-        <p class="text-lg font-light text-primary text-justify">Diabetes is a chronic (long-lasting) health condition that
+        <p class="text-justify text-lg font-light text-primary">Diabetes is a chronic (long-lasting) health condition that
           affects how your body turns food into energy. <br></br>
 
           Your body breaks down most of the food you eat into sugar (glucose) and releases it into your bloodstream. When
@@ -66,20 +66,21 @@
       </div>
       <div class="container">
         <div class="mt-10 grid grid-cols-3">
-          <button class= "mb-6 border-2 bg-black py-3 px-3 text-white rounded-sm" id="pilihan1">
-            <span class="text-xs md:text-base">Type 1</span>
-          </button>
-          <button class= "mb-6 border-2 bg-black py-3 px-3 text-white rounded-sm" id="pilihan2">
-            <span class="text-xs md:text-base">Type 2</span>
-          </button>
-          <button class= "mb-6 border-2 bg-black py-3 px-3 text-white rounded-sm" id="pilihan3">
-            <span class="text-xs md:text-base">Gestational</span>
-          </button>
+          @foreach ($types as $type)
+            <button class="mb-6 rounded-sm border-2 bg-black py-3 px-3 text-white" onclick="">
+              <a href="/{{ $type["id"] }}" class="text-xs md:text-base">{{ $type['slug'] }}</a>
+            </button>
+          @endforeach
         </div>
-        <p class="text-lg font-light text-primary text-justify">Type 1 diabetes is thought to be caused by an autoimmune reaction (the body attacks itself by mistake). This reaction stops your body from making insulin. Approximately 5-10% of the people who have diabetes have type 1. Symptoms of type 1 diabetes often develop quickly. It’s usually diagnosed in children, teens, and young adults. If you have type 1 diabetes, you’ll need to take insulin every day to survive. Currently, no one knows how to prevent type 1 diabetes.
-        <p>
+        
+        <div class="w-full rounded-sm border border-[#BBBBBB] bg-white p-3">
+          <div class="m-3">
+            <p class="font-base mb-3 text-lg text-primary lg:text-2xl">{{ $new_type['name'] }}</p>
+            <p class="text-justify text-lg font-light text-primary">{{ $new_type['description'] }}</p>
+          </div>
+        </div>
       </div>
-      
+
     </div>
   </section>
 @endsection
