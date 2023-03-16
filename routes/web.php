@@ -29,6 +29,10 @@ Route::get('/dashboard', function(){
     return view('pages.dashboard');
 });
 
+Route::get('/config', function(){
+    return view('components.config');
+});
+
 Route::get('/login', function () {
     return view('pages.login');
 });
