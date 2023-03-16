@@ -22,7 +22,7 @@
               <a href="/diagnose" class="text-dark mx-8 flex py-2 text-base group-hover:text-secondary">Diagnose</a>
             </li>
             <li class="group">
-              <a href="/discussion" class="text-dark mx-8 flex py-2 text-base group-hover:text-secondary">Discussion</a>
+              <a href="/dashboard" class="text-dark mx-8 flex py-2 text-base group-hover:text-secondary">Dashboard</a>
             </li>
             <li class="group">
               <a href="/medicines" class="text-dark mx-8 flex py-2 text-base group-hover:text-secondary">Medicines</a>

@@ -25,12 +25,8 @@ Route::get('/about', function () {
     return view('pages.about');
 });
 
-Route::get('/discussion', function () {
-    return view('components.view');
-});
-
-Route::get('/create', function () {
-    return view('components.create');
+Route::get('/dashboard', function(){
+    return view('pages.dashboard');
 });
 
 Route::get('/login', function () {
@@ -40,3 +36,11 @@ Route::get('/login', function () {
 Route::get('/register', function () {
     return view('pages.register');
 });
+
+// Route::get('/discussion', function () {
+//     return view('components.view');
+// });
+
+// Route::get('/create', function () {
+//     return view('components.create');
+// });
