@@ -66,21 +66,37 @@
       </div>
       <div class="container">
         <div class="mt-10 grid grid-cols-3">
-          @foreach ($types as $type)
-            <button class="mb-6 rounded-sm border-2 bg-black py-3 px-3 text-white" onclick="">
-              <a href="/{{ $type["id"] }}" class="text-xs md:text-base">{{ $type['slug'] }}</a>
+          @for($i = 0; $i < count($types); $i++)
+            <button id="warna" class="mb-6 rounded-sm border-2 bg-black py-3 px-3 text-white" onclick="changeType({{ $i }})">
+              <p class="text-xs md:text-base">{{ $types[$i]["slug"] }}</p>
             </button>
-          @endforeach
-        </div>
-        
-        <div class="w-full rounded-sm border border-[#BBBBBB] bg-white p-3">
-          <div class="m-3">
-            <p class="font-base mb-3 text-lg text-primary lg:text-2xl">{{ $new_type['name'] }}</p>
-            <p class="text-justify text-lg font-light text-primary">{{ $new_type['description'] }}</p>
-          </div>
+          @endfor
         </div>
       </div>
-
+      <div id="typee"></div>
     </div>
   </section>
+
+  <script>
+    const a = @json($types);
+    const typee = document.getElementById('typee');
+    const warna = document.getElementById('warna');
+    console.log(warna);
+    const changeType = (id) => {
+      typee.innerHTML = "";
+
+      typee.innerHTML += `
+        <div class="container">
+          <div class="w-full rounded-sm border border-[#BBBBBB] bg-white p-3">
+            <div class="m-3">
+              <p class="font-base mb-3 text-lg text-primary lg:text-2xl">${a[id].name}</p>
+              <p class="text-justify text-lg font-light text-primary">${a[id].description}</p>
+            </div>
+          </div>
+        </div>
+      `;
+
+      
+    }
+  </script>
 @endsection

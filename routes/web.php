@@ -29,7 +29,7 @@ Route::get('/', function () {
         ],
         [
             "id" => 3,
-            "slug" => "Type 3",
+            "slug" => "Gestational",
             "name" => "Gestational Diabetes",
             "description" => "Gestational diabetes develops in pregnant women who have never had diabetes. If you have gestational diabetes, your baby could be at higher risk for health problems. Gestational diabetes usually goes away after your baby is born. However, it increases your risk for type 2 diabetes later in life. Your baby is more likely to have obesity as a child or teen and develop type 2 diabetes later in life."
         ],
