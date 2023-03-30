@@ -13,7 +13,11 @@ class DiseasesController extends Controller
      */
     public function index()
     {
-        //
+        $diseases = Diseases::latest();
+
+        return view('components.admin.diseases.view', [
+            'diseases' => $diseases->get()
+        ]);
     }
 
     /**

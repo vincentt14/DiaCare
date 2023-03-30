@@ -28,7 +28,7 @@
               <a href="/adminDashboard" class="text-dark mx-8 flex py-2 text-base group-hover:text-secondary">Admin Dashboard</a>
             </li>
             <li class="group">
-              <a href="/medicines" class="text-dark mx-8 flex py-2 text-base group-hover:text-secondary">Medicines</a>
+              <a href="/medicinesPage" class="text-dark mx-8 flex py-2 text-base group-hover:text-secondary">Medicines</a>
             </li>
             <li class="group">
               <a href="/about"

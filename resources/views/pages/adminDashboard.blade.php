@@ -45,7 +45,7 @@
         <div class="w-full self-center px-4">
           <h1 class="text-2xl font-bold text-primary lg:text-3xl">
           </h1>
-          <div class="mt-5">
+          <div class="mt-8">
             <div
               class="bayangan_field mx-auto mb-6 grid max-w-xl p-3 divide-x-2 grid-cols-3 border-2 border-black bg-white py-2md:max-w-2xl">
               <div class="font-base text-lg text-secondary flex items-center justify-center md:text-xl hover:text-primary">
@@ -54,12 +54,12 @@
                 </a>
               </div>
               <div class="font-base text-lg text-secondary flex items-center justify-center md:text-xl hover:text-primary">
-                <a href="/admin/diseases">
+                <a href="/diseases">
                   Diseases
                 </a>
               </div>
               <div class="font-base text-lg text-secondary flex items-center justify-center md:text-xl hover:text-primary">
-                <a href="/admin/medicines">
+                <a href="/medicines">
                   Medicines
                 </a>
               </div>

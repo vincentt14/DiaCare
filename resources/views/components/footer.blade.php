@@ -34,7 +34,7 @@
             </a>
           </li>
           <li>
-            <a href="/medicines" target="blank"
+            <a href="/medicinesPage" target="blank"
               class="mb-2 inline-block text-base selection:bg-blue-500 selection:text-blue-100 hover:text-blue-500">
               Medicines
             </a>

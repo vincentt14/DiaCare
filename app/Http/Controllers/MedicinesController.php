@@ -13,7 +13,11 @@ class MedicinesController extends Controller
      */
     public function index()
     {
-        //
+        $medicines = Medicines::latest();
+
+        return view('components.admin.medicines.view', [
+            'medicines' => $medicines->get()
+        ]);
     }
 
     /**

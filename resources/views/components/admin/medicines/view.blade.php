@@ -30,12 +30,12 @@
             </tr>
           </thead>
           <tbody>
-            {{-- @foreach ($recyclers as $recycler) --}}
+            @foreach ($medicines as $medicine)
             <tr class="px-6 py-3 text-center">
-              <td class="px-6 py-2">1</td>
-              <td class="px-6 py-2">Panadol</td>
-              <td class="px-6 py-2">Setiap kaplet mengandung Paracetamol 500 mg.</td>
-              <td class="px-6 py-2">4 x sehari 25-50 mg.</td>
+              <td class="px-6 py-2">{{ $loop->iteration }}</td>
+              <td class="px-6 py-2">{{ $medicine['name'] }}</td>
+              <td class="px-6 py-2 text-justify">{{ $medicine['composition'] }}</td>
+              <td class="px-6 py-2 text-justify">{{ $medicine['dose'] }}</td>
               <td class="flex justify-center px-6 py-2">
                 <a class="mx-2 text-blue-400" href="#">
                   View
@@ -52,28 +52,7 @@
                 </form>
               </td>
             </tr>
-            <tr class="px-6 py-3 text-center">
-              <td class="px-6 py-2">2</td>
-              <td class="px-6 py-2">Longatin</td>
-              <td class="px-6 py-2">Noscapine 50 mg.</td>
-              <td class="px-6 py-2">2 x sehari 25-50 mg.</td>
-              <td class="flex justify-center px-6 py-2">
-                <a class="mx-2 text-blue-400" href="#">
-                  View
-                </a>
-                <a class="mx-2 text-yellow-400" href="#">
-                  Edit
-                </a>
-                <form class="mx-2 text-red-400" action="#" method="post" class="d-inline">
-                  @method('delete')
-                  @csrf
-                  <button onClick="return confirm('Are you sure?')">
-                    Delete
-                  </button>
-                </form>
-              </td>
-            </tr>
-            {{-- @endforeach --}}
+            @endforeach
           </tbody>
         </table>
       </div>

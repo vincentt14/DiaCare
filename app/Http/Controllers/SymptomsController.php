@@ -13,7 +13,7 @@ class SymptomsController extends Controller
      */
     public function index()
     {
-        $symptoms = Symptoms::latest();
+        $symptoms = Symptoms::orderBy('kode_gejala');
 
         return view('components.admin.symptoms.view', [
             'symptoms' => $symptoms->get()
@@ -25,7 +25,7 @@ class SymptomsController extends Controller
      */
     public function create()
     {
-        //
+        return view('components.admin.symptoms.add');
     }
 
     /**
@@ -33,7 +33,13 @@ class SymptomsController extends Controller
      */
     public function store(StoreSymptomsRequest $request)
     {
-        //
+        $validatedData = $request->validate([
+            'kode_gejala' => 'required',
+            'gejala' => 'required',
+        ]);
+
+        Symptoms::create($validatedData);
+        return redirect('/symptoms');
     }
 
     /**

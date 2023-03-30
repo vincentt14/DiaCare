@@ -43,8 +43,8 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('/medicines', function () {
-    return view('pages.medicines');
+Route::get('/medicinesPage', function () {
+    return view('pages.medicinesPage');
 });
 
 Route::get('/about', function () {
@@ -71,15 +71,8 @@ Route::get('/register', function () {
 Route::resources([
     'symptoms' => SymptomsController::class,
     'diseases' => DiseasesController::class,
-    'medicine' => MedicinesController::class,
+    'medicines' => MedicinesController::class,
 ]);
-
-Route::get('/admin/diseases', function () {
-    return view('components.admin.diseases.view');
-});
-Route::get('/admin/medicines', function () {
-    return view('components.admin.medicines.view');
-});
 
 
 

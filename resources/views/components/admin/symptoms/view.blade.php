@@ -3,7 +3,7 @@
 @section('content')
   <button
     class="mb-3 mt-2 btnnn rounded-sm border-2 border-black bg-black py-3 px-5 text-white duration-300 ease-out hover:bg-white hover:text-black">
-    <a href="#">Add Symptoms</a>
+    <a href="/symptoms/create">Add Symptoms</a>
   </button>
   <div class="w-full lg:mx-auto">
     <div class="mb-10 w-full">
