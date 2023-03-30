@@ -13,15 +13,15 @@
   <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
 
   {{-- trix --}}
-  <link rel="stylesheet" type="text/css" href="/css/trix.css">
-  <script type="text/javascript" src="/js/trix.js"></script>
+  {{-- <link rel="stylesheet" type="text/css" href="/css/trix.css">
+  <script type="text/javascript" src="/js/trix.js"></script> --}}
 
-  <style>
+  {{-- <style>
     /* trix toolbar - non aktif image upload*/
     trix-toolbar [data-trix-button-group="file-tools"] {
       display: none
     }
-  </style>
+  </style> --}}
 
 </head>
 
