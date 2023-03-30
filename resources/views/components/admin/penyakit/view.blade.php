@@ -1,10 +1,14 @@
 @extends('pages.adminDashboard')
 
 @section('content')
-  <h2 class="mb-5 mt-2 text-lg font-light text-primary lg:text-2xl"><span class="font-bold">Penyakit</span> Table</h2>
+  <button
+    class="btnnn mb-3 mt-2 rounded-sm border-2 border-black bg-black py-3 px-5 text-white duration-300 ease-out hover:bg-white hover:text-black">
+    <a href="#">Add Penyakit</a>
+  </button>
   <div class="w-full lg:mx-auto">
     <div class="mb-10 w-full">
       <div class="w-full rounded-sm border border-[#BBBBBB] bg-white p-3">
+        <h1 class="mt-2 mb-4 text-center text-lg font-light text-primary lg:text-2xl">Penyakit Table</h1>
         <table class="w-full rounded-xl text-slate-800">
           <thead class="text-secondary">
             <tr>
