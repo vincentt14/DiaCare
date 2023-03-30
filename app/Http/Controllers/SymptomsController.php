@@ -13,7 +13,7 @@ class SymptomsController extends Controller
      */
     public function index()
     {
-        $symptoms = Symptoms::orderBy('kode_gejala');
+        $symptoms = Symptoms::orderBy('symptoms_code');
 
         return view('components.admin.symptoms.view', [
             'symptoms' => $symptoms->get()
@@ -34,8 +34,8 @@ class SymptomsController extends Controller
     public function store(StoreSymptomsRequest $request)
     {
         $validatedData = $request->validate([
-            'kode_gejala' => 'required',
-            'gejala' => 'required',
+            'symptoms_code' => 'required',
+            'symptoms' => 'required',
         ]);
 
         Symptoms::create($validatedData);

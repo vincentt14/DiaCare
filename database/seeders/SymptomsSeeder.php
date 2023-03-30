@@ -14,12 +14,12 @@ class SymptomsSeeder extends Seeder
     public function run(): void
     {
         Symptoms::create([
-            'kode_gejala' => 'G001',
-            'gejala' => 'Sakit Perut'
+            'symptoms_code' => 'G001',
+            'symptoms' => 'Sakit Perut'
         ]);
         Symptoms::create([
-            'kode_gejala' => 'G002',
-            'gejala' => 'Mual'
+            'symptoms_code' => 'G002',
+            'symptoms' => 'Mual'
         ]);
     }
 }

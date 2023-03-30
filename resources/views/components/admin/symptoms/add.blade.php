@@ -17,22 +17,24 @@
           @csrf
           <div class="w-full lg:mx-auto">
             <div class="mb-4 w-full px-4">
-              <label for="kode_gejala" class="text-base font-bold text-primary lg:text-xl">
+              <label for="symptoms_code" class="text-base font-bold text-primary lg:text-xl">
                 Symptoms Code
               </label>
-              <input type="text" id="kode_gejala" name="kode_gejala"
-                class="@error('name') border-red-500 @enderror w-full rounded-sm border border-2 bg-white p-3 focus:outline-none focus:ring focus:ring-blue-500"
-                />
-              @error('kode_gejala')
-                <p class="text-red-500 mt-2">{{ $message }}</p>
+              <input type="text" id="symptoms_code" name="symptoms_code"
+                class="@error('symptoms_code') border-red-500 @else border-[#BBBBBB] @enderror w-full rounded-sm border bg-white p-3 focus:outline-none focus:ring focus:ring-blue-500" />
+              @error('symptoms_code')
+                <p class="mt-2 text-red-500">{{ $message }}</p>
               @enderror
             </div>
             <div class="mb-4 w-full px-4">
-              <label for="gejala" class="text-base font-bold text-primary lg:text-xl">
+              <label for="symptoms" class="text-base font-bold text-primary lg:text-xl">
                 Symptoms
               </label>
-              <input type="text" id="gejala" name="gejala"
-                class="w-full rounded-sm border border-[#BBBBBB] bg-white p-3 focus:outline-none focus:ring focus:ring-blue-500" />
+              <input type="text" id="symptoms " name="symptoms"
+                class="@error('symptoms') border-red-500 @else border-[#BBBBBB] @enderror w-full rounded-sm border bg-white p-3 focus:outline-none focus:ring focus:ring-blue-500" />
+              @error('symptoms')
+                <p class="mt-2 text-red-500">{{ $message }}</p>
+              @enderror
             </div>
             <div class="mt-10 w-full px-4">
               <button type="submit"
