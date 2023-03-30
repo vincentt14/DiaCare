@@ -2,7 +2,7 @@
 
 @section('content')
   <button
-    class="mb-3 mt-2 btnnn rounded-sm border-2 border-black bg-black py-3 px-5 text-white duration-300 ease-out hover:bg-white hover:text-black">
+    class="btnnn mb-3 mt-2 rounded-sm border-2 border-black bg-black py-3 px-5 text-white duration-300 ease-out hover:bg-white hover:text-black">
     <a href="/symptoms/create">Add Symptoms</a>
   </button>
   <div class="w-full lg:mx-auto">
@@ -28,23 +28,23 @@
           </thead>
           <tbody>
             @foreach ($symptoms as $symptom)
-            <tr class="px-6 py-3 text-center">
-              <td class="px-6 py-2">{{ $loop->iteration }}</td>
-              <td class="px-6 py-2">{{ $symptom['symptoms_code'] }}</td>
-              <td class="px-6 py-2">{{ $symptom['symptoms'] }}</td>
-              <td class="flex justify-center px-6 py-2">
-                <a class="mx-2 text-yellow-400" href="#">
-                  Edit
-                </a>
-                <form class="mx-2 text-red-400" action="#" method="post" class="d-inline">
-                  @method('delete')
-                  @csrf
-                  <button onClick="return confirm('Are you sure?')">
-                    Delete
-                  </button>
-                </form>
-              </td>
-            </tr>
+              <tr class="px-6 py-3 text-center">
+                <td class="px-6 py-2">{{ $loop->iteration }}</td>
+                <td class="px-6 py-2">{{ $symptom['symptoms_code'] }}</td>
+                <td class="px-6 py-2">{{ $symptom['symptoms'] }}</td>
+                <td class="flex justify-center px-6 py-2">
+                  <a class="mx-2 text-yellow-400" href="/symptoms/{{ $symptom['id'] }}/edit">
+                    Edit
+                  </a>
+                  <form class="mx-2 text-red-400" action="/symptoms/{{ $symptom['id'] }}" method="post" class="d-inline">
+                    @method('delete')
+                    @csrf
+                    <button onClick="return confirm('Are you sure?')">
+                      Delete
+                    </button>
+                  </form>
+                </td>
+              </tr>
             @endforeach
           </tbody>
         </table>

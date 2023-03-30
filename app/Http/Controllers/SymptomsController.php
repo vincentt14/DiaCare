@@ -55,7 +55,9 @@ class SymptomsController extends Controller
      */
     public function edit(Symptoms $symptoms)
     {
-        //
+        return view ('components.admin.symptoms.edit', [
+            'symptoms' => $symptoms
+        ]);
     }
 
     /**
@@ -71,6 +73,7 @@ class SymptomsController extends Controller
      */
     public function destroy(Symptoms $symptoms)
     {
-        //
+        Symptoms::destroy($symptoms['id']);
+        return redirect('/symptoms');
     }
 }
