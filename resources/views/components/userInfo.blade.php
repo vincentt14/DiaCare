@@ -4,8 +4,8 @@
     <div class="col-1 col-span-1 flex items-center justify-center text-2xl font-bold text-primary">100
     </div>
     <div class="col-2 col-span-2">
-      <p class="text-xs lg:text-base">Indonesian</p>
-      <p class="text-xs lg:text-base">Patient</p>
+      <p class="text-xs lg:text-base">DiaCare</p>
+      <p class="text-xs lg:text-base">Users</p>
     </div>
   </div>
   <div class="grid grid-cols-3">

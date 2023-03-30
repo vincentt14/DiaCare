@@ -1,7 +1,7 @@
 <div class="w-full self-center px-4">
 
   <h1 class="text-2xl font-bold text-primary lg:text-3xl">
-    Lastest diagnose <span class="text-secondary">history</span>.
+    Lastest diagnose <span class="text-secondary">History</span>.
   </h1>
   <div class="mt-5">
     <div
@@ -16,7 +16,7 @@
         </div>
       </div>
       <div class="font-base text-lg md:text-xl text-primary md:flex md:items-center md:justify-center">
-        Result : <span class="text-secondary"> Diabetes Mellitus 1</span>
+        Result : <span class="text-red-500"> Diabetes Mellitus 1</span>
       </div>
     </div>
 

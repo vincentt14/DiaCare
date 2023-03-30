@@ -12,7 +12,8 @@
         <h2 class="mb-5 mt-2 text-lg font-light text-primary lg:text-2xl">Dashboard. <span class="font-bold">Vincent</span></h2>
       </div>
       
-      @include('components.result')
+      {{-- @include('components.user.result') --}}
+      @include('components.admin.setting')
     </div>
   </section>
 
