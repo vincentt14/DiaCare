@@ -13,7 +13,11 @@ class SymptomsController extends Controller
      */
     public function index()
     {
-        //
+        $symptoms = Symptoms::latest();
+
+        return view('components.admin.symptoms.view', [
+            'symptoms' => $symptoms->get()
+        ]);
     }
 
     /**

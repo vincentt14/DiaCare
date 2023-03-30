@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\DiseasesController;
+use App\Http\Controllers\MedicinesController;
+use App\Http\Controllers\SymptomsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -56,20 +59,6 @@ Route::get('/adminDashboard', function () {
     return view('pages.adminDashboard');
 });
 
-Route::get('/admin/symptoms', function () {
-    return view('components.admin.symptoms.view');
-});
-Route::get('/admin/diseases', function () {
-    return view('components.admin.diseases.view');
-});
-Route::get('/admin/medicines', function () {
-    return view('components.admin.medicines.view');
-});
-
-Route::get('/config', function () {
-    return view('components.config');
-});
-
 Route::get('/login', function () {
     return view('pages.login');
 });
@@ -77,6 +66,22 @@ Route::get('/login', function () {
 Route::get('/register', function () {
     return view('pages.register');
 });
+
+
+Route::resources([
+    'symptoms' => SymptomsController::class,
+    'diseases' => DiseasesController::class,
+    'medicine' => MedicinesController::class,
+]);
+
+Route::get('/admin/diseases', function () {
+    return view('components.admin.diseases.view');
+});
+Route::get('/admin/medicines', function () {
+    return view('components.admin.medicines.view');
+});
+
+
 
 // Route::get('/discussion', function () {
 //     return view('components.view');

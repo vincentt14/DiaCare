@@ -14,7 +14,9 @@ return new class extends Migration
         Schema::create('symptoms', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-        });
+            $table->string('kode_gejala');
+            $table->string('gejala');
+        }); 
     }
 
     /**

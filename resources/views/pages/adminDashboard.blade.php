@@ -49,7 +49,7 @@
             <div
               class="bayangan_field mx-auto mb-6 grid max-w-xl p-3 divide-x-2 grid-cols-3 border-2 border-black bg-white py-2md:max-w-2xl">
               <div class="font-base text-lg text-secondary flex items-center justify-center md:text-xl hover:text-primary">
-                <a href="/admin/symptoms">
+                <a href="/symptoms">
                   Symptoms
                 </a>
               </div>
