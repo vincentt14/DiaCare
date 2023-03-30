@@ -3,7 +3,7 @@
 @section('content')
   <h2 class="mb-5 mt-2 text-lg font-light text-primary lg:text-2xl"><span class="font-bold">Gejala</span> Table</h2>
   <div class="w-full lg:mx-auto">
-    <div class="mb-10 w-full px-4">
+    <div class="mb-10 w-full">
       <div class="w-full rounded-sm border border-[#BBBBBB] bg-white p-3">
         <table class="w-full rounded-xl text-slate-800">
           <thead class="text-secondary">

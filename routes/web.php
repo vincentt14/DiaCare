@@ -59,8 +59,11 @@ Route::get('/adminDashboard', function () {
 Route::get('/admin/gejala', function () {
     return view('components.admin.gejala.view');
 });
-Route::get('/admin/panyakit', function () {
+Route::get('/admin/penyakit', function () {
     return view('components.admin.penyakit.view');
+});
+Route::get('/admin/medicines', function () {
+    return view('components.admin.medicines.view');
 });
 
 Route::get('/config', function () {
