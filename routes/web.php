@@ -56,11 +56,11 @@ Route::get('/adminDashboard', function () {
     return view('pages.adminDashboard');
 });
 
-Route::get('/admin/gejala', function () {
-    return view('components.admin.gejala.view');
+Route::get('/admin/symptoms', function () {
+    return view('components.admin.symptoms.view');
 });
-Route::get('/admin/penyakit', function () {
-    return view('components.admin.penyakit.view');
+Route::get('/admin/diseases', function () {
+    return view('components.admin.diseases.view');
 });
 Route::get('/admin/medicines', function () {
     return view('components.admin.medicines.view');
