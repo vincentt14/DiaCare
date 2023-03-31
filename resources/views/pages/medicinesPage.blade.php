@@ -23,10 +23,13 @@
           </div>
         </div>
       </form>
-      <div class="mt-10 grid w-full grid-cols-1 flex-wrap gap-5 px-4 md:grid-cols-2 lg:grid-cols-4">
-        @if ($medicines->count())
+      @if ($medicines->count())
+        <div class="mx-4 mt-2">
+          {{ $medicines->links() }}
+        </div>
+        <div class="mt-5 grid w-full grid-cols-1 flex-wrap gap-5 px-4 md:grid-cols-2 lg:grid-cols-4">
           @foreach ($medicines as $medicine)
-            <div class="mb-5 rounded-sm shadow-lg border-2 border-primary bg-white p-4">
+            <div class="mb-5 rounded-sm border-2 border-primary bg-white p-4 shadow-lg">
               <div class="h-[170px] overflow-hidden rounded-sm border-2 border-secondary shadow-lg">
                 <img src="https://source.unsplash.com/w8p9cQDLX7I" alt="{{ $medicine['name'] }}"
                   class="h-full w-full object-cover" />
@@ -40,14 +43,21 @@
               <p class="my-3 text-justify text-primary">Dose : <span
                   class="font-light text-slate-700">{{ $medicine['dose'] }}</span>
               </p>
+              <button
+                class="w-full rounded-sm border-2 border-black bg-black py-3 px-5 text-white duration-300 ease-out hover:bg-white hover:text-black hover:shadow-xl md:my-4">
+                <a href="/medicines/{{ $medicine['id'] }}">Detail</a>
+              </button>
             </div>
           @endforeach
-        @else
-          <h2 class="mb-5 mt-2 text-lg font-light text-primary lg:text-2xl">Medicine <span class="font-bold">Not
-              Found</span>.
-          </h2>
-        @endif
-      </div>
+        </div>
+        <div class="mx-4 mt-2">
+          {{ $medicines->links() }}
+        </div>
+      @else
+        <h2 class="mb-5 mt-2 text-lg font-light text-primary lg:text-2xl">Medicine <span class="font-bold">Not
+            Found</span>.
+        </h2>
+      @endif
     </div>
   </section>
 @endsection

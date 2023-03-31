@@ -53,7 +53,7 @@ Route::get('/dashboard', function () {
 });
 
 Route::get('/adminDashboard', function () {
-    return view('pages.adminDashboard');
+    return view('components.admin.base');
 });
 
 Route::get('/login', function () {

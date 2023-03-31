@@ -55,7 +55,7 @@
                 class="text-primary">Care</span>.
             </p>
           </h1>
-          <h2 class="mb-5 mt-2 text-lg font-light text-primary lg:text-2xl">Dashboard. <span
+          <h2 class="mb-3 mt-2 text-lg font-light text-primary lg:text-2xl">Dashboard. <span
               class="font-bold">Admin</span>
           </h2>
         </div>
@@ -64,7 +64,7 @@
           </h1>
           <div class="mt-8">
             <div
-              class="bayangan_field py-2md:max-w-2xl mx-auto mb-6 grid max-w-xl grid-cols-3 divide-x-2 border-2 border-black bg-white p-3">
+              class="bayangan_field py-2 mx-auto mb-6 grid max-w-xl grid-cols-3 divide-x-2 border-2 border-black bg-white p-3">
               <div
                 class="font-base flex items-center justify-center text-lg text-secondary hover:text-primary md:text-xl">
                 <a href="/symptoms">

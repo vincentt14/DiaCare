@@ -15,10 +15,7 @@ class MedicinesPage extends Controller
         }
 
         return view('pages.medicinesPage', [
-            'medicines' => $medicines->get()
+            'medicines' => $medicines->paginate(8)
         ]);
     }
-
 }
-
-// ->filter(request(['search']))->paginate(7)->withQueryString()
