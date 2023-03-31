@@ -39,7 +39,7 @@ class SymptomController extends Controller
         ]);
 
         Symptom::create($validatedData);
-        return redirect('/symptoms');
+        return redirect('/symptoms')->with('success', 'Symptom was added successfully');
     }
 
     /**
@@ -65,7 +65,15 @@ class SymptomController extends Controller
      */
     public function update(UpdateSymptomRequest $request, Symptom $symptom)
     {
-        //
+        $rules = [
+            'symptoms_code' => 'required',
+            'symptoms' => 'required',
+        ];
+
+        $validatedData = $request->validate($rules);
+
+        $symptom->update($validatedData);
+        return redirect('/symptoms')->with('success', 'Symptom was updated successfully');
     }
 
     /**
@@ -74,6 +82,6 @@ class SymptomController extends Controller
     public function destroy(Symptom $symptom)
     {
         Symptom::destroy($symptom['id']);
-        return redirect('/symptoms');
+        return redirect('/symptoms')->with('success', 'Symptom was deleted successfully');
     }
 }

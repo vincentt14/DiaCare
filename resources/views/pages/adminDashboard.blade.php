@@ -28,6 +28,23 @@
 <body>
   @include('components.navbar')
 
+  @if (session()->has('success'))
+    <div
+      class="sticky left-1/2 top-20 z-20 flex min-h-[50px] w-[300px] -translate-x-1/2 justify-between gap-x-4 bg-secondary px-5 pt-3.5 pb-4 text-white">
+      <p>{{ session('success') }}</p>
+      <button class="h-fit hover:text-white/75" onclick="this.parentNode.parentNode.removeChild(this.parentNode)">
+        X
+      </button>
+    </div>
+  @elseif(session()->has('error'))
+    <div
+      class="sticky left-1/2 top-20 z-20 flex min-h-[50px] w-[300px] -translate-x-1/2 justify-between gap-x-4 bg-red-500 px-5 pt-3.5 pb-4 text-white">
+      <p>{{ session('error') }}</p>
+      <button class="h-fit hover:text-white/75" onclick="this.parentNode.parentNode.removeChild(this.parentNode)">
+        X
+      </button>
+    </div>
+  @endif
   <main>
     <section class="pt-28 pb-24 lg:pt-36 lg:pb-32">
       <div class="container">
@@ -47,18 +64,21 @@
           </h1>
           <div class="mt-8">
             <div
-              class="bayangan_field mx-auto mb-6 grid max-w-xl p-3 divide-x-2 grid-cols-3 border-2 border-black bg-white py-2md:max-w-2xl">
-              <div class="font-base text-lg text-secondary flex items-center justify-center md:text-xl hover:text-primary">
+              class="bayangan_field py-2md:max-w-2xl mx-auto mb-6 grid max-w-xl grid-cols-3 divide-x-2 border-2 border-black bg-white p-3">
+              <div
+                class="font-base flex items-center justify-center text-lg text-secondary hover:text-primary md:text-xl">
                 <a href="/symptoms">
                   Symptoms
                 </a>
               </div>
-              <div class="font-base text-lg text-secondary flex items-center justify-center md:text-xl hover:text-primary">
+              <div
+                class="font-base flex items-center justify-center text-lg text-secondary hover:text-primary md:text-xl">
                 <a href="/diseases">
                   Diseases
                 </a>
               </div>
-              <div class="font-base text-lg text-secondary flex items-center justify-center md:text-xl hover:text-primary">
+              <div
+                class="font-base flex items-center justify-center text-lg text-secondary hover:text-primary md:text-xl">
                 <a href="/medicines">
                   Medicines
                 </a>
