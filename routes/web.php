@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\DiseaseController;
 use App\Http\Controllers\MedicineController;
+use App\Http\Controllers\MedicinesPage;
 use App\Http\Controllers\SymptomController;
 use Illuminate\Support\Facades\Route;
 
@@ -43,10 +44,6 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('/medicinesPage', function () {
-    return view('pages.medicinesPage');
-});
-
 Route::get('/about', function () {
     return view('pages.about');
 });
@@ -67,6 +64,7 @@ Route::get('/register', function () {
     return view('pages.register');
 });
 
+Route::get('/medicinesPage', [MedicinesPage::class, 'index']);
 
 Route::resources([
     'symptoms' => SymptomController::class,
