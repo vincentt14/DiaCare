@@ -60,25 +60,25 @@ const typeWriterEffect = () => {
 };
 typeWriterEffect();
 
-// button di home
-const pilihan1 = document.querySelector("#pilihan1");
-const pilihan2 = document.querySelector("#pilihan2");
-const pilihan3 = document.querySelector("#pilihan3");
+// // button di home
+// const pilihan1 = document.querySelector("#pilihan1");
+// const pilihan2 = document.querySelector("#pilihan2");
+// const pilihan3 = document.querySelector("#pilihan3");
 
-pilihan1.addEventListener("click", function () {
-    pilihan1.classList.add("aktif");
-    pilihan2.classList.remove("aktif");
-    pilihan3.classList.remove("aktif");
-});
+// pilihan1.addEventListener("click", function () {
+//     pilihan1.classList.add("aktif");
+//     pilihan2.classList.remove("aktif");
+//     pilihan3.classList.remove("aktif");
+// });
 
-pilihan2.addEventListener("click", function () {
-    pilihan1.classList.remove("aktif");
-    pilihan2.classList.add("aktif");
-    pilihan3.classList.remove("aktif");
-});
+// pilihan2.addEventListener("click", function () {
+//     pilihan1.classList.remove("aktif");
+//     pilihan2.classList.add("aktif");
+//     pilihan3.classList.remove("aktif");
+// });
 
-pilihan3.addEventListener("click", function () {
-    pilihan1.classList.remove("aktif");
-    pilihan2.classList.remove("aktif");
-    pilihan3.classList.add("aktif");
-});
+// pilihan3.addEventListener("click", function () {
+//     pilihan1.classList.remove("aktif");
+//     pilihan2.classList.remove("aktif");
+//     pilihan3.classList.add("aktif");
+// });

@@ -28,15 +28,15 @@
             </a>
           </li>
           <li>
-            <a href="/discussion" target="blank"
-              class="mb-2 inline-block text-base selection:bg-blue-500 selection:text-blue-100 hover:text-blue-500">
-              Discussion
-            </a>
-          </li>
-          <li>
             <a href="/medicinesPage" target="blank"
               class="mb-2 inline-block text-base selection:bg-blue-500 selection:text-blue-100 hover:text-blue-500">
               Medicines
+            </a>
+          </li>
+          <li>
+            <a href="/adminDashboard" target="blank"
+              class="mb-2 inline-block text-base selection:bg-blue-500 selection:text-blue-100 hover:text-blue-500">
+              Admin Dashboard
             </a>
           </li>
         </ul>
@@ -48,12 +48,6 @@
             <a href="/about"
               class="mb-2 inline-block text-base selection:bg-blue-500 selection:text-blue-100 hover:text-blue-500">
               DiaCare
-            </a>
-          </li>
-          <li>
-            <a href="https://vincentt14.github.io/" target="blank"
-              class="mb-2 inline-block text-base selection:bg-blue-500 selection:text-blue-100 hover:text-blue-500">
-              Founder
             </a>
           </li>
         </ul>
