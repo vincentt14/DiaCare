@@ -25,7 +25,7 @@ class DiseaseController extends Controller
      */
     public function create()
     {
-        //
+        return view('components.admin.diseases.add');
     }
 
     /**
@@ -33,7 +33,13 @@ class DiseaseController extends Controller
      */
     public function store(StoreDiseaseRequest $request)
     {
-        //
+        $validatedData = $request->validate([
+            'diseases_code' => 'required',
+            'diseases' => 'required',
+        ]);
+
+        Disease::create($validatedData);
+        return redirect('/diseases')->with('success', 'Diseases was added successfully');
     }
 
     /**
@@ -49,7 +55,9 @@ class DiseaseController extends Controller
      */
     public function edit(Disease $disease)
     {
-        //
+        return view('components.admin.diseases.edit', [
+            'disease' => $disease
+        ]);
     }
 
     /**
@@ -57,7 +65,15 @@ class DiseaseController extends Controller
      */
     public function update(UpdateDiseaseRequest $request, Disease $disease)
     {
-        //
+        $rules = [
+            'diseases_code' => 'required',
+            'diseases' => 'required',
+        ];
+
+        $validatedData = $request->validate($rules);
+
+        $disease->update($validatedData);
+        return redirect('/diseases')->with('success', 'Diseases was updated successfully');
     }
 
     /**
@@ -65,6 +81,7 @@ class DiseaseController extends Controller
      */
     public function destroy(Disease $disease)
     {
-        //
+        Disease::destroy($disease['id']);
+        return redirect('/diseases')->with('success', 'Diseases was deleted successfully');
     }
 }

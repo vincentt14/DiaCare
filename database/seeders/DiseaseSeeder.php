@@ -14,16 +14,16 @@ class DiseaseSeeder extends Seeder
     public function run(): void
     {
         Disease::create([
-            'kode_penyakit' => 'P001',
-            'penyakit' => 'Diabetes Mellitus 1'
+            'diseases_code' => 'P001',
+            'diseases' => 'Diabetes Mellitus 1'
         ]);
         Disease::create([
-            'kode_penyakit' => 'P002',
-            'penyakit' => 'Diabetes Mellitus 2'
+            'diseases_code' => 'P002',
+            'diseases' => 'Diabetes Mellitus 2'
         ]);
         Disease::create([
-            'kode_penyakit' => 'P003',
-            'penyakit' => 'Diabetes Gestasional'
+            'diseases_code' => 'P003',
+            'diseases' => 'Diabetes Gestasional'
         ]);
     }
 }
