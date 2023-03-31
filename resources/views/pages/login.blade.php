@@ -16,16 +16,14 @@
               Username
             </label>
             <input type="text" id="username" name="username"
-              class="bayangan_field w-full rounded-sm border-2 border-[#030723] bg-white p-3 focus:outline-none focus:ring focus:ring-blue-500"
-              required autofocus />
+              class="bayangan_field w-full rounded-sm border-2 border-[#030723] bg-white p-3 focus:outline-none focus:ring focus:ring-blue-500" />
           </div>
           <div class="mb-8 w-full px-4">
             <label for="password" class="text-base font-bold text-primary">
               Password
             </label>
             <input type="password" id="password" name="password"
-              class="bayangan_field w-full rounded-sm border-2 border-[#030723] bg-white p-3 focus:outline-none focus:ring focus:ring-blue-500"
-              required />
+              class="bayangan_field w-full rounded-sm border-2 border-[#030723] bg-white p-3 focus:outline-none focus:ring focus:ring-blue-500" />
           </div>
           <div class="w-full px-4">
             <button type="submit"

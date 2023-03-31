@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AppController;
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DiseaseController;
 use App\Http\Controllers\MedicineController;
@@ -23,14 +24,13 @@ Route::get('/', [AppController::class, 'index']);
 Route::get('/about', [AppController::class, 'about']);
 Route::get('/medicinesPage', [AppController::class, 'medicine']);
 
+Route::get('/login', [AuthController::class, 'login']);
+Route::post('/login', [AuthController::class, 'authenticate']);
 
-Route::get('/login', function () {
-    return view('pages.login');
-});
+Route::get('/register', [AuthController::class, 'register']);
+Route::post('/register', [AuthController::class, 'store']);
 
-Route::get('/register', function () {
-    return view('pages.register');
-});
+Route::post('/logout', [AuthController::class, 'logout']);
 
 Route::get('/dashboard', [DashboardController::class, 'user']);
 Route::get('/adminDashboard', [DashboardController::class, 'admin']);
@@ -45,8 +45,4 @@ Route::resources([
 
 // Route::get('/discussion', function () {
 //     return view('components.view');
-// });
-
-// Route::get('/create', function () {
-//     return view('components.create');
 // });
