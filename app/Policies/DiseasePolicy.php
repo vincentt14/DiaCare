@@ -2,11 +2,11 @@
 
 namespace App\Policies;
 
-use App\Models\Diseases;
+use App\Models\Disease;
 use App\Models\User;
 use Illuminate\Auth\Access\Response;
 
-class DiseasesPolicy
+class DiseasePolicy
 {
     /**
      * Determine whether the user can view any models.
@@ -19,7 +19,7 @@ class DiseasesPolicy
     /**
      * Determine whether the user can view the model.
      */
-    public function view(User $user, Diseases $diseases): bool
+    public function view(User $user, Disease $disease): bool
     {
         //
     }
@@ -35,7 +35,7 @@ class DiseasesPolicy
     /**
      * Determine whether the user can update the model.
      */
-    public function update(User $user, Diseases $diseases): bool
+    public function update(User $user, Disease $disease): bool
     {
         //
     }
@@ -43,7 +43,7 @@ class DiseasesPolicy
     /**
      * Determine whether the user can delete the model.
      */
-    public function delete(User $user, Diseases $diseases): bool
+    public function delete(User $user, Disease $disease): bool
     {
         //
     }
@@ -51,7 +51,7 @@ class DiseasesPolicy
     /**
      * Determine whether the user can restore the model.
      */
-    public function restore(User $user, Diseases $diseases): bool
+    public function restore(User $user, Disease $disease): bool
     {
         //
     }
@@ -59,7 +59,7 @@ class DiseasesPolicy
     /**
      * Determine whether the user can permanently delete the model.
      */
-    public function forceDelete(User $user, Diseases $diseases): bool
+    public function forceDelete(User $user, Disease $disease): bool
     {
         //
     }

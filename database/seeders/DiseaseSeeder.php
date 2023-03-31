@@ -2,26 +2,26 @@
 
 namespace Database\Seeders;
 
-use App\Models\Diseases;
+use App\Models\Disease;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class DiseasesSeeder extends Seeder
+class DiseaseSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
     public function run(): void
     {
-        Diseases::create([
+        Disease::create([
             'kode_penyakit' => 'P001',
             'penyakit' => 'Diabetes Mellitus 1'
         ]);
-        Diseases::create([
+        Disease::create([
             'kode_penyakit' => 'P002',
             'penyakit' => 'Diabetes Mellitus 2'
         ]);
-        Diseases::create([
+        Disease::create([
             'kode_penyakit' => 'P003',
             'penyakit' => 'Diabetes Gestasional'
         ]);

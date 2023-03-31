@@ -2,18 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Diseases;
-use App\Http\Requests\StoreDiseasesRequest;
-use App\Http\Requests\UpdateDiseasesRequest;
+use App\Models\Disease;
+use App\Http\Requests\StoreDiseaseRequest;
+use App\Http\Requests\UpdateDiseaseRequest;
 
-class DiseasesController extends Controller
+class DiseaseController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $diseases = Diseases::latest();
+        $diseases = Disease::latest();
 
         return view('components.admin.diseases.view', [
             'diseases' => $diseases->get()
@@ -31,7 +31,7 @@ class DiseasesController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreDiseasesRequest $request)
+    public function store(StoreDiseaseRequest $request)
     {
         //
     }
@@ -39,7 +39,7 @@ class DiseasesController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Diseases $diseases)
+    public function show(Disease $disease)
     {
         //
     }
@@ -47,7 +47,7 @@ class DiseasesController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Diseases $diseases)
+    public function edit(Disease $disease)
     {
         //
     }
@@ -55,7 +55,7 @@ class DiseasesController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateDiseasesRequest $request, Diseases $diseases)
+    public function update(UpdateDiseaseRequest $request, Disease $disease)
     {
         //
     }
@@ -63,7 +63,7 @@ class DiseasesController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Diseases $diseases)
+    public function destroy(Disease $disease)
     {
         //
     }
