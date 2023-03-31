@@ -6,7 +6,7 @@
       <div class="self-center lg:w-2/3">
         <div class="space-beetween flex">
           <h1 class="text-2xl font-bold text-primary lg:text-3xl">
-            Add <span class="text-secondary">Symptoms</span>
+            Edit <span class="text-secondary">Symptoms</span>
           </h1>
           <button
             class="btnnn ml-5 rounded-sm border-2 border-black bg-black py-2 px-5 text-white duration-300 ease-out hover:bg-white hover:text-black">
@@ -51,7 +51,7 @@
       <div class="hidden w-full self-center md:block lg:w-1/3">
         <div class="mt-10 lg:right-0">
           <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-          <lottie-player src="https://assets5.lottiefiles.com/private_files/lf30_aw7xbqgf.json" background="transparent"
+          <lottie-player src="https://assets5.lottiefiles.com/private_files/lf30_krkiex3w.json" background="transparent"
             speed="1" style="width: 300px; height: 300px;" loop autoplay class="mx-auto"></lottie-player>
         </div>
       </div>

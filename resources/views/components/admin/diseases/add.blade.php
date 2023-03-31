@@ -39,7 +39,7 @@
             <div class="mt-10 w-full px-4">
               <button type="submit"
                 class="btnn w-full rounded-sm border-2 border-black bg-black py-3 px-8 text-white duration-300 ease-out hover:bg-white hover:text-black focus:outline-none focus:ring focus:ring-blue-500">
-                Add Diseases
+                Add Disease
               </button>
             </div>
           </div>
@@ -49,7 +49,7 @@
       <div class="hidden w-full self-center md:block lg:w-1/3">
         <div class="mt-10 lg:right-0">
           <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-          <lottie-player src="https://assets5.lottiefiles.com/private_files/lf30_aw7xbqgf.json" background="transparent"
+          <lottie-player src="https://assets5.lottiefiles.com/private_files/lf30_mvurfbs7.json" background="transparent"
             speed="1" style="width: 300px; height: 300px;" loop autoplay class="mx-auto"></lottie-player>
         </div>
       </div>

@@ -13,7 +13,7 @@ class DiseaseController extends Controller
      */
     public function index()
     {
-        $diseases = Disease::latest();
+        $diseases = Disease::orderBy('diseases_code');
 
         return view('components.admin.diseases.view', [
             'diseases' => $diseases->get()

@@ -15,7 +15,7 @@ class DatabaseSeeder extends Seeder
         $this->call([
             SymptomSeeder::class,
             DiseaseSeeder::class,
-            MedicinesSeeder::class,
+            MedicineSeeder::class,
         ]);
     }
 }
