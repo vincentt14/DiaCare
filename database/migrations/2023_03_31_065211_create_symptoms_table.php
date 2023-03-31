@@ -16,7 +16,7 @@ return new class extends Migration
             $table->timestamps();
             $table->string('symptoms_code');
             $table->string('symptoms');
-        }); 
+        });
     }
 
     /**

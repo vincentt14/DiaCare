@@ -1,5 +1,3 @@
-@dd($symptoms);
-
 @extends('pages.adminDashboard')
 
 @section('content')
@@ -15,7 +13,7 @@
             <a href="/symptoms">Back</a>
           </button>
         </div>
-        <form class="mt-5" method="post" action="/symptoms/{{ $symptoms['id'] }}">
+        <form class="mt-5" method="post" action="/symptoms/{{ $symptom['id'] }}">
           @method('put')
           @csrf
           <div class="w-full lg:mx-auto">
@@ -24,7 +22,7 @@
                 Symptoms Code
               </label>
               <input type="text" id="symptoms_code" name="symptoms_code"
-                value="{{ @old('symptoms_code', $symptoms['symptoms_code']) }}"
+                value="{{ @old('symptoms_code', $symptom['symptoms_code']) }}"
                 class="@error('symptoms_code') border-red-500 @else border-[#BBBBBB] @enderror w-full rounded-sm border bg-white p-3 focus:outline-none focus:ring focus:ring-blue-500" />
               @error('symptoms_code')
                 <p class="mt-2 text-red-500">{{ $message }}</p>
@@ -34,7 +32,7 @@
               <label for="symptoms" class="text-base font-bold text-primary lg:text-xl">
                 Symptoms
               </label>
-              <input type="text" id="symptoms " name="symptoms" value="{{ @old('symptoms', $symptoms['symptoms']) }}"
+              <input type="text" id="symptoms " name="symptoms" value="{{ @old('symptoms', $symptom['symptoms']) }}"
                 class="@error('symptoms') border-red-500 @else border-[#BBBBBB] @enderror w-full rounded-sm border bg-white p-3 focus:outline-none focus:ring focus:ring-blue-500" />
               @error('symptoms')
                 <p class="mt-2 text-red-500">{{ $message }}</p>
@@ -43,7 +41,7 @@
             <div class="mt-10 w-full px-4">
               <button type="submit"
                 class="btnn w-full rounded-sm border-2 border-black bg-black py-3 px-8 text-white duration-300 ease-out hover:bg-white hover:text-black focus:outline-none focus:ring focus:ring-blue-500">
-                Add Symptoms
+                Edit Symptoms
               </button>
             </div>
           </div>

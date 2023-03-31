@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\DiseasesController;
 use App\Http\Controllers\MedicinesController;
-use App\Http\Controllers\SymptomsController;
+use App\Http\Controllers\SymptomController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -69,7 +69,7 @@ Route::get('/register', function () {
 
 
 Route::resources([
-    'symptoms' => SymptomsController::class,
+    'symptoms' => SymptomController::class,
     'diseases' => DiseasesController::class,
     'medicines' => MedicinesController::class,
 ]);

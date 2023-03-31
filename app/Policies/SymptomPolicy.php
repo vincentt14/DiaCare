@@ -2,11 +2,11 @@
 
 namespace App\Policies;
 
-use App\Models\Symptoms;
+use App\Models\Symptom;
 use App\Models\User;
 use Illuminate\Auth\Access\Response;
 
-class SymptomsPolicy
+class SymptomPolicy
 {
     /**
      * Determine whether the user can view any models.
@@ -19,7 +19,7 @@ class SymptomsPolicy
     /**
      * Determine whether the user can view the model.
      */
-    public function view(User $user, Symptoms $symptoms): bool
+    public function view(User $user, Symptom $symptom): bool
     {
         //
     }
@@ -35,7 +35,7 @@ class SymptomsPolicy
     /**
      * Determine whether the user can update the model.
      */
-    public function update(User $user, Symptoms $symptoms): bool
+    public function update(User $user, Symptom $symptom): bool
     {
         //
     }
@@ -43,7 +43,7 @@ class SymptomsPolicy
     /**
      * Determine whether the user can delete the model.
      */
-    public function delete(User $user, Symptoms $symptoms): bool
+    public function delete(User $user, Symptom $symptom): bool
     {
         //
     }
@@ -51,7 +51,7 @@ class SymptomsPolicy
     /**
      * Determine whether the user can restore the model.
      */
-    public function restore(User $user, Symptoms $symptoms): bool
+    public function restore(User $user, Symptom $symptom): bool
     {
         //
     }
@@ -59,7 +59,7 @@ class SymptomsPolicy
     /**
      * Determine whether the user can permanently delete the model.
      */
-    public function forceDelete(User $user, Symptoms $symptoms): bool
+    public function forceDelete(User $user, Symptom $symptom): bool
     {
         //
     }

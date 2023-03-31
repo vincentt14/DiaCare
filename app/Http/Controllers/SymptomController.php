@@ -2,18 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Symptoms;
-use App\Http\Requests\StoreSymptomsRequest;
-use App\Http\Requests\UpdateSymptomsRequest;
+use App\Models\Symptom;
+use App\Http\Requests\StoreSymptomRequest;
+use App\Http\Requests\UpdateSymptomRequest;
 
-class SymptomsController extends Controller
+class SymptomController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $symptoms = Symptoms::orderBy('symptoms_code');
+        $symptoms = Symptom::orderBy('symptoms_code');
 
         return view('components.admin.symptoms.view', [
             'symptoms' => $symptoms->get()
@@ -31,21 +31,21 @@ class SymptomsController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreSymptomsRequest $request)
+    public function store(StoreSymptomRequest $request)
     {
         $validatedData = $request->validate([
             'symptoms_code' => 'required',
             'symptoms' => 'required',
         ]);
 
-        Symptoms::create($validatedData);
+        Symptom::create($validatedData);
         return redirect('/symptoms');
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Symptoms $symptoms)
+    public function show(Symptom $symptom)
     {
         //
     }
@@ -53,17 +53,17 @@ class SymptomsController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Symptoms $symptoms)
+    public function edit(Symptom $symptom)
     {
-        return view ('components.admin.symptoms.edit', [
-            'symptoms' => $symptoms
+        return view('components.admin.symptoms.edit', [
+            'symptom' => $symptom
         ]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateSymptomsRequest $request, Symptoms $symptoms)
+    public function update(UpdateSymptomRequest $request, Symptom $symptom)
     {
         //
     }
@@ -71,9 +71,9 @@ class SymptomsController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Symptoms $symptoms)
+    public function destroy(Symptom $symptom)
     {
-        Symptoms::destroy($symptoms['id']);
+        Symptom::destroy($symptom['id']);
         return redirect('/symptoms');
     }
 }
