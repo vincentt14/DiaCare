@@ -54,9 +54,9 @@
           {{ $medicines->links() }}
         </div>
       @else
-        <h2 class="mb-5 mt-2 text-lg font-light text-primary lg:text-2xl">Medicine <span class="font-bold">Not
-            Found</span>.
-        </h2>
+        <div class="mx-4 mt-5 w-full rounded-sm border border-[#BBBBBB] bg-white p-3">
+          <h1 class="mt-2 mb-4 text-center text-lg font-light text-primary lg:text-2xl">Medicines Not Found.</h1>
+        </div>
       @endif
     </div>
   </section>
