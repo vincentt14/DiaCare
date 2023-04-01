@@ -16,6 +16,8 @@ return new class extends Migration
             $table->timestamps();
             $table->string('diseases_code');
             $table->string('diseases');
+            $table->string('type');
+            $table->text('description');
         });
     }
 
