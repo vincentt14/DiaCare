@@ -4,15 +4,18 @@ namespace App\Http\Controllers;
 
 use App\Models\Disease;
 use App\Models\Medicine;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class AppController extends Controller
 {
     public function index()
     {
+        $user = User::all();
         $disease = Disease::all();
         return view('pages.home', [
             "disease" => $disease,
+            'user' => $user
         ]);
     }
 

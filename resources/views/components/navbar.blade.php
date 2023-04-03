@@ -25,22 +25,36 @@
               <a href="/dashboard" class="text-dark mx-8 flex py-2 text-base group-hover:text-secondary">Dashboard</a>
             </li>
             <li class="group">
-              <a href="/adminDashboard" class="text-dark mx-8 flex py-2 text-base group-hover:text-secondary">Admin Dashboard</a>
+              <a href="/adminDashboard" class="text-dark mx-8 flex py-2 text-base group-hover:text-secondary">Admin
+                Dashboard</a>
             </li>
             <li class="group">
-              <a href="/medicinesPage" class="text-dark mx-8 flex py-2 text-base group-hover:text-secondary">Medicines</a>
+              <a href="/medicinesPage"
+                class="text-dark mx-8 flex py-2 text-base group-hover:text-secondary">Medicines</a>
             </li>
             <li class="group">
               <a href="/about"
                 class="text-dark mx-8 mb-3 flex py-2 text-base group-hover:text-secondary lg:mb-0">About</a>
             </li>
-            <li class="group">
-              <button
-                class="btnnn ml-5 rounded-sm border-2 border-black bg-black py-2 px-5 text-white duration-300 ease-out hover:bg-white hover:text-black">
-                <a href="/login">Login</a>
-              </button>
-            </li>
 
+            @if (auth()->user() !== null)
+              <li class="group">
+                <form action='/logout' method="post">
+                  @csrf
+                  <button type="submit"
+                    class="btnnn ml-5 rounded-sm border-2 border-black bg-black py-2 px-5 text-white duration-300 ease-out hover:bg-white hover:text-black">
+                    Logout
+                  </button>
+                </form>
+              </li>
+            @else
+              <li class="group">
+                <button
+                  class="btnnn ml-5 rounded-sm border-2 border-black bg-black py-2 px-5 text-white duration-300 ease-out hover:bg-white hover:text-black">
+                  <a href="/login">Login</a>
+                </button>
+              </li>
+            @endif
           </ul>
         </nav>
       </div>

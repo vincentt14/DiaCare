@@ -1,4 +1,5 @@
 {{-- @dd($disease); --}}
+{{-- @dd($user); --}}
 
 @extends('layouts.app')
 

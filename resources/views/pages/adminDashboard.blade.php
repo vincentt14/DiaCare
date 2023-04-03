@@ -64,7 +64,7 @@
           </h1>
           <div class="mt-8">
             <div
-              class="bayangan_field py-2 mx-auto mb-6 grid max-w-xl grid-cols-3 divide-x-2 border-2 border-black bg-white p-3">
+              class="bayangan_field mx-auto mb-6 grid max-w-xl grid-cols-3 divide-x-2 border-2 border-black bg-white p-3 py-2">
               <div
                 class="font-base flex items-center justify-center text-lg text-secondary hover:text-primary md:text-xl">
                 <a href="/symptoms">

@@ -28,6 +28,23 @@
 <body>
   @include('components.navbar')
 
+  @if (session()->has('success'))
+    <div
+      class="sticky left-1/2 top-20 z-20 flex min-h-[50px] w-[300px] -translate-x-1/2 justify-between gap-x-4 bg-secondary px-5 pt-3.5 pb-4 text-white">
+      <p>{{ session('success') }}</p>
+      <button class="h-fit hover:text-white/75" onclick="this.parentNode.parentNode.removeChild(this.parentNode)">
+        X
+      </button>
+    </div>
+  @elseif(session()->has('error'))
+    <div
+      class="sticky left-1/2 top-20 z-20 flex min-h-[50px] w-[300px] -translate-x-1/2 justify-between gap-x-4 bg-red-500 px-5 pt-3.5 pb-4 text-white">
+      <p>{{ session('error') }}</p>
+      <button class="h-fit hover:text-white/75" onclick="this.parentNode.parentNode.removeChild(this.parentNode)">
+        X
+      </button>
+    </div>
+  @endif
   <main>
     @yield('content')
   </main>
