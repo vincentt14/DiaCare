@@ -1,4 +1,4 @@
-{{-- @dd($types); --}}
+{{-- @dd($disease); --}}
 
 @extends('layouts.app')
 
@@ -68,10 +68,10 @@
       </div>
       <div class="container">
         <div class="mt-10 grid grid-cols-3">
-          @for ($i = 0; $i < count($types); $i++)
+          @for ($i = 0; $i < count($disease); $i++)
             <button id="warna" class="mb-6 rounded-sm border-2 bg-black py-3 px-3 text-white"
               onclick="changeType({{ $i }})">
-              <p class="text-xs md:text-base">{{ $types[$i]['slug'] }}</p>
+              <p class="text-xs md:text-base">{{ $disease[$i]['type'] }}</p>
             </button>
           @endfor
         </div>
@@ -81,7 +81,7 @@
   </section>
 
   <script>
-    const a = @json($types);
+    const a = @json($disease);
     const typee = document.getElementById('typee');
     const warna = document.getElementById('warna');
     console.log(warna);
@@ -92,7 +92,7 @@
         <div class="container">
           <div class="w-full rounded-sm border border-[#BBBBBB] bg-white p-3">
             <div class="m-3">
-              <p class="font-base mb-3 text-lg text-primary lg:text-2xl">${a[id].name}</p>
+              <p class="font-base mb-3 text-lg text-primary lg:text-2xl">${a[id].diseases}</p>
               <p class="text-justify text-lg font-light text-primary">${a[id].description}</p>
             </div>
           </div>
