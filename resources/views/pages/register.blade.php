@@ -9,28 +9,37 @@
         </div>
       </div>
       <div class="mx-auto w-4/5 md:w-2/5">
-        <form action="/" method="post">
-
+        <form action="/register" method="post">
+          @csrf
           <div class="mb-5 w-full px-4">
             <label for="username" class="text-base font-bold text-primary">
               Username
             </label>
             <input type="text" id="username" name="username"
-              class="bayangan_field w-full rounded-sm border-2 border-[#030723] bg-white p-3 focus:outline-none focus:ring focus:ring-blue-500" />
+              class="bayangan_field @error('username') border-red-500 @else border-[#030723] @enderror w-full rounded-sm border-2 bg-white p-3 focus:outline-none focus:ring focus:ring-blue-500" />
+            @error('username')
+              <p class="mt-2 text-red-500">{{ $message }}</p>
+            @enderror
           </div>
           <div class="mb-5 w-full px-4">
             <label for="email" class="text-base font-bold text-primary">
               Email
             </label>
             <input type="text" id="email" name="email"
-              class="bayangan_field w-full rounded-sm border-2 border-[#030723] bg-white p-3 focus:outline-none focus:ring focus:ring-blue-500" />
+              class="bayangan_field @error('email') border-red-500 @else border-[#030723] @enderror w-full rounded-sm border-2 bg-white p-3 focus:outline-none focus:ring focus:ring-blue-500" />
+            @error('email')
+              <p class="mt-2 text-red-500">{{ $message }}</p>
+            @enderror
           </div>
           <div class="mb-8 w-full px-4">
             <label for="password" class="text-base font-bold text-primary">
               Password
             </label>
             <input type="password" id="password" name="password"
-              class="bayangan_field w-full rounded-sm border-2 border-[#030723] bg-white p-3 focus:outline-none focus:ring focus:ring-blue-500" />
+              class="bayangan_field @error('password') border-red-500 @else border-[#030723] @enderror w-full rounded-sm border-2 bg-white p-3 focus:outline-none focus:ring focus:ring-blue-500" />
+            @error('password')
+              <p class="mt-2 text-red-500">{{ $message }}</p>
+            @enderror
           </div>
           <div class="w-full px-4">
             <button type="submit"
