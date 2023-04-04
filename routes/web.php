@@ -24,15 +24,15 @@ Route::get('/', [AppController::class, 'index']);
 Route::get('/about', [AppController::class, 'about']);
 Route::get('/medicinesPage', [AppController::class, 'medicine']);
 
-Route::get('/login', [AuthController::class, 'login']);
+Route::get('/login', [AuthController::class, 'login'])->name('login')->middleware('guest');
 Route::post('/login', [AuthController::class, 'authenticate']);
 
-Route::get('/register', [AuthController::class, 'register']);
+Route::get('/register', [AuthController::class, 'register'])->middleware('guest');
 Route::post('/register', [AuthController::class, 'store']);
 
-Route::post('/logout', [AuthController::class, 'logout']);
+Route::post('/logout', [AuthController::class, 'logout'])->middleware('auth');
 
-Route::get('/dashboard', [DashboardController::class, 'user']);
+Route::get('/dashboard', [DashboardController::class, 'user'])->middleware('auth');
 Route::get('/adminDashboard', [DashboardController::class, 'admin']);
 
 Route::resources([

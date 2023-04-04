@@ -23,7 +23,7 @@ class AuthController extends Controller
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
 
-            $redirectLink = '/';
+            $redirectLink = '/dashboard';
             if (Auth::user()->is_admin == 1)
                 $redirectLink = '/adminDashboard';
 
