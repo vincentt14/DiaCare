@@ -33,7 +33,7 @@ Route::post('/register', [AuthController::class, 'store']);
 Route::post('/logout', [AuthController::class, 'logout'])->middleware('auth');
 
 Route::get('/dashboard', [DashboardController::class, 'user'])->middleware('auth');
-Route::get('/adminDashboard', [DashboardController::class, 'admin']);
+Route::get('/adminDashboard', [DashboardController::class, 'admin'])->middleware('admin');
 
 Route::resources([
     'symptoms' => SymptomController::class,

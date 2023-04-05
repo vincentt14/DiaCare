@@ -15,11 +15,11 @@ class SymptomSeeder extends Seeder
     {
         Symptom::create([
             'symptoms_code' => 'G001',
-            'symptoms' => 'Sakit Perut'
+            'symptoms' => 'Apakah anda mengalami Sakit Perut?'
         ]);
         Symptom::create([
             'symptoms_code' => 'G002',
-            'symptoms' => 'Mual'
+            'symptoms' => 'Apakah anda mengalami mual?'
         ]);
     }
 }
