@@ -13,9 +13,11 @@ class AppController extends Controller
     {
         $user = User::all();
         $disease = Disease::all();
+        $medicine = Medicine::all();
         return view('pages.home', [
             "disease" => $disease,
-            'user' => $user
+            "user" => $user,
+            "medicine" => $medicine
         ]);
     }
 

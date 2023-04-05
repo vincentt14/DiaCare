@@ -16,29 +16,33 @@
         <ul class="text-slate-400">
           <h3 class="mb-5 text-xl font-semibold text-white selection:bg-blue-500 selection:text-blue-100">Shortcuts</h3>
           <li>
-            <a href="/" target="blank"
+            <a href="/"
               class="mb-2 inline-block text-base selection:bg-blue-500 selection:text-blue-100 hover:text-blue-500">
               Home
             </a>
           </li>
           <li>
-            <a href="/diagnose" target="blank"
+            <a href="/diagnose"
               class="mb-2 inline-block text-base selection:bg-blue-500 selection:text-blue-100 hover:text-blue-500">
               Diagnose
             </a>
           </li>
           <li>
-            <a href="/medicinesPage" target="blank"
+            <a href="/medicinesPage"
               class="mb-2 inline-block text-base selection:bg-blue-500 selection:text-blue-100 hover:text-blue-500">
               Medicines
             </a>
           </li>
-          <li>
-            <a href="/dashboard" target="blank"
-              class="mb-2 inline-block text-base selection:bg-blue-500 selection:text-blue-100 hover:text-blue-500">
-              Dashboard
-            </a>
-          </li>
+
+          @if (auth()->user() !== null)
+            <li>
+              <a href="/dashboard"
+                class="mb-2 inline-block text-base selection:bg-blue-500 selection:text-blue-100 hover:text-blue-500">
+                Dashboard
+              </a>
+            </li>
+          @endif
+
         </ul>
       </div>
       <div class="mb-12 w-full flex-col place-items-center md:flex md:w-1/3">

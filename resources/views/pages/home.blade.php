@@ -19,20 +19,24 @@
             <h2 class="mb-1 text-lg font-light text-primary lg:text-2xl">You can &ZeroWidthSpace;</h2>
             <h2 class="typewrite"></h2>
           </div>
-          <p class="mb-10 max-w-md text-slate-500">
+          <p class="mb-3 max-w-md text-slate-500">
             "A positive mindset can overcome the most dire of situations."
             <span class="mt-1 block text-secondary">- Scott Earle.</span>
           </p>
           <div class="flex flex-col md:flex-row">
             <button
-              class="btnn mb-5 rounded-sm border-2 border-black bg-black py-3 px-8 text-white duration-300 ease-out hover:bg-white hover:text-black focus:outline-none focus:ring focus:ring-blue-500 md:mb-16 lg:mb-20">
+              class="btnn mb-5 rounded-sm border-2 border-black bg-black py-3 px-8 text-white duration-300 ease-out hover:bg-white hover:text-black focus:outline-none focus:ring focus:ring-blue-500 lg:mb-8">
               <a href="#definition">What is Diabetes?</a>
             </button>
             <button
-              class="btnn mb-16 rounded-sm border-2 border-black bg-black py-3 px-8 text-white duration-300 ease-out hover:bg-white hover:text-black focus:outline-none focus:ring focus:ring-blue-500 md:ml-10 lg:mb-20">
+              class="btnn mb-5 rounded-sm border-2 border-black bg-black py-3 px-8 text-white duration-300 ease-out hover:bg-white hover:text-black focus:outline-none focus:ring focus:ring-blue-500 md:ml-10 lg:mb-8">
               <a href="/diagnose">Diagnose</a>
             </button>
           </div>
+          <p class="mb-3 max-w-md  text-slate-500">
+            To get <span class="font-bold">Dashboard</span> feature you have to <a href="/login"
+              class="font-bold text-secondary">Login.</a>
+          </p>
           @include('components.userInfo')
         </div>
         <div
