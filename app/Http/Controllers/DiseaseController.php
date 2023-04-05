@@ -8,6 +8,10 @@ use App\Http\Requests\UpdateDiseaseRequest;
 
 class DiseaseController extends Controller
 {
+    public function __construct(){
+        $this->middleware('admin');
+    }
+
     /**
      * Display a listing of the resource.
      */
