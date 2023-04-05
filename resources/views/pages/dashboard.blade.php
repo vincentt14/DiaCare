@@ -9,7 +9,7 @@
           <p class="mt-1 block text-4xl font-bold text-secondary lg:text-5xl">Dia<span class="text-primary">Care</span>.
           </p>
         </h1>
-        <h2 class="mb-5 mt-2 text-lg font-light text-primary lg:text-2xl">Dashboard. <span class="font-bold">{{ auth()->user()->name }}</span></h2>
+        <h2 class="mb-5 mt-2 text-lg font-light text-primary lg:text-2xl">Dashboard. <span class="font-bold capitalize">{{ auth()->user()->name }}</span></h2>
       </div>
       
       @include('components.user.result')

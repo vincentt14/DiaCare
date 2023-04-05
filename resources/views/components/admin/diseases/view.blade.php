@@ -34,6 +34,9 @@
                   <td class="px-6 py-2">{{ $disease['diseases_code'] }}</td>
                   <td class="px-6 py-2">{{ $disease['diseases'] }}</td>
                   <td class="flex justify-center px-6 py-2">
+                    <a class="mx-2 text-blue-400" href="/diseases/{{ $disease['id'] }}">
+                      View
+                    </a>
                     <a class="mx-2 text-yellow-400" href="/diseases/{{ $disease['id'] }}/edit">
                       Edit
                     </a>

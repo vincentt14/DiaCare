@@ -9,9 +9,9 @@ use App\Http\Requests\UpdateMedicineRequest;
 class MedicineController extends Controller
 {
     public function __construct(){
-        $this->middleware('admin');
+        $this->middleware('admin')->except(['show']);
     }
-    
+
     /**
      * Display a listing of the resource.
      */
@@ -53,7 +53,9 @@ class MedicineController extends Controller
      */
     public function show(Medicine $medicine)
     {
-        //
+        return view('pages.medDetail', [
+            'medicine' => $medicine
+        ]);
     }
 
     /**

@@ -40,6 +40,8 @@ class DiseaseController extends Controller
         $validatedData = $request->validate([
             'diseases_code' => 'required',
             'diseases' => 'required',
+            'type' => 'required',
+            'description' => 'required',
         ]);
 
         Disease::create($validatedData);
@@ -51,7 +53,9 @@ class DiseaseController extends Controller
      */
     public function show(Disease $disease)
     {
-        //
+        return view('pages.diseaseDetail', [
+            'disease' => $disease
+        ]);
     }
 
     /**
@@ -72,6 +76,8 @@ class DiseaseController extends Controller
         $rules = [
             'diseases_code' => 'required',
             'diseases' => 'required',
+            'type' => 'required',
+            'description' => 'required',
         ];
 
         $validatedData = $request->validate($rules);
