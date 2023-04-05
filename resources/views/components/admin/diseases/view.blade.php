@@ -32,7 +32,7 @@
                 <tr class="px-6 py-3 text-center">
                   <td class="px-6 py-2">{{ $loop->iteration }}</td>
                   <td class="px-6 py-2">{{ $disease['diseases_code'] }}</td>
-                  <td class="px-6 py-2">{{ $disease['diseases'] }}</td>
+                  <td class="px-6 py-2 text-justify">{{ $disease['diseases'] }}</td>
                   <td class="flex justify-center px-6 py-2">
                     <a class="mx-2 text-blue-400" href="/diseases/{{ $disease['id'] }}">
                       View
