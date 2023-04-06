@@ -35,19 +35,19 @@
           </div>
           @if (auth()->user() == null)
             <p class="mb-3 max-w-md text-slate-500">
-              To get <span class="font-bold">Dashboard</span> feature you have to <a href="/login"
+              To get <span class="font-bold text-primary">Dashboard</span> feature you have to <a href="/login"
                 class="font-bold text-secondary">Login.</a>
             </p>
           @elseif (auth()->user() !== null && auth()->user()->is_admin == 1)
             <p class="mb-3 max-w-md text-slate-500">
-              Wellcome back <span class="font-bold uppercase">{{ auth()->user()->name }}</span>. Go to <a
-                href="/adminDashboard" class="font-bold capitalize text-secondary">{{ auth()->user()->name }}
+              Wellcome back <span class="font-bold text-primary uppercase">{{ auth()->user()->name }}</span>. Go to <a
+                href="/adminDashboard" class="font-bold capitalize text-secondary">{{ auth()->user()->name }}'s
                 Dashboard</a>.
             </p>
           @elseif (auth()->user() !== null)
             <p class="mb-3 max-w-md text-slate-500">
-              Wellcome back <span class="font-bold uppercase">{{ auth()->user()->name }}</span>. Go to <a
-                href="/dashboard" class="font-bold capitalize text-secondary">{{ auth()->user()->name }} dashboard</a>.
+              Wellcome back <span class="font-bold text-primary uppercase">{{ auth()->user()->name }}</span>. Go to <a
+                href="/dashboard" class="font-bold capitalize text-secondary">{{ auth()->user()->name }}'s dashboard</a>.
             </p>
           @endif
           @include('components.userInfo')

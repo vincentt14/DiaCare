@@ -36,6 +36,26 @@
                 <p class="mt-2 text-red-500">{{ $message }}</p>
               @enderror
             </div>
+            <div class="mb-4 w-full px-4">
+              <label for="type" class="text-base font-bold text-primary lg:text-xl">
+                Type
+              </label>
+              <input type="text" id="type " name="type" value="{{ @old('type') }}"
+                class="@error('type') border-red-500 @else border-[#BBBBBB] @enderror w-full rounded-sm border bg-white p-3 focus:outline-none focus:ring focus:ring-blue-500" />
+              @error('type')
+                <p class="mt-2 text-red-500">{{ $message }}</p>
+              @enderror
+            </div>
+            <div class="mb-4 w-full px-4">
+              <label for="description" class="text-base font-bold text-primary lg:text-xl">
+                Description
+              </label>
+              <textarea id="description " name="description"
+                class="@error('description') border-red-500 @else border-[#BBBBBB] @enderror w-full rounded-sm border bg-white p-3 focus:outline-none focus:ring focus:ring-blue-500">{{ @old('description') }}</textarea>
+              @error('description')
+                <p class="mt-2 text-red-500">{{ $message }}</p>
+              @enderror
+            </div>
             <div class="mt-10 w-full px-4">
               <button type="submit"
                 class="btnn w-full rounded-sm border-2 border-black bg-black py-3 px-8 text-white duration-300 ease-out hover:bg-white hover:text-black focus:outline-none focus:ring focus:ring-blue-500">
