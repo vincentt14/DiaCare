@@ -20,7 +20,7 @@ hamburger.addEventListener("click", function () {
 
 // typeWrite
 const typeWriterEffect = () => {
-    const words = ["Diagnose.", "Disscuss.", "View Medicines.", "Learn."];
+    const words = ["Diagnose.", "Track History.", "View Medicines.", "Learn."];
     let wordCount = 0;
     let letterCount = 0;
 
@@ -59,6 +59,7 @@ const typeWriterEffect = () => {
     type();
 };
 typeWriterEffect();
+
 
 // // button di home
 // const pilihan1 = document.querySelector("#pilihan1");

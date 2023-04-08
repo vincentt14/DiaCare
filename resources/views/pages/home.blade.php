@@ -40,13 +40,13 @@
             </p>
           @elseif (auth()->user() !== null && auth()->user()->is_admin == 1)
             <p class="mb-3 max-w-md text-slate-500">
-              Wellcome back <span class="font-bold text-primary uppercase">{{ auth()->user()->name }}</span>. Go to <a
+              Wellcome back <span class="font-bold uppercase text-primary">{{ auth()->user()->name }}</span>. Go to <a
                 href="/adminDashboard" class="font-bold capitalize text-secondary">{{ auth()->user()->name }}'s
                 Dashboard</a>.
             </p>
           @elseif (auth()->user() !== null)
             <p class="mb-3 max-w-md text-slate-500">
-              Wellcome back <span class="font-bold text-primary uppercase">{{ auth()->user()->name }}</span>. Go to <a
+              Wellcome back <span class="font-bold uppercase text-primary">{{ auth()->user()->name }}</span>. Go to <a
                 href="/dashboard" class="font-bold capitalize text-secondary">{{ auth()->user()->name }}'s dashboard</a>.
             </p>
           @endif
@@ -103,6 +103,11 @@
     const typee = document.getElementById('typee');
     const warna = document.getElementById('warna');
     console.log(warna);
+
+    const changeColor = (id) => {
+      warna.className = 'warna';
+    }
+
     const changeType = (id) => {
       typee.innerHTML = "";
 

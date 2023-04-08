@@ -33,7 +33,6 @@
               Medicines
             </a>
           </li>
-
           @if (auth()->user() !== null)
             <li>
               <a href="/dashboard"
@@ -43,6 +42,14 @@
             </li>
           @endif
 
+          @if (auth()->user() !== null && auth()->user()->is_admin == 1)
+            <li>
+              <a href="/adminDashboard"
+                class="mb-2 inline-block text-base selection:bg-blue-500 selection:text-blue-100 hover:text-blue-500">
+                Admin Dashboard
+              </a>
+            </li>
+          @endif
         </ul>
       </div>
       <div class="mb-12 w-full flex-col place-items-center md:flex md:w-1/3">
