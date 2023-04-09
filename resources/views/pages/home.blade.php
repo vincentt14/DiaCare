@@ -97,7 +97,7 @@
       <div id="typee"></div>
     </div>
   </section>
-  <section class="pt-10 pb-24 lg:pt-36 lg:pb-32">
+  <section class="pt-16 pb-24 lg:pt-32 lg:pb-32">
     <div class="container">
       <div class="flex flex-wrap">
         <div class="bayangan hidden w-full self-center rounded-sm border-2 border-primary bg-white p-4 md:block lg:w-1/4">
@@ -116,7 +116,7 @@
             <div id="accordion-collapse" data-accordion="collapse">
               <h2 id="accordion-collapse-heading-1">
                 <button type="button"
-                  class="flex w-full items-center justify-between rounded-t-md border border-b-0 border-secondary p-5 text-left font-medium text-gray-500 hover:bg-gray-100 focus:ring-2 focus:ring-secondary"
+                  class="flex w-full items-center justify-between rounded-t-md border border-b-0 border-secondary p-5 text-left font-medium text-gray-500 hover:bg-slate-100 focus:ring-2 focus:ring-secondary"
                   data-accordion-target="#accordion-collapse-body-1" aria-expanded="true"
                   aria-controls="accordion-collapse-body-1">
                   <span>Workout Routine</span>
@@ -130,18 +130,24 @@
               </h2>
               <div id="accordion-collapse-body-1" class="hidden" aria-labelledby="accordion-collapse-heading-1">
                 <div class="border border-b-0 border-slate-500 p-5">
-                  <p class="mb-2 text-gray-500">Regular exercise can increase insulin production and sensitivity of the body's cells to insulin. That way, blood sugar levels will be controlled properly, so you can avoid diabetes.</p>
-                  <p class="mb-2 text-gray-500">In addition, exercise also helps burn calories to produce energy and store excess glucose as an energy reserve in the form of muscle protein as a reserve so it doesn't accumulate in the blood.</p>
-                  <p class="text-gray-500">Do at least <span class="text-secondary">150 minutes</span> of exercise <span class="text-secondary">each week</span>, divided into <span class="text-secondary">5 sessions </span>or days, <span class="text-secondary">30 minutes per session</span>.</p>
+                  <p class="mb-2 text-gray-500">Regular exercise can increase insulin production and sensitivity of the
+                    body's cells to insulin. That way, blood sugar levels will be controlled properly, so you can avoid
+                    diabetes.</p>
+                  <p class="mb-2 text-gray-500">In addition, exercise also helps burn calories to produce energy and store
+                    excess glucose as an energy reserve in the form of muscle protein as a reserve so it doesn't
+                    accumulate in the blood.</p>
+                  <p class="text-gray-500">Do at least <span class="text-secondary">150 minutes</span> of exercise <span
+                      class="text-secondary">each week</span>, divided into <span class="text-secondary">5 sessions
+                    </span>or days, <span class="text-secondary">30 minutes per session</span>.</p>
                 </div>
               </div>
-              
+
               <h2 id="accordion-collapse-heading-2">
                 <button type="button"
-                  class="flex w-full items-center justify-between border border-b-0 border-secondary p-5 text-left font-medium text-gray-500 hover:bg-gray-100 focus:ring-2 focus:ring-secondary"
+                  class="flex w-full items-center justify-between border border-b-0 border-secondary p-5 text-left font-medium text-gray-500 hover:bg-slate-100 focus:ring-2 focus:ring-secondary"
                   data-accordion-target="#accordion-collapse-body-2" aria-expanded="false"
                   aria-controls="accordion-collapse-body-2">
-                  <span>Is there a Figma file available?</span>
+                  <span>Maintaining Body Weight remains Ideal</span>
                   <svg data-accordion-icon class="h-6 w-6 shrink-0" fill="currentColor" viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd"
@@ -152,20 +158,22 @@
               </h2>
               <div id="accordion-collapse-body-2" class="hidden" aria-labelledby="accordion-collapse-heading-2">
                 <div class="border border-b-0 border-slate-500 p-5">
-                  <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is first conceptualized and designed using
-                    the Figma software so everything you see in the library has a design equivalent in our Figma file.</p>
-                  <p class="text-gray-500 dark:text-gray-400">Check out the <a href="https://flowbite.com/figma/"
-                      class="text-blue-600 hover:underline dark:text-blue-500">Figma design system</a> based on the
-                    utility classes from Tailwind CSS and components from Flowbite.</p>
+                  <p class="mb-2 text-gray-500">Obesity is one of the main causes of diabetes. This is because obesity
+                    disrupts the work of metabolism so that the body's cells are unable to respond optimally to insulin.
+                  </p>
+                  <p class="text-gray-500">Therefore, the next tips for preventing diabetes naturally is to <span
+                      class="text-secondary"> maintain an ideal body weight</span>. Also pay attention to the <span
+                      class="text-secondary">intake of carbohydrates and sugar</span> that enter the body to avoid
+                    obesity.</p>
                 </div>
               </div>
 
               <h2 id="accordion-collapse-heading-3">
                 <button type="button"
-                  class="flex w-full items-center justify-between border border-b-0 border-secondary p-5 text-left font-medium text-gray-500 hover:bg-gray-100 focus:ring-2 focus:ring-secondary"
+                  class="flex w-full items-center justify-between border border-b-0 border-secondary p-5 text-left font-medium text-gray-500 hover:bg-slate-100 focus:ring-2 focus:ring-secondary"
                   data-accordion-target="#accordion-collapse-body-3" aria-expanded="false"
                   aria-controls="accordion-collapse-body-3">
-                  <span>What are the differences between Flowbite and Tailwind UI?</span>
+                  <span>Implement a Healthy Diet</span>
                   <svg data-accordion-icon class="h-6 w-6 shrink-0" fill="currentColor" viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd"
@@ -175,29 +183,21 @@
                 </button>
               </h2>
               <div id="accordion-collapse-body-3" class="hidden" aria-labelledby="accordion-collapse-heading-3">
-                <div class="border border-b-0 border-slate-500 p-5">The main difference is that the core components from
-                  Flowbite are open source under the MIT license, whereas Tailwind UI is a paid product. Another
-                  difference is that Flowbite relies on smaller and standalone components, whereas Tailwind UI offers
-                  sections of pages.</p>
-                  <p class="mb-2 text-gray-500 dark:text-gray-400">However, we actually recommend using both Flowbite,
-                    Flowbite Pro, and even Tailwind UI as there is no technical reason stopping you from using the best of
-                    two worlds.</p>
-                  <p class="mb-2 text-gray-500 dark:text-gray-400">Learn more about these technologies:</p>
-                  <ul class="list-disc pl-5 text-gray-500 dark:text-gray-400">
-                    <li><a href="https://flowbite.com/pro/"
-                        class="text-blue-600 hover:underline dark:text-blue-500">Flowbite Pro</a></li>
-                    <li><a href="https://tailwindui.com/" rel="nofollow"
-                        class="text-blue-600 hover:underline dark:text-blue-500">Tailwind UI</a></li>
-                  </ul>
+                <div class="border border-b-0 border-slate-500 p-5">
+                  <p class="mb-2 text-gray-500">How to prevent diabetes early should also be accompanied by the adoption
+                    of a healthy diet. Try to <span class="text-secondary">reduce fast food, high sugar and fat</span>.
+                    Start<span class="text-secondary"> choosing foods with high nutritional content, such as protein,
+                      fiber and vitamins</span>.
+                  </p>
                 </div>
               </div>
 
               <h2 id="accordion-collapse-heading-4">
                 <button type="button"
-                  class="flex w-full items-center justify-between border border-b-0 border-secondary p-5 text-left font-medium text-gray-500 hover:bg-gray-100 focus:ring-2 focus:ring-secondary"
+                  class="flex w-full items-center justify-between border border-b-0 border-secondary p-5 text-left font-medium text-gray-500 hover:bg-slate-100 focus:ring-2 focus:ring-secondary"
                   data-accordion-target="#accordion-collapse-body-4" aria-expanded="false"
                   aria-controls="accordion-collapse-body-4">
-                  <span>What are the differences between Flowbite and Tailwind UI?</span>
+                  <span>Check Blood Sugar Routinely</span>
                   <svg data-accordion-icon class="h-6 w-6 shrink-0" fill="currentColor" viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd"
@@ -207,29 +207,26 @@
                 </button>
               </h2>
               <div id="accordion-collapse-body-4" class="hidden" aria-labelledby="accordion-collapse-heading-4">
-                <div class="border border-b-0 border-slate-500 p-5">The main difference is that the core components from
-                  Flowbite are open source under the MIT license, whereas Tailwind UI is a paid product. Another
-                  difference is that Flowbite relies on smaller and standalone components, whereas Tailwind UI offers
-                  sections of pages.</p>
-                  <p class="mb-2 text-gray-500 dark:text-gray-400">However, we actually recommend using both Flowbite,
-                    Flowbite Pro, and even Tailwind UI as there is no technical reason stopping you from using the best of
-                    two worlds.</p>
-                  <p class="mb-2 text-gray-500 dark:text-gray-400">Learn more about these technologies:</p>
-                  <ul class="list-disc pl-5 text-gray-500 dark:text-gray-400">
-                    <li><a href="https://flowbite.com/pro/"
-                        class="text-blue-600 hover:underline dark:text-blue-500">Flowbite Pro</a></li>
-                    <li><a href="https://tailwindui.com/" rel="nofollow"
-                        class="text-blue-600 hover:underline dark:text-blue-500">Tailwind UI</a></li>
-                  </ul>
+                <div class="border border-b-0 border-slate-500 p-5">
+                  <p class="mb-2 text-gray-500">Regular blood sugar checks are necessary to see the value of blood sugar
+                    levels in the body. By doing regular checks, you can monitor the condition of your sugar levels and
+                    detect diabetes earlier.
+                  </p>
+                  <p class="text-gray-500">Can be done <span class="text-secondary">once a year if you are in
+                      good health and not at high risk of diabetes</span>. However, <span class="text-secondary">if you
+                      have a
+                      history of diabetes and are at high risk of developing it</span>, it is recommended to have more
+                    <span class="text-secondary">frequent checks</span>.
+                  </p>
                 </div>
               </div>
 
               <h2 id="accordion-collapse-heading-5">
                 <button type="button"
-                  class="flex w-full items-center justify-between border border-b-0 border-secondary p-5 text-left font-medium text-gray-500 hover:bg-gray-100 focus:ring-2 focus:ring-secondary"
+                  class="flex w-full items-center justify-between border border-b-0 border-secondary p-5 text-left font-medium text-gray-500 hover:bg-slate-100 focus:ring-2 focus:ring-secondary"
                   data-accordion-target="#accordion-collapse-body-5" aria-expanded="false"
                   aria-controls="accordion-collapse-body-5">
-                  <span>What are the differences between Flowbite and Tailwind UI?</span>
+                  <span>Managing Stress</span>
                   <svg data-accordion-icon class="h-6 w-6 shrink-0" fill="currentColor" viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd"
@@ -239,29 +236,20 @@
                 </button>
               </h2>
               <div id="accordion-collapse-body-5" class="hidden" aria-labelledby="accordion-collapse-heading-5">
-                <div class="border border-b-0 border-slate-500 p-5">The main difference is that the core components from
-                  Flowbite are open source under the MIT license, whereas Tailwind UI is a paid product. Another
-                  difference is that Flowbite relies on smaller and standalone components, whereas Tailwind UI offers
-                  sections of pages.</p>
-                  <p class="mb-2 text-gray-500 dark:text-gray-400">However, we actually recommend using both Flowbite,
-                    Flowbite Pro, and even Tailwind UI as there is no technical reason stopping you from using the best of
-                    two worlds.</p>
-                  <p class="mb-2 text-gray-500 dark:text-gray-400">Learn more about these technologies:</p>
-                  <ul class="list-disc pl-5 text-gray-500 dark:text-gray-400">
-                    <li><a href="https://flowbite.com/pro/"
-                        class="text-blue-600 hover:underline dark:text-blue-500">Flowbite Pro</a></li>
-                    <li><a href="https://tailwindui.com/" rel="nofollow"
-                        class="text-blue-600 hover:underline dark:text-blue-500">Tailwind UI</a></li>
-                  </ul>
+                <div class="border border-b-0 border-slate-500 p-5">
+                  <p class="mb-2 text-gray-500">When <span class="text-secondary">stressed</span>, the body will release
+                    the <span class="text-secondary">hormone cortisol which can increase blood sugar levels</span>.
+                    Therefore, one way to prevent diabetes is to manage stress well.
+                  </p>
                 </div>
               </div>
 
               <h2 id="accordion-collapse-heading-6">
                 <button type="button"
-                  class="flex w-full items-center justify-between border border-b-0 border-secondary p-5 text-left font-medium text-gray-500 hover:bg-gray-100 focus:ring-2 focus:ring-secondary"
+                  class="flex w-full items-center justify-between border border-b-0 border-secondary p-5 text-left font-medium text-gray-500 hover:bg-slate-100 focus:ring-2 focus:ring-secondary"
                   data-accordion-target="#accordion-collapse-body-6" aria-expanded="false"
                   aria-controls="accordion-collapse-body-6">
-                  <span>What are the differences between Flowbite and Tailwind UI?</span>
+                  <span>Maintaining Optimal Levels of Vitamin D</span>
                   <svg data-accordion-icon class="h-6 w-6 shrink-0" fill="currentColor" viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd"
@@ -271,29 +259,23 @@
                 </button>
               </h2>
               <div id="accordion-collapse-body-6" class="hidden" aria-labelledby="accordion-collapse-heading-6">
-                <div class="border border-b-0 border-slate-500 p-5">The main difference is that the core components from
-                  Flowbite are open source under the MIT license, whereas Tailwind UI is a paid product. Another
-                  difference is that Flowbite relies on smaller and standalone components, whereas Tailwind UI offers
-                  sections of pages.</p>
-                  <p class="mb-2 text-gray-500 dark:text-gray-400">However, we actually recommend using both Flowbite,
-                    Flowbite Pro, and even Tailwind UI as there is no technical reason stopping you from using the best of
-                    two worlds.</p>
-                  <p class="mb-2 text-gray-500 dark:text-gray-400">Learn more about these technologies:</p>
-                  <ul class="list-disc pl-5 text-gray-500 dark:text-gray-400">
-                    <li><a href="https://flowbite.com/pro/"
-                        class="text-blue-600 hover:underline dark:text-blue-500">Flowbite Pro</a></li>
-                    <li><a href="https://tailwindui.com/" rel="nofollow"
-                        class="text-blue-600 hover:underline dark:text-blue-500">Tailwind UI</a></li>
-                  </ul>
+                <div class="border border-b-0 border-slate-500 p-5">
+                  <p class="mb-2 text-gray-500">This vitamin can <span class="text-secondary">increase the body's
+                      sensitivity to insulin</span>. That way,
+                    the risk of insulin resistance will decrease.
+                  </p>
+                  <p class="text-gray-500">Some food sources that have <span class="text-secondary">high vitamin
+                      D</span> content include <span class="text-secondary">salmon, yogurt and fruits such as
+                      avocados</span>.</p>
                 </div>
               </div>
 
               <h2 id="accordion-collapse-heading-7">
                 <button type="button"
-                  class="flex w-full items-center justify-between border border-secondary p-5 text-left font-medium text-gray-500 hover:bg-gray-100 focus:ring-2 focus:ring-secondary"
+                  class="flex w-full items-center justify-between border border-secondary p-5 text-left font-medium text-gray-500 hover:bg-slate-100 focus:ring-2 focus:ring-secondary"
                   data-accordion-target="#accordion-collapse-body-7" aria-expanded="false"
                   aria-controls="accordion-collapse-body-7">
-                  <span>What are the differences between Flowbite and Tailwind UI?</span>
+                  <span>Stopping Smoking Habits</span>
                   <svg data-accordion-icon class="h-6 w-6 shrink-0" fill="currentColor" viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd"
@@ -303,20 +285,15 @@
                 </button>
               </h2>
               <div id="accordion-collapse-body-7" class="hidden" aria-labelledby="accordion-collapse-heading-7">
-                <div class="border border-t-0 border-slate-500 p-5">The main difference is that the core components from
-                  Flowbite are open source under the MIT license, whereas Tailwind UI is a paid product. Another
-                  difference is that Flowbite relies on smaller and standalone components, whereas Tailwind UI offers
-                  sections of pages.</p>
-                  <p class="mb-2 text-gray-500 dark:text-gray-400">However, we actually recommend using both Flowbite,
-                    Flowbite Pro, and even Tailwind UI as there is no technical reason stopping you from using the best of
-                    two worlds.</p>
-                  <p class="mb-2 text-gray-500 dark:text-gray-400">Learn more about these technologies:</p>
-                  <ul class="list-disc pl-5 text-gray-500 dark:text-gray-400">
-                    <li><a href="https://flowbite.com/pro/"
-                        class="text-blue-600 hover:underline dark:text-blue-500">Flowbite Pro</a></li>
-                    <li><a href="https://tailwindui.com/" rel="nofollow"
-                        class="text-blue-600 hover:underline dark:text-blue-500">Tailwind UI</a></li>
-                  </ul>
+                <div class="border border-t-0 border-slate-500 p-5">
+                  <p class="mb-2 text-gray-500">Facts on the ground show that type 2 diabetes is experienced by many
+                    smokers. If someone actively smokes, he has a <span class="text-secondary">higher risk of diabetes by
+                      44% than non-smokers</span>.
+                  </p>
+                  <p class="text-gray-500">This risk can <span class="text-secondary">increase by 61%</span> if
+                    cigarette consumption reaches <span class="text-secondary">more than 20 cigarettes per day</span>.
+                    So, if you actively smoke, then the most effective way to prevent
+                    diabetes is to stop the habit.</p>
                 </div>
               </div>
 

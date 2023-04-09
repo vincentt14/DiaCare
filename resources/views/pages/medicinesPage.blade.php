@@ -29,7 +29,7 @@
         </div>
         <div class="mt-5 grid w-full grid-cols-1 flex-wrap gap-5 px-4 md:grid-cols-2 lg:grid-cols-4">
           @foreach ($medicines as $medicine)
-            <div class="flex flex-col justify-between mb-5 rounded-sm border-2 border-primary bg-white p-4 shadow-lg">
+            <div class="mb-5 flex flex-col justify-between rounded-sm border-2 border-primary bg-white p-4 shadow-lg">
               <div class="h-[170px] overflow-hidden rounded-sm border-2 border-secondary shadow-lg">
                 <img src="https://source.unsplash.com/w8p9cQDLX7I" alt="{{ $medicine['name'] }}"
                   class="h-full w-full object-cover" />
@@ -44,7 +44,7 @@
                   class="font-light text-slate-700">{{ $medicine['dose'] }}</span>
               </p>
               <button
-                class="place-self-end w-full rounded-sm border-2 border-black bg-black py-3 px-5 text-white duration-300 ease-out hover:bg-white hover:text-black hover:shadow-xl md:my-4">
+                class="w-full place-self-end rounded-sm border-2 border-black bg-black py-3 px-5 text-white duration-300 ease-out hover:bg-white hover:text-black hover:shadow-xl md:my-4">
                 <a href="/medicines/{{ $medicine['id'] }}">Detail</a>
               </button>
             </div>
