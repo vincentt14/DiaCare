@@ -23,7 +23,7 @@ class AppController extends Controller
 
     public function medicine()
     {
-        $medicines = Medicine::latest();
+        $medicines = Medicine::orderby('name');
 
         if (request('search')) {
             $medicines->where('name', 'like', '%' . request('search') . '%');

@@ -9,7 +9,7 @@
           <p class="mt-1 block text-4xl font-bold text-secondary lg:text-5xl">Dia<span class="text-primary">Care</span>.
           </p>
         </h1>
-        <h2 class="mb-5 mt-2 text-lg font-light text-primary lg:text-2xl">Medicines.</h2>
+        <h2 class="mt-2 text-lg font-light text-primary lg:text-2xl">Medicines.</h2>
       </div>
       <form action="/medicinesPage" method="get">
         <div class="w-full self-center px-4">
@@ -29,7 +29,7 @@
         </div>
         <div class="mt-5 grid w-full grid-cols-1 flex-wrap gap-5 px-4 md:grid-cols-2 lg:grid-cols-4">
           @foreach ($medicines as $medicine)
-            <div class="mb-5 rounded-sm border-2 border-primary bg-white p-4 shadow-lg">
+            <div class="flex flex-col justify-between mb-5 rounded-sm border-2 border-primary bg-white p-4 shadow-lg">
               <div class="h-[170px] overflow-hidden rounded-sm border-2 border-secondary shadow-lg">
                 <img src="https://source.unsplash.com/w8p9cQDLX7I" alt="{{ $medicine['name'] }}"
                   class="h-full w-full object-cover" />
@@ -37,14 +37,14 @@
               <h3 class="mt-5 mb-3 text-xl font-semibold text-secondary">
                 {{ $medicine['name'] }}
               </h3>
-              <p class="my-3 text-justify text-primary">Composition : <span
+              <p class="my-3 text-justify text-primary">Composition: <span
                   class="font-light text-slate-700">{{ $medicine['composition'] }}</span>
               </p>
-              <p class="my-3 text-justify text-primary">Dose : <span
+              <p class="my-3 text-justify text-primary">Dose: <span
                   class="font-light text-slate-700">{{ $medicine['dose'] }}</span>
               </p>
               <button
-                class="w-full rounded-sm border-2 border-black bg-black py-3 px-5 text-white duration-300 ease-out hover:bg-white hover:text-black hover:shadow-xl md:my-4">
+                class="place-self-end w-full rounded-sm border-2 border-black bg-black py-3 px-5 text-white duration-300 ease-out hover:bg-white hover:text-black hover:shadow-xl md:my-4">
                 <a href="/medicines/{{ $medicine['id'] }}">Detail</a>
               </button>
             </div>

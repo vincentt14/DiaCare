@@ -17,7 +17,7 @@ class MedicineController extends Controller
      */
     public function index()
     {
-        $medicines = Medicine::latest();
+        $medicines = Medicine::orderby('name');
 
         return view('components.admin.medicines.view', [
             'medicines' => $medicines->get()
