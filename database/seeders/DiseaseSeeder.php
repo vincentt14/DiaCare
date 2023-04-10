@@ -14,10 +14,16 @@ class DiseaseSeeder extends Seeder
     public function run(): void
     {
         Disease::create([
+            'diseases_code' => 'P000',
+            'diseases' => 'Negative',
+            'type' => 'Negative',
+            'description' => "You don't have diabetes mellitus."
+        ]);
+        Disease::create([
             'diseases_code' => 'P001',
             'diseases' => 'Diabetes Mellitus 1',
-            'type' => 'Type 1',
-            'description' => 'Type 1 diabetes is thought to be caused by an autoimmune reaction (the body attacks itself by mistake). This reaction stops your body from making insulin. Approximately 5-10% of the people who have diabetes have type 1. Symptoms of type 1 diabetes often develop quickly. It’s usually diagnosed in children, teens, and young adults. If you have type 1 diabetes, you’ll need to take insulin every day to survive. Currently, no one knows how to prevent type 1 diabetes.'
+            'type' => 'Type 1', 
+            'description' => 'Type 1 diabetes is thought to be caused by an autoimmune reaction (the body attacks itself by mistake). This reaction stops your body from making insulin. <br> Approximately 5-10% of the people who have diabetes have type 1. Symptoms of type 1 diabetes often develop quickly. It’s usually diagnosed in children, teens, and young adults. If you have type 1 diabetes, you’ll need to take insulin every day to survive. Currently, no one knows how to prevent type 1 diabetes.'
         ]);
         Disease::create([
             'diseases_code' => 'P002',

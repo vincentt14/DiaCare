@@ -30,7 +30,7 @@ class AppController extends Controller
         }
 
         return view('pages.medicinesPage', [
-            'medicines' => $medicines->paginate(8)
+            'medicines' => $medicines->paginate(8)->withQueryString()
         ]);
     }
 

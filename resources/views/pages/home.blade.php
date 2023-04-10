@@ -86,7 +86,7 @@
       </div>
       <div class="container">
         <div class="mt-10 grid grid-cols-3">
-          @for ($i = 0; $i < count($disease); $i++)
+          @for ($i = 1; $i < count($disease); $i++)
             <button id="warna" class="mb-6 rounded-sm border-2 bg-black py-3 px-3 text-white"
               onclick="changeType({{ $i }})">
               <p class="text-xs md:text-base">{{ $disease[$i]['type'] }}</p>
