@@ -32,7 +32,7 @@
                 Description
               </label>
               <textarea id="description " name="description"
-                class="@error('description') border-red-500 @else border-[#BBBBBB] @enderror w-full rounded-sm border bg-white p-3 focus:outline-none focus:ring focus:ring-blue-500">{{ @old('description', $medicine['description']) }}</textarea>
+                class="@error('description') border-red-500 @else border-[#BBBBBB] @enderror h-[100px] w-full rounded-sm border bg-white p-3 focus:outline-none focus:ring focus:ring-blue-500">{{ @old('description', $medicine['description']) }}</textarea>
               @error('description')
                 <p class="mt-2 text-red-500">{{ $message }}</p>
               @enderror

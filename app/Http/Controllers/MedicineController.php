@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\Medicine;
 use App\Http\Requests\StoreMedicineRequest;
 use App\Http\Requests\UpdateMedicineRequest;
+use App\Models\Disease;
+use App\Models\Symptom;
+use App\Models\User;
 
 class MedicineController extends Controller
 {
@@ -18,9 +21,17 @@ class MedicineController extends Controller
     public function index()
     {
         $medicines = Medicine::orderby('name');
+        $medicinesInfo = Medicine::all();
+        $diseasesInfo = Disease::all();
+        $symptomsInfo = Symptom::all();
+        $usersInfo = User::all();
 
         return view('components.admin.medicines.view', [
-            'medicines' => $medicines->paginate(10)
+            'medicines' => $medicines->paginate(10),
+            'medicinesInfo' => $medicinesInfo,
+            'diseasesInfo' => $diseasesInfo,
+            'symptomsInfo' => $symptomsInfo,
+            'usersInfo' => $usersInfo
         ]);
     }
 
@@ -29,7 +40,17 @@ class MedicineController extends Controller
      */
     public function create()
     {
-        return view('components.admin.medicines.add');
+        $medicinesInfo = Medicine::all();
+        $diseasesInfo = Disease::all();
+        $symptomsInfo = Symptom::all();
+        $usersInfo = User::all();
+
+        return view('components.admin.medicines.add', [
+            'medicinesInfo' => $medicinesInfo,
+            'diseasesInfo' => $diseasesInfo,
+            'symptomsInfo' => $symptomsInfo,
+            'usersInfo' => $usersInfo
+        ]);
     }
 
     /**
@@ -63,8 +84,17 @@ class MedicineController extends Controller
      */
     public function edit(Medicine $medicine)
     {
+        $medicinesInfo = Medicine::all();
+        $diseasesInfo = Disease::all();
+        $symptomsInfo = Symptom::all();
+        $usersInfo = User::all();
+
         return view('components.admin.medicines.edit', [
-            'medicine' => $medicine
+            'medicine' => $medicine,
+            'medicinesInfo' => $medicinesInfo,
+            'diseasesInfo' => $diseasesInfo,
+            'symptomsInfo' => $symptomsInfo,
+            'usersInfo' => $usersInfo
         ]);
     }
 

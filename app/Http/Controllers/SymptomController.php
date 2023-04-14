@@ -21,15 +21,17 @@ class SymptomController extends Controller
     public function index()
     {
         $symptoms = Symptom::orderBy('symptoms_code');
-        $diseases = Disease::all();
-        $medicines = Medicine::all();
-        $users = User::all();
+        $symptomsInfo = Symptom::all();
+        $diseasesInfo = Disease::all();
+        $medicinesInfo = Medicine::all();
+        $usersInfo = User::all();
 
         return view('components.admin.symptoms.view', [
             'symptoms' => $symptoms->paginate(10),
-            'diseases' => $diseases,
-            'medicines' => $medicines,
-            'users' => $users
+            'symptomsInfo' => $symptomsInfo,
+            'diseasesInfo' => $diseasesInfo,
+            'medicinesInfo' => $medicinesInfo,
+            'usersInfo' => $usersInfo
         ]);
     }
 
@@ -38,16 +40,16 @@ class SymptomController extends Controller
      */
     public function create()
     {
-        $symptoms = Symptom::all();
-        $diseases = Disease::all();
-        $medicines = Medicine::all();
-        $users = User::all();
+        $symptomsInfo = Symptom::all();
+        $diseasesInfo = Disease::all();
+        $medicinesInfo = Medicine::all();
+        $usersInfo = User::all();
 
         return view('components.admin.symptoms.add', [
-            'symptoms' => $symptoms,
-            'diseases' => $diseases,
-            'medicines' => $medicines,
-            'users' => $users
+            'symptomsInfo' => $symptomsInfo,
+            'diseasesInfo' => $diseasesInfo,
+            'medicinesInfo' => $medicinesInfo,
+            'usersInfo' => $usersInfo
         ]);
     }
 
@@ -78,17 +80,17 @@ class SymptomController extends Controller
      */
     public function edit(Symptom $symptom)
     {
-        $symptoms = Symptom::all();
-        $diseases = Disease::all();
-        $medicines = Medicine::all();
-        $users = User::all();
+        $symptomsInfo = Symptom::all();
+        $diseasesInfo = Disease::all();
+        $medicinesInfo = Medicine::all();
+        $usersInfo = User::all();
 
         return view('components.admin.symptoms.edit', [
             'symptom' => $symptom,
-            'symptoms' => $symptoms,
-            'diseases' => $diseases,
-            'medicines' => $medicines,
-            'users' => $users
+            'symptomsInfo' => $symptomsInfo,
+            'diseasesInfo' => $diseasesInfo,
+            'medicinesInfo' => $medicinesInfo,
+            'usersInfo' => $usersInfo
         ]);
     }
 

@@ -21,15 +21,17 @@ class DiseaseController extends Controller
     public function index()
     {
         $diseases = Disease::orderBy('diseases_code');
-        $symptoms = Symptom::all();
-        $medicines = Medicine::all();
-        $users = User::all();
+        $diseasesInfo = Disease::all();
+        $symptomsInfo = Symptom::all();
+        $medicinesInfo = Medicine::all();
+        $usersInfo = User::all();
 
         return view('components.admin.diseases.view', [
             'diseases' => $diseases->paginate(10),
-            'symptoms' => $symptoms,
-            'medicines' => $medicines,
-            'users' => $users
+            'diseasesInfo' => $diseasesInfo,
+            'symptomsInfo' => $symptomsInfo,
+            'medicinesInfo' => $medicinesInfo,
+            'usersInfo' => $usersInfo
         ]);
     }
 
@@ -38,7 +40,17 @@ class DiseaseController extends Controller
      */
     public function create()
     {
-        return view('components.admin.diseases.add');
+        $diseasesInfo = Disease::all();
+        $symptomsInfo = Symptom::all();
+        $medicinesInfo = Medicine::all();
+        $usersInfo = User::all();
+
+        return view('components.admin.diseases.add', [
+            'diseasesInfo' => $diseasesInfo,
+            'symptomsInfo' => $symptomsInfo,
+            'medicinesInfo' => $medicinesInfo,
+            'usersInfo' => $usersInfo
+        ]);
     }
 
     /**
@@ -72,8 +84,17 @@ class DiseaseController extends Controller
      */
     public function edit(Disease $disease)
     {
+        $diseasesInfo = Disease::all();
+        $symptomsInfo = Symptom::all();
+        $medicinesInfo = Medicine::all();
+        $usersInfo = User::all();
+
         return view('components.admin.diseases.edit', [
-            'disease' => $disease
+            'disease' => $disease,
+            'diseasesInfo' => $diseasesInfo,
+            'symptomsInfo' => $symptomsInfo,
+            'medicinesInfo' => $medicinesInfo,
+            'usersInfo' => $usersInfo
         ]);
     }
 

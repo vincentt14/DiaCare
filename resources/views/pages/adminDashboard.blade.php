@@ -37,7 +37,7 @@
   <main>
     <section class="pt-28 pb-24 lg:pt-36 lg:pb-32">
       <div class="container">
-        <div class="flex">
+        <div class="flex flex-col lg:flex-row">
           <div class="w-full self-center px-4">
             <h1 class="text-base font-medium text-primary md:text-xl">
               Welcome to
@@ -51,33 +51,33 @@
           </div>
 
           <div class="grid w-full grid-cols-4 gap-1 self-center px-4">
-            <div class="text-center rounded-md bg-sky-200 border border-sky-500 p-3">
+            <div class="text-center rounded-[4px] bg-sky-200 border border-sky-500 p-3">
               <h1 class="text-4xl font-bold text-primary lg:text-5xl">
-                {{ count($symptoms) }}
+                {{ count($symptomsInfo) }}
               </h1>
               <p class="text-base font-base text-primary lg:text-xl">
                 Symptoms
               </p>
             </div>
-            <div class="text-center rounded-md bg-pink-200 border border-pink-500 p-3">
+            <div class="text-center rounded-[4px] bg-pink-200 border border-pink-500 p-3">
               <h1 class="text-4xl font-bold text-primary lg:text-5xl">
-                {{ count($diseases) }}
+                {{ count($diseasesInfo) }}
               </h1>
               <p class="text-base font-base text-primary lg:text-xl">
                 Diseases
               </p>
             </div>
-            <div class="text-center rounded-md bg-green-200 border border-green-500 p-3">
+            <div class="text-center rounded-[4px] bg-green-200 border border-green-500 p-3">
               <h1 class="text-4xl font-bold text-primary lg:text-5xl">
-                {{ count($medicines) }}
+                {{ count($medicinesInfo) }}
               </h1>
               <p class="text-base font-base text-primary lg:text-xl">
                 Medicines
               </p>
             </div>
-            <div class="text-center rounded-md bg-indigo-200 border border-indigo-500 p-3">
+            <div class="text-center rounded-[4px] bg-indigo-200 border border-indigo-500 p-3">
               <h1 class="text-4xl font-bold text-primary lg:text-5xl">
-                {{ count($users) }}
+                {{ count($usersInfo) }}
               </h1>
               <p class="text-base font-base text-primary lg:text-xl">
                 Users

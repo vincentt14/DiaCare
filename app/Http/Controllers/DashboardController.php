@@ -18,16 +18,16 @@ class DashboardController extends Controller
 
     public function admin()
     {
-        $symptoms = Symptom::all();
-        $diseases = Disease::all();
-        $medicines = Medicine::all();
-        $users = User::all();
+        $symptomsInfo = Symptom::all();
+        $diseasesInfo = Disease::all();
+        $medicinesInfo = Medicine::all();
+        $usersInfo = User::all();
 
         return view('components.admin.base', [
-            'symptoms' => $symptoms,
-            'diseases' => $diseases,
-            'medicines' => $medicines,
-            'users' => $users
+            'symptomsInfo' => $symptomsInfo,
+            'diseasesInfo' => $diseasesInfo,
+            'medicinesInfo' => $medicinesInfo,
+            'usersInfo' => $usersInfo
         ]);
     }
 }
