@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\Symptom;
 use App\Http\Requests\StoreSymptomRequest;
 use App\Http\Requests\UpdateSymptomRequest;
+use App\Models\Disease;
+use App\Models\Medicine;
+use App\Models\User;
 
 class SymptomController extends Controller
 {
@@ -18,9 +21,15 @@ class SymptomController extends Controller
     public function index()
     {
         $symptoms = Symptom::orderBy('symptoms_code');
+        $diseases = Disease::all();
+        $medicines = Medicine::all();
+        $users = User::all();
 
         return view('components.admin.symptoms.view', [
-            'symptoms' => $symptoms->paginate(10)
+            'symptoms' => $symptoms->paginate(10),
+            'diseases' => $diseases,
+            'medicines' => $medicines,
+            'users' => $users
         ]);
     }
 
@@ -29,7 +38,17 @@ class SymptomController extends Controller
      */
     public function create()
     {
-        return view('components.admin.symptoms.add');
+        $symptoms = Symptom::all();
+        $diseases = Disease::all();
+        $medicines = Medicine::all();
+        $users = User::all();
+
+        return view('components.admin.symptoms.add', [
+            'symptoms' => $symptoms,
+            'diseases' => $diseases,
+            'medicines' => $medicines,
+            'users' => $users
+        ]);
     }
 
     /**
@@ -59,8 +78,17 @@ class SymptomController extends Controller
      */
     public function edit(Symptom $symptom)
     {
+        $symptoms = Symptom::all();
+        $diseases = Disease::all();
+        $medicines = Medicine::all();
+        $users = User::all();
+
         return view('components.admin.symptoms.edit', [
-            'symptoms' => $symptom
+            'symptom' => $symptom,
+            'symptoms' => $symptoms,
+            'diseases' => $diseases,
+            'medicines' => $medicines,
+            'users' => $users
         ]);
     }
 

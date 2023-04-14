@@ -38,7 +38,7 @@
                   <td class="px-6 py-2 border">{{ $medicine['name'] }}</td>
                   <td class="px-6 py-2 text-justify content-start border">{{ $medicine['composition'] }}</td>
                   <td class="px-6 py-2 text-justify border">{{ $medicine['dose'] }}</td>
-                  <td class="flex justify-center px-6 py-2 border content-center">
+                  <td class="flex items-center px-6 py-2 border content-center">
                     <a class="mx-2 text-blue-400" href="/medicines/{{ $medicine['id'] }}">
                       View
                     </a>

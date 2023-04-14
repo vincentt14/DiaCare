@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\Disease;
 use App\Http\Requests\StoreDiseaseRequest;
 use App\Http\Requests\UpdateDiseaseRequest;
+use App\Models\Medicine;
+use App\Models\Symptom;
+use App\Models\User;
 
 class DiseaseController extends Controller
 {
@@ -18,9 +21,15 @@ class DiseaseController extends Controller
     public function index()
     {
         $diseases = Disease::orderBy('diseases_code');
+        $symptoms = Symptom::all();
+        $medicines = Medicine::all();
+        $users = User::all();
 
         return view('components.admin.diseases.view', [
-            'diseases' => $diseases->paginate(10)
+            'diseases' => $diseases->paginate(10),
+            'symptoms' => $symptoms,
+            'medicines' => $medicines,
+            'users' => $users
         ]);
     }
 

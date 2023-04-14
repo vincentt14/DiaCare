@@ -12,17 +12,6 @@
   <link rel="preconnect" href="https://fonts.bunny.net">
   <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
 
-  {{-- trix --}}
-  {{-- <link rel="stylesheet" type="text/css" href="/css/trix.css">
-  <script type="text/javascript" src="/js/trix.js"></script> --}}
-
-  {{-- <style>
-    /* trix toolbar - non aktif image upload*/
-    trix-toolbar [data-trix-button-group="file-tools"] {
-      display: none
-    }
-  </style> --}}
-
 </head>
 
 <body>
@@ -48,17 +37,58 @@
   <main>
     <section class="pt-28 pb-24 lg:pt-36 lg:pb-32">
       <div class="container">
-        <div class="w-full self-center px-4">
-          <h1 class="text-base font-medium text-primary md:text-xl">
-            Welcome to
-            <p class="mt-1 block text-4xl font-bold text-secondary lg:text-5xl">Dia<span
-                class="text-primary">Care</span>.
-            </p>
-          </h1>
-          <h2 class="mb-3 mt-2 text-lg font-light text-primary lg:text-2xl">Dashboard. <span
-              class="font-bold">Admin</span>
-          </h2>
+        <div class="flex">
+          <div class="w-full self-center px-4">
+            <h1 class="text-base font-medium text-primary md:text-xl">
+              Welcome to
+              <p class="mt-1 block text-4xl font-bold text-secondary lg:text-5xl">Dia<span
+                  class="text-primary">Care</span>.
+              </p>
+            </h1>
+            <h2 class="mb-3 mt-2 text-lg font-light text-primary lg:text-2xl">Dashboard. <span
+                class="font-bold">Admin</span>
+            </h2>
+          </div>
+
+          <div class="grid w-full grid-cols-4 gap-1 self-center px-4">
+            <div class="text-center rounded-md bg-sky-200 border border-sky-500 p-3">
+              <h1 class="text-4xl font-bold text-primary lg:text-5xl">
+                {{ count($symptoms) }}
+              </h1>
+              <p class="text-base font-base text-primary lg:text-xl">
+                Symptoms
+              </p>
+            </div>
+            <div class="text-center rounded-md bg-pink-200 border border-pink-500 p-3">
+              <h1 class="text-4xl font-bold text-primary lg:text-5xl">
+                {{ count($diseases) }}
+              </h1>
+              <p class="text-base font-base text-primary lg:text-xl">
+                Diseases
+              </p>
+            </div>
+            <div class="text-center rounded-md bg-green-200 border border-green-500 p-3">
+              <h1 class="text-4xl font-bold text-primary lg:text-5xl">
+                {{ count($medicines) }}
+              </h1>
+              <p class="text-base font-base text-primary lg:text-xl">
+                Medicines
+              </p>
+            </div>
+            <div class="text-center rounded-md bg-indigo-200 border border-indigo-500 p-3">
+              <h1 class="text-4xl font-bold text-primary lg:text-5xl">
+                {{ count($users) }}
+              </h1>
+              <p class="text-base font-base text-primary lg:text-xl">
+                Users
+              </p>
+            </div>
+
+
+
+          </div>
         </div>
+
         <div class="w-full self-center px-4">
           <h1 class="text-2xl font-bold text-primary lg:text-3xl">
           </h1>
