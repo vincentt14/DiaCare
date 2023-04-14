@@ -1,3 +1,4 @@
+{{-- @dd($symptoms); --}}
 @extends('pages.adminDashboard')
 
 @section('content')
@@ -9,20 +10,20 @@
     <div class="mb-10 w-full">
       <div class="w-full rounded-sm border border-[#BBBBBB] bg-white p-3">
         @if ($symptoms->count())
-        <h1 class="mt-2 mb-4 text-center text-lg font-light text-primary lg:text-2xl">Symptoms Table</h1>
-        <table class="w-full rounded-xl text-slate-800">
+          <h1 class="mt-2 mb-4 text-center text-lg font-light text-primary lg:text-2xl">Symptoms Table</h1>
+          <table class="mb-3 w-full rounded-xl text-slate-800">
             <thead class="text-secondary">
               <tr>
-                <th class="px-6 py-3">
+                <th class="border bg-slate-50 px-6 py-3">
                   No
                 </th>
-                <th class="px-6 py-3">
+                <th class="border bg-slate-50 px-6 py-3">
                   Symptoms Code
                 </th>
-                <th class="px-6 py-3">
+                <th class="border bg-slate-50 px-6 py-3">
                   Symptoms
                 </th>
-                <th class="px-6 py-3">
+                <th class="border bg-slate-50 px-6 py-3">
                   Action
                 </th>
               </tr>
@@ -30,10 +31,10 @@
             <tbody>
               @foreach ($symptoms as $symptom)
                 <tr class="px-6 py-3 text-center">
-                  <td class="px-6 py-2">{{ $loop->iteration }}</td>
-                  <td class="px-6 py-2">{{ $symptom['symptoms_code'] }}</td>
-                  <td class="px-6 py-2 text-justify">{{ $symptom['symptoms'] }}</td>
-                  <td class="flex justify-center px-6 py-2">
+                  <td class="border px-6 py-2">{{ $loop->iteration }}</td>
+                  <td class="border px-6 py-2">{{ $symptom['symptoms_code'] }}</td>
+                  <td class="border px-6 py-2 text-justify">{{ $symptom['symptoms'] }}</td>
+                  <td class="flex justify-center border px-6 py-2">
                     <a class="mx-2 text-yellow-400" href="/symptoms/{{ $symptom['id'] }}/edit">
                       Edit
                     </a>
@@ -51,8 +52,9 @@
             </tbody>
           @else
             <h1 class="mt-2 mb-4 text-center text-lg font-light text-primary lg:text-2xl">There is no Symptoms.</h1>
-          @endif
+        @endif
         </table>
+        {{ $symptoms->links() }}
       </div>
     </div>
   </div>

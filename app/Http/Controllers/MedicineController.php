@@ -20,7 +20,7 @@ class MedicineController extends Controller
         $medicines = Medicine::orderby('name');
 
         return view('components.admin.medicines.view', [
-            'medicines' => $medicines->get()
+            'medicines' => $medicines->paginate(10)
         ]);
     }
 

@@ -1,3 +1,4 @@
+{{-- @dd($medicines); --}}
 @extends('pages.adminDashboard')
 
 @section('content')
@@ -10,22 +11,22 @@
       <div class="w-full rounded-sm border border-[#BBBBBB] bg-white p-3">
         @if ($medicines->count())
           <h1 class="mt-2 mb-4 text-center text-lg font-light text-primary lg:text-2xl">Medicines Table</h1>
-          <table class="w-full rounded-xl text-slate-800">
+          <table class="w-full rounded-xl text-slate-800 border mb-3">
             <thead class="text-secondary">
               <tr>
-                <th class="px-6 py-3">
+                <th class="px-6 py-3 border bg-slate-50">
                   No
                 </th>
-                <th class="px-6 py-3">
+                <th class="px-6 py-3 border bg-slate-50">
                   Name
                 </th>
-                <th class="px-6 py-3">
+                <th class="px-6 py-3 border bg-slate-50">
                   Composition
                 </th>
-                <th class="px-6 py-3">
+                <th class="px-6 py-3 border bg-slate-50">
                   Dose
                 </th>
-                <th class="px-6 py-3">
+                <th class="px-6 py-3 border bg-slate-50">
                   Action
                 </th>
               </tr>
@@ -33,11 +34,11 @@
             <tbody>
               @foreach ($medicines as $medicine)
                 <tr class="px-6 py-3 text-center">
-                  <td class="px-6 py-2">{{ $loop->iteration }}</td>
-                  <td class="px-6 py-2">{{ $medicine['name'] }}</td>
-                  <td class="px-6 py-2 text-justify content-start">{{ $medicine['composition'] }}</td>
-                  <td class="px-6 py-2 text-justify">{{ $medicine['dose'] }}</td>
-                  <td class="flex justify-center px-6 py-2">
+                  <td class="px-6 py-2 border">{{ $loop->iteration }}</td>
+                  <td class="px-6 py-2 border">{{ $medicine['name'] }}</td>
+                  <td class="px-6 py-2 text-justify content-start border">{{ $medicine['composition'] }}</td>
+                  <td class="px-6 py-2 text-justify border">{{ $medicine['dose'] }}</td>
+                  <td class="flex justify-center px-6 py-2 border content-center">
                     <a class="mx-2 text-blue-400" href="/medicines/{{ $medicine['id'] }}">
                       View
                     </a>
@@ -60,6 +61,7 @@
             <h1 class="mt-2 mb-4 text-center text-lg font-light text-primary lg:text-2xl">There is no Medicines.</h1>
         @endif
         </table>
+        {{ $medicines->links() }}
       </div>
     </div>
   </div>

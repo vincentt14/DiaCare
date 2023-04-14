@@ -20,7 +20,7 @@ class SymptomController extends Controller
         $symptoms = Symptom::orderBy('symptoms_code');
 
         return view('components.admin.symptoms.view', [
-            'symptoms' => $symptoms->get()
+            'symptoms' => $symptoms->paginate(10)
         ]);
     }
 
@@ -60,7 +60,7 @@ class SymptomController extends Controller
     public function edit(Symptom $symptom)
     {
         return view('components.admin.symptoms.edit', [
-            'symptom' => $symptom
+            'symptoms' => $symptom
         ]);
     }
 

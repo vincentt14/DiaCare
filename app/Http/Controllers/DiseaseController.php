@@ -20,7 +20,7 @@ class DiseaseController extends Controller
         $diseases = Disease::orderBy('diseases_code');
 
         return view('components.admin.diseases.view', [
-            'diseases' => $diseases->get()
+            'diseases' => $diseases->paginate(10)
         ]);
     }
 

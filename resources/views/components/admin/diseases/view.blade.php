@@ -10,19 +10,19 @@
       <div class="w-full rounded-sm border border-[#BBBBBB] bg-white p-3">
         @if ($diseases->count())
         <h1 class="mt-2 mb-4 text-center text-lg font-light text-primary lg:text-2xl">Diseases Table</h1>
-        <table class="w-full rounded-xl text-slate-800">
+        <table class="w-full rounded-xl text-slate-800 mb-3">
             <thead class="text-secondary">
               <tr>
-                <th class="px-6 py-3">
+                <th class="px-6 py-3 border bg-slate-50">
                   No
                 </th>
-                <th class="px-6 py-3">
+                <th class="px-6 py-3 border bg-slate-50">
                   Diseases Code
                 </th>
-                <th class="px-6 py-3">
+                <th class="px-6 py-3 border bg-slate-50">
                   Diseases
                 </th>
-                <th class="px-6 py-3">
+                <th class="px-6 py-3 border bg-slate-50">
                   Action
                 </th>
               </tr>
@@ -30,10 +30,10 @@
             <tbody>
               @foreach ($diseases as $disease)
                 <tr class="px-6 py-3 text-center">
-                  <td class="px-6 py-2">{{ $loop->iteration }}</td>
-                  <td class="px-6 py-2">{{ $disease['diseases_code'] }}</td>
-                  <td class="px-6 py-2 text-justify">{{ $disease['diseases'] }}</td>
-                  <td class="flex justify-center px-6 py-2">
+                  <td class="px-6 py-2 border">{{ $loop->iteration }}</td>
+                  <td class="px-6 py-2 border">{{ $disease['diseases_code'] }}</td>
+                  <td class="px-6 py-2 text-justify border">{{ $disease['diseases'] }}</td>
+                  <td class="flex justify-center px-6 py-2 border">
                     <a class="mx-2 text-blue-400" href="/diseases/{{ $disease['id'] }}">
                       View
                     </a>
@@ -56,6 +56,7 @@
             <h1 class="mt-2 mb-4 text-center text-lg font-light text-primary lg:text-2xl">There is no Diseases.</h1>
           @endif
         </table>
+        {{ $diseases->links() }}
       </div>
     </div>
   </div>
