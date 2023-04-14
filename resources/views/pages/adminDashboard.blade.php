@@ -51,41 +51,38 @@
           </div>
 
           <div class="grid w-full grid-cols-4 gap-1 self-center px-4">
-            <div class="text-center rounded-[4px] bg-sky-200 border border-sky-500 p-3">
+            <div class="rounded-[4px] border border-sky-500 bg-sky-200 p-3 text-center">
               <h1 class="text-4xl font-bold text-primary lg:text-5xl">
                 {{ count($symptomsInfo) }}
               </h1>
-              <p class="text-base font-base text-primary lg:text-xl">
+              <p class="font-base text-base text-primary lg:text-xl">
                 Symptoms
               </p>
             </div>
-            <div class="text-center rounded-[4px] bg-pink-200 border border-pink-500 p-3">
+            <div class="rounded-[4px] border border-pink-500 bg-pink-200 p-3 text-center">
               <h1 class="text-4xl font-bold text-primary lg:text-5xl">
                 {{ count($diseasesInfo) }}
               </h1>
-              <p class="text-base font-base text-primary lg:text-xl">
+              <p class="font-base text-base text-primary lg:text-xl">
                 Diseases
               </p>
             </div>
-            <div class="text-center rounded-[4px] bg-green-200 border border-green-500 p-3">
+            <div class="rounded-[4px] border border-green-500 bg-green-200 p-3 text-center">
               <h1 class="text-4xl font-bold text-primary lg:text-5xl">
                 {{ count($medicinesInfo) }}
               </h1>
-              <p class="text-base font-base text-primary lg:text-xl">
+              <p class="font-base text-base text-primary lg:text-xl">
                 Medicines
               </p>
             </div>
-            <div class="text-center rounded-[4px] bg-indigo-200 border border-indigo-500 p-3">
+            <div class="rounded-[4px] border border-indigo-500 bg-indigo-200 p-3 text-center">
               <h1 class="text-4xl font-bold text-primary lg:text-5xl">
                 {{ count($usersInfo) }}
               </h1>
-              <p class="text-base font-base text-primary lg:text-xl">
+              <p class="font-base text-base text-primary lg:text-xl">
                 Users
               </p>
             </div>
-
-
-
           </div>
         </div>
 
@@ -94,23 +91,35 @@
           </h1>
           <div class="mt-8">
             <div
-              class="bayangan_field mx-auto mb-6 grid max-w-xl grid-cols-3 divide-x-2 border-2 border-black bg-white p-3 py-2">
+              class="bayangan_field mx-auto mb-8 grid grid-cols-5 divide-x-2 border-2 border-primary bg-white p-3 py-4">
               <div
-                class="font-base flex items-center justify-center text-lg text-secondary hover:text-primary md:text-xl">
+                class="font-base flex items-center justify-center font-bold text-lg text-secondary hover:text-primary md:text-xl">
                 <a href="/symptoms">
                   Symptoms
                 </a>
               </div>
               <div
-                class="font-base flex items-center justify-center text-lg text-secondary hover:text-primary md:text-xl">
+                class="font-base flex items-center justify-center font-bold text-lg text-secondary hover:text-primary md:text-xl">
                 <a href="/diseases">
                   Diseases
                 </a>
               </div>
               <div
-                class="font-base flex items-center justify-center text-lg text-secondary hover:text-primary md:text-xl">
+                class="font-base flex items-center justify-center font-bold text-lg text-secondary hover:text-primary md:text-xl">
                 <a href="/medicines">
                   Medicines
+                </a>
+              </div>
+              <div
+                class="font-base flex items-center justify-center font-bold text-lg text-secondary hover:text-primary md:text-xl">
+                <a href="/medicines">
+                  Rule Base
+                </a>
+              </div>
+              <div
+                class="font-base flex items-center justify-center font-bold text-lg text-secondary hover:text-primary md:text-xl">
+                <a href="/users">
+                  Users
                 </a>
               </div>
             </div>

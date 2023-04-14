@@ -2,16 +2,16 @@
 
 @section('content')
   <button
-    class="btnnn mb-3 mt-2 rounded-sm border-2 border-black bg-black py-3 px-5 text-white duration-300 ease-out hover:bg-white hover:text-black">
+    class="btnnn mb-3 rounded-sm border-2 border-black bg-black py-3 px-5 text-white duration-300 ease-out hover:bg-white hover:text-black">
     <a href="/diseases/create">Add Diseases</a>
   </button>
   <div class="w-full lg:mx-auto">
     <div class="mb-10 w-full">
       <div class="w-full rounded-sm border border-[#BBBBBB] bg-white p-3">
         @if ($diseases->count())
-        <h1 class="mt-2 mb-4 text-center text-lg font-light text-primary lg:text-2xl">Diseases Table</h1>
+        <h1 class="font-base mt-3 mb-5 text-center text-lg text-slate-800 lg:text-2xl">Diseases Table</h1>
         <table class="w-full rounded-xl text-slate-800 mb-3">
-            <thead class="text-secondary">
+            <thead class="text-slate-700">
               <tr>
                 <th class="px-6 py-3 border bg-slate-50">
                   No
