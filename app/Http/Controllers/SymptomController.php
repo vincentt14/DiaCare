@@ -26,8 +26,12 @@ class SymptomController extends Controller
         $medicinesInfo = Medicine::all();
         $usersInfo = User::all();
 
+        if (request('search')){
+            $symptoms->where('symptoms', 'like', '%' . request('search') . '%');
+        }
+
         return view('components.admin.symptoms.view', [
-            'symptoms' => $symptoms->paginate(10),
+            'symptoms' => $symptoms->paginate(10)->withQueryString(),
             'symptomsInfo' => $symptomsInfo,
             'diseasesInfo' => $diseasesInfo,
             'medicinesInfo' => $medicinesInfo,

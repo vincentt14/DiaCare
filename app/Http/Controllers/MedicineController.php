@@ -26,8 +26,12 @@ class MedicineController extends Controller
         $symptomsInfo = Symptom::all();
         $usersInfo = User::all();
 
+        if (request('search')){
+            $medicines->where('name', 'like', '%' . request('search') . '%');
+        }
+
         return view('components.admin.medicines.view', [
-            'medicines' => $medicines->paginate(10),
+            'medicines' => $medicines->paginate(10)->withQueryString(),
             'medicinesInfo' => $medicinesInfo,
             'diseasesInfo' => $diseasesInfo,
             'symptomsInfo' => $symptomsInfo,

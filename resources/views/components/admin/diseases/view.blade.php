@@ -8,21 +8,35 @@
   <div class="w-full lg:mx-auto">
     <div class="mb-10 w-full">
       <div class="w-full rounded-sm border border-[#BBBBBB] bg-white p-3">
+        <div class="flex items-center justify-between px-4">
+          <h1 class="font-base mx-3 mt-3 mb-5 text-lg text-slate-800 lg:text-2xl">Diseases Table</h1>
+          <form action="/diseases" method="get">
+            <div class="w-full self-center">
+              <div class="flex">
+                <input type="text" id="search" name="search" placeholder="search for diseases"
+                  class="my-2 w-full rounded-sm border-2 border-[#030723] bg-white p-3 focus:outline-none focus:ring focus:ring-blue-500 md:my-4" />
+                <button type="submit"
+                  class="my-2 mx-3 rounded-sm border-2 border-black bg-black py-3 px-5 text-white duration-300 ease-out hover:bg-white hover:text-black md:my-4">
+                  Search
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
         @if ($diseases->count())
-        <h1 class="font-base mt-3 mb-5 text-center text-lg text-slate-800 lg:text-2xl">Diseases Table</h1>
-        <table class="w-full rounded-xl text-slate-800 mb-3">
+          <table class="mb-3 w-full rounded-xl text-slate-800">
             <thead class="text-slate-700">
               <tr>
-                <th class="px-6 py-3 border bg-slate-50">
+                <th class="border bg-slate-50 px-6 py-3">
                   No
                 </th>
-                <th class="px-6 py-3 border bg-slate-50">
+                <th class="border bg-slate-50 px-6 py-3">
                   Diseases Code
                 </th>
-                <th class="px-6 py-3 border bg-slate-50">
+                <th class="border bg-slate-50 px-6 py-3">
                   Diseases
                 </th>
-                <th class="px-6 py-3 border bg-slate-50">
+                <th class="border bg-slate-50 px-6 py-3">
                   Action
                 </th>
               </tr>
@@ -30,10 +44,10 @@
             <tbody>
               @foreach ($diseases as $disease)
                 <tr class="px-6 py-3 text-center">
-                  <td class="px-6 py-2 border">{{ $loop->iteration }}</td>
-                  <td class="px-6 py-2 border">{{ $disease['diseases_code'] }}</td>
-                  <td class="px-6 py-2 text-justify border">{{ $disease['diseases'] }}</td>
-                  <td class="flex justify-center px-6 py-2 border">
+                  <td class="border px-6 py-2">{{ $loop->iteration }}</td>
+                  <td class="border px-6 py-2">{{ $disease['diseases_code'] }}</td>
+                  <td class="border px-6 py-2 text-justify">{{ $disease['diseases'] }}</td>
+                  <td class="flex justify-center border px-6 py-2">
                     <a class="mx-2 text-blue-400" href="/diseases/{{ $disease['id'] }}">
                       View
                     </a>
@@ -53,12 +67,12 @@
               @endforeach
             </tbody>
           @else
-            <h1 class="mt-2 mb-4 text-center text-lg font-light text-primary lg:text-2xl">There is no Diseases.</h1>
-          @endif
+            <h1 class="mt-2 mb-4 border p-3 text-center text-lg font-light text-primary lg:text-2xl">There is no Diseases.
+            </h1>
+        @endif
         </table>
         {{ $diseases->links() }}
       </div>
     </div>
   </div>
 @endsection
-

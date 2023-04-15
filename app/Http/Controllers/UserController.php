@@ -24,8 +24,12 @@ class UserController extends Controller
         $diseasesInfo = Disease::all();
         $medicinesInfo = Medicine::all();
 
+        if (request('search')){
+            $users->where('name', 'like', '%' . request('search') . '%');
+        }
+
         return view('components.admin.users.view', [
-            'users' => $users->paginate(10),
+            'users' => $users->paginate(10)->withQueryString(),
             'symptomsInfo' => $symptomsInfo,
             'diseasesInfo' => $diseasesInfo,
             'medicinesInfo' => $medicinesInfo,

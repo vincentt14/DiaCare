@@ -9,8 +9,23 @@
   <div class="w-full lg:mx-auto">
     <div class="mb-10 w-full">
       <div class="w-full rounded-sm border border-[#BBBBBB] bg-white p-3">
+
+        <div class="flex items-center justify-between px-4">
+          <h1 class="font-base mx-3 mt-3 mb-5 text-lg text-slate-800 lg:text-2xl">Symptoms Table</h1>
+          <form action="/symptoms" method="get">
+            <div class="w-full self-center">
+              <div class="flex">
+                <input type="text" id="search" name="search" placeholder="search for symptoms"
+                  class="my-2 w-full rounded-sm border-2 border-[#030723] bg-white p-3 focus:outline-none focus:ring focus:ring-blue-500 md:my-4" />
+                <button type="submit"
+                  class="my-2 mx-3 rounded-sm border-2 border-black bg-black py-3 px-5 text-white duration-300 ease-out hover:bg-white hover:text-black md:my-4">
+                  Search
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
         @if ($symptoms->count())
-          <h1 class="font-base mt-3 mb-5 text-center text-lg text-slate-800 lg:text-2xl">Symptoms Table</h1>
           <table class="mb-3 w-full rounded-xl text-slate-800">
             <thead class="text-slate-700">
               <tr>
@@ -51,7 +66,8 @@
               @endforeach
             </tbody>
           @else
-            <h1 class="mt-2 mb-4 text-center text-lg font-light text-primary lg:text-2xl">There is no Symptoms.</h1>
+            <h1 class="mt-2 mb-4 border p-3 text-center text-lg font-light text-primary lg:text-2xl">There is no Symptoms.
+            </h1>
         @endif
         </table>
         {{ $symptoms->links() }}
