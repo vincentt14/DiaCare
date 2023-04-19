@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Disease;
 use App\Models\Medicine;
+use App\Models\Symptom;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -18,6 +19,16 @@ class AppController extends Controller
             "disease" => $disease,
             "user" => $user,
             "medicine" => $medicine
+        ]);
+    }
+
+    public function diagnose(){
+        $users = User::all();
+        $symptoms = Symptom::all();
+        $diseases = Disease::all();
+        return view('pages.diagnose', [
+            "symptoms" => $symptoms,
+            "diseases" => $diseases
         ]);
     }
 
