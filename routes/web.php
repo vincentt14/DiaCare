@@ -26,6 +26,7 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', [AppController::class, 'index']);
+Route::get('/test', [AppController::class, 'logicRelation']);
 Route::get('/diagnose', [AppController::class, 'diagnose']);
 Route::get('/about', [AppController::class, 'about']);
 Route::get('/medicinesPage', [AppController::class, 'medicine']);

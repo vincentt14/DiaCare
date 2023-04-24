@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Disease;
 use App\Models\Medicine;
+use App\Models\Rule;
 use App\Models\Symptom;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -50,7 +51,25 @@ class AppController extends Controller
         return view('pages.about');
     }
 
-    public function relation(){
-        
+    public function logicRelation(){
+        $diseases = Disease::all();
+        $symptoms = Symptom::all();
+        $rules = Rule::all();
+
+        $rgp = [];
+        for($i = 0; $i < count($diseases); $i++){
+            $rpg[$i]['id'] = $diseases[$i]['id'];
+            $rpg[$i]['name'] = $diseases[$i]['diseases'];
+
+            for($j = 0; $j < count($symptoms); $j++){
+                foreach($rules as $rule){
+                    $rule['disease_id'] == $j;
+
+                    // dd($rule);
+                }
+                var_dump($rule);
+                // $rule = $rules.find(e => e.symptom_id == j && e.disease_id == i);
+            }
+        }
     }
 }
