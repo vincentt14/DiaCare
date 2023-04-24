@@ -42,7 +42,7 @@
                     <h1 class="font-base mx-3 mt-3 mb-5 text-lg text-slate-800 lg:text-2xl">Questions</h1>
                     <div class="w-full self-center">
                       <a href="/"
-                        class="mx-3 py-3 px-5 rounded-sm border-2 border-black bg-black text-white duration-300 ease-out hover:bg-white hover:text-black">
+                        class="mx-3 rounded-sm border-2 border-black bg-black py-3 px-5 text-white duration-300 ease-out hover:bg-white hover:text-black">
                         Back to Home
                       </a>
                     </div>
@@ -86,4 +86,6 @@
         </div>
       </div>
   </section>
+
+  <script></script>
 @endsection

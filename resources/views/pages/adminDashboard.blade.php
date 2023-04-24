@@ -112,7 +112,7 @@
               </div>
               <div
                 class="font-base flex items-center justify-center font-bold text-lg text-secondary hover:text-primary md:text-xl">
-                <a href="/medicines">
+                <a href="/rules">
                   Rule Base
                 </a>
               </div>
