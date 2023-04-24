@@ -10,6 +10,23 @@ use App\Models\Medicine;
 use App\Models\Symptom;
 use App\Models\User;
 
+
+
+// STEP 1 query DONE
+// ambil semua penyakit
+// ambil semua gejala
+// ambil semua rules
+
+
+// STEP 2 
+// objek = {
+//   "negative" = [ 1, 0 , 1, 0, 1, 0],
+//   "diabetes1" = [0, 0, 0, 0, 1, 1],
+//   "diabetes2" = [0, 0, 0, 0, 1, 1],
+//   "diabetes3" = [0, 0, 0, 0, 1, 1],
+// }
+
+
 class RuleController extends Controller
 {
     /**

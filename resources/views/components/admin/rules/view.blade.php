@@ -31,10 +31,10 @@
                 <th class="border bg-slate-50 px-6 py-3">
                   Diseases
                 </th>
-                @foreach ($symptoms as $symptom)
-                  <th class="border bg-slate-50 px-6 py-3">
-                    {{ $symptom['symptoms_code'] }}
-                  </th>
+                @foreach($symptoms as $symptom)
+                <th class="border bg-slate-50 px-6 py-3">
+                  {{ $symptom['symptoms_code'] }}
+                </th>
                 @endforeach
                 <th class="border bg-slate-50 px-6 py-3">
                   Action
@@ -42,19 +42,17 @@
               </tr>
             </thead>
             <tbody>
-              @foreach ($rules as $rule)
+              @foreach ($diseases as $disease)
                 <tr class="px-6 py-3 text-center">
                   <td class="border px-6 py-2">{{ $loop->iteration }}</td>
-                  @foreach ($diseases as $disease)
-                    <td class="border px-6 py-2">{{ $disease['diseases'] }}</td>
-                  @endforeach
-                  <td class="content-start border px-6 py-2">{{ $rule['symptom_id'] }}</td>
+                  <td class="border px-6 py-2">{{ $disease['diseases'] }}</td>
+                  <td class="content-start border px-6 py-2">tes</td>
                   <td class="content-start border px-6 py-2">
-                    <a class="mx-2 text-yellow-400" href="/rules/{{ $rule['id'] }}/edit">
+                    <a class="mx-2 text-yellow-400" href="/rules/{{ $disease['id'] }}/edit">
                       Edit
                     </a>
                   </td>
-
+                  
                 </tr>
               @endforeach
             </tbody>
