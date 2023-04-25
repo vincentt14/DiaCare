@@ -42,6 +42,7 @@ Route::get('/dashboard', [DashboardController::class, 'user'])->middleware('auth
 Route::get('/adminDashboard', [DashboardController::class, 'admin'])->middleware('admin');
 
 Route::get('/rules', [AppController::class, 'logicRelation']);
+Route::get('/rules/{id}/edit', [AppController::class, 'edit']);
 
 Route::resources([
     'symptoms' => SymptomController::class,
