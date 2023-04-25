@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('rules', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->foreignId('disease_id')->constrained();
-            $table->foreignId('symptom_id')->constrained();
+            $table->foreignId('disease_id')->constrained()->onDelete('cascade')->onUpdate('cascade');
+            $table->foreignId('symptom_id')->constrained()->onDelete('cascade')->onUpdate('cascade');
             $table->boolean('rule_value');
         });
     }

@@ -26,7 +26,6 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', [AppController::class, 'index']);
-Route::get('/test', [AppController::class, 'logicRelation']);
 Route::get('/diagnose', [AppController::class, 'diagnose']);
 Route::get('/about', [AppController::class, 'about']);
 Route::get('/medicinesPage', [AppController::class, 'medicine']);
@@ -42,6 +41,7 @@ Route::post('/logout', [AuthController::class, 'logout'])->middleware('auth');
 Route::get('/dashboard', [DashboardController::class, 'user'])->middleware('auth');
 Route::get('/adminDashboard', [DashboardController::class, 'admin'])->middleware('admin');
 
+Route::get('/test', [AppController::class, 'logicRelation']);
 Route::resources([
     'symptoms' => SymptomController::class,
     'diseases' => DiseaseController::class,

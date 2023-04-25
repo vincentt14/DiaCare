@@ -23,7 +23,8 @@ class AppController extends Controller
         ]);
     }
 
-    public function diagnose(){
+    public function diagnose()
+    {
         $users = User::all();
         $symptoms = Symptom::all();
         $diseases = Disease::all();
@@ -51,25 +52,33 @@ class AppController extends Controller
         return view('pages.about');
     }
 
-    public function logicRelation(){
+    public function logicRelation()
+    {
         $diseases = Disease::all();
         $symptoms = Symptom::all();
         $rules = Rule::all();
 
-        $rgp = [];
-        for($i = 0; $i < count($diseases); $i++){
-            $rpg[$i]['id'] = $diseases[$i]['id'];
-            $rpg[$i]['name'] = $diseases[$i]['diseases'];
+        $diseaseRelation = [];
+        for ($i = 0; $i < count($diseases); $i++) {
+            $diseaseRelation[$i]['id'] = $diseases[$i]['id'];
+            $diseaseRelation[$i]['name'] = $diseases[$i]['diseases'];
+            $diseaseRelation[$i]['rules'] = [];
 
-            for($j = 0; $j < count($symptoms); $j++){
-                foreach($rules as $rule){
-                    $rule['disease_id'] == $j;
-
-                    // dd($rule);
+            for ($j = 0; $j < count($symptoms); $j++) {
+                $rule = 0;
+                for ($k = 0; $k < count($rules); $k++) {
+                    if ($rules[$k]['symptom_id'] == $j + 1 && $rules[$k]['disease_id'] == $i + 1) {
+                        $rule = $rules[$k]['rule_value'];
+                        break;
+                    }
                 }
-                var_dump($rule);
-                // $rule = $rules.find(e => e.symptom_id == j && e.disease_id == i);
+                if (!$rule) {
+                    array_push($diseaseRelation[$i]['rules'], 0);
+                } else {
+                    array_push($diseaseRelation[$i]['rules'], $rule);
+                }
             }
         }
+        dd($diseaseRelation);
     }
 }

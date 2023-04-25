@@ -87,7 +87,7 @@
       <div class="container">
         <div class="mt-10 grid grid-cols-3">
           @for ($i = 1; $i < count($disease); $i++)
-            <button id="warna" class="mb-6 rounded-sm border-2 bg-black py-3 px-3 text-white"
+            <button id="warna" class="mb-0 rounded-sm border-2 bg-black py-3 px-3 text-white"
               onclick="changeType({{ $i }})">
               <p class="text-xs md:text-base">{{ $disease[$i]['type'] }}</p>
             </button>
@@ -318,7 +318,7 @@
       typee.innerHTML = "";
 
       typee.innerHTML += `
-        <div class="container">
+        <div class="container mt-5">
           <div class="w-full rounded-sm border border-[#BBBBBB] bg-white p-3">
             <div class="m-3">
               <p class="font-base mb-3 text-lg text-primary lg:text-2xl">${a[id].diseases}</p>
