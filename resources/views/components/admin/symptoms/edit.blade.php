@@ -46,7 +46,6 @@
             </div>
           </div>
         </form>
-
       </div>
       <div class="hidden w-full self-center md:block lg:w-1/3">
         <div class="mt-10 lg:right-0">

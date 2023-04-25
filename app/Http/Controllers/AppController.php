@@ -83,7 +83,6 @@ class AppController extends Controller
                 }
             }
         }
-        // dd($diseaseRelation);
 
         $diseaseRelations = $diseaseRelation;
         $medicinesInfo = Medicine::all();
@@ -102,67 +101,48 @@ class AppController extends Controller
     {
         $symptoms = Symptom::all();
         $rules = Rule::all();
+        $diseases = Disease::all();
         $disease = DB::table('diseases')->where('id', '=', $id)->get()[0];
         
-        $objectBaru = array(
+        $diseaseDetail = array(
             "id" => "$disease->id",
             "diseases_code" => $disease->diseases_code,
             "name" => $disease->diseases,
             "rules" => [],
         );
-        // dd($objectBaru, $disease->id, $symptoms[0]['id']);
-        // dd($disease->id);
+
         for ($i = 0; $i < count($symptoms); $i++) {
             $rule = 0;
             for ($j = 0; $j < count($rules); $j++) {
                 if (
-                    $rules[$j]['symptoms_id'] == $symptoms[$i]['id'] &&
-                    $rules[$j]['diseases_id'] == $disease->id
+                    $rules[$j]['symptom_id'] == $symptoms[$i]['id'] &&
+                    $rules[$j]['disease_id'] == $disease->id
                 ) {
                     $rule = $rules[$j]['rule_value'];
                     break;
                 }
             }
+
             if (!$rule) {
-                array_push($objectBaru['rules'], 0);
+                array_push($diseaseDetail['rules'], 0);
             } else {
-                array_push($objectBaru['rules'], $rule);
+                array_push($diseaseDetail['rules'], $rule);
             }
         }
+        // dd($diseaseDetail);
 
-        dd($objectBaru);
+        $diseaseDetails = $diseaseDetail;
+        $medicinesInfo = Medicine::all();
+        $usersInfo = User::all();
 
-        //     for ($j = 0; $j < count($symptoms); $j++) {
-        //         $rule = 0;
-        //         for ($k = 0; $k < count($rules); $k++) {
-        //             if (
-        //                 $rules[$k]['symptom_id'] == $symptoms[$j]['id'] &&
-        //                 $rules[$k]['disease_id'] == $diseases[$i]['id']
-        //             ) {
-        //                 $rule = $rules[$k]['rule_value'];
-        //                 break;
-        //             }
-        //         }
-        //         if (!$rule) {
-        //             array_push($diseaseRelation[$i]['rules'], 0);
-        //         } else {
-        //             array_push($diseaseRelation[$i]['rules'], $rule);
-        //         }
-        //     }
-        // }
-        // dd($diseaseRelation);
 
-        // $diseaseRelations = $diseaseRelation[$id];
-        // $medicinesInfo = Medicine::all();
-        // $usersInfo = User::all();
-
-        // return view('components.admin.rules.edit', [
-        //     'diseaseRelations' => $diseaseRelations,
-        //     'diseasesInfo' => $diseases,
-        //     'symptomsInfo' => $symptoms,
-        //     'medicinesInfo' => $medicinesInfo,
-        //     'usersInfo' => $usersInfo
-        // ]);
+        return view('components.admin.rules.edit', [
+            'diseaseDetails' => $diseaseDetails,
+            'diseasesInfo' => $diseases,
+            'symptomsInfo' => $symptoms,
+            'medicinesInfo' => $medicinesInfo,
+            'usersInfo' => $usersInfo
+        ]);
     }
 
 // public function update( $request, $disease)
@@ -178,5 +158,5 @@ class AppController extends Controller
 
 //     $disease->update($validatedData);
 //     return redirect('/diseases')->with('success', 'Diseases was updated successfully');
-// }
+// }4
 }
