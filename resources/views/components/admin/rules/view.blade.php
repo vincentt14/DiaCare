@@ -1,8 +1,7 @@
-@dd($symptomsInfo, $diseaseRelation);
+{{-- @dd($diseaseRelations); --}}
 @extends('pages.adminDashboard')
 
 @section('content')
-
   <div class="w-full lg:mx-auto">
     <div class="mb-10 w-full">
       <div class="w-full rounded-sm border border-[#BBBBBB] bg-white p-3">
@@ -21,7 +20,7 @@
             </div>
           </form>
         </div>
-        @if ($rules->count())
+        @if (count($diseaseRelations))
           <table class="mb-3 w-full rounded-xl border text-slate-800">
             <thead class="text-slate-700">
               <tr>
@@ -31,10 +30,10 @@
                 <th class="border bg-slate-50 px-6 py-3">
                   Diseases
                 </th>
-                @foreach($symptoms as $symptom)
-                <th class="border bg-slate-50 px-6 py-3">
-                  {{ $symptom['symptoms_code'] }}
-                </th>
+                @foreach ($symptomsInfo as $symptom)
+                  <th class="border bg-slate-50 px-6 py-3">
+                    {{ $symptom['symptoms_code'] }}
+                  </th>
                 @endforeach
                 <th class="border bg-slate-50 px-6 py-3">
                   Action
@@ -42,26 +41,18 @@
               </tr>
             </thead>
             <tbody>
-              @foreach ($diseases as $disease)
+              @foreach ($diseaseRelations as $disease)
                 <tr class="px-6 py-3 text-center">
                   <td class="border px-6 py-2">{{ $loop->iteration }}</td>
-                  <td class="border px-6 py-2">{{ $disease['diseases'] }}</td>
-
-
-                  <td class="content-start border px-6 py-2">tes</td>
-
-
+                  <td class="border px-6 py-2">{{ $disease['name'] }}</td>
+                  @foreach ($disease['rules'] as $rule)
+                    <td class="content-start border px-6 py-2">{{ $rule ? '✓' : '-'}}</td>
+                  @endforeach
                   <td class="content-start border px-6 py-2">
-                    <a class="mx-2 text-yellow-400" href="/rules/{{ $rule['id'] }}/edit">
+                    <a class="mx-2 text-yellow-400" href="/rules/{{ $disease['id'] }}/edit">
                       Edit
                     </a>
                   </td>
-                  
-
-
-
-
-
                 </tr>
               @endforeach
             </tbody>

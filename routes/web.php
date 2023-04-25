@@ -41,13 +41,13 @@ Route::post('/logout', [AuthController::class, 'logout'])->middleware('auth');
 Route::get('/dashboard', [DashboardController::class, 'user'])->middleware('auth');
 Route::get('/adminDashboard', [DashboardController::class, 'admin'])->middleware('admin');
 
-Route::get('/test', [AppController::class, 'logicRelation']);
+Route::get('/rules', [AppController::class, 'logicRelation']);
+
 Route::resources([
     'symptoms' => SymptomController::class,
     'diseases' => DiseaseController::class,
     'medicines' => MedicineController::class,
     'users' => UserController::class,
-    'rules' => RuleController::class,
 ]);
 
 

@@ -67,7 +67,10 @@ class AppController extends Controller
             for ($j = 0; $j < count($symptoms); $j++) {
                 $rule = 0;
                 for ($k = 0; $k < count($rules); $k++) {
-                    if ($rules[$k]['symptom_id'] == $j + 1 && $rules[$k]['disease_id'] == $i + 1) {
+                    if (
+                        $rules[$k]['symptom_id'] == $symptoms[$j]['id'] &&
+                        $rules[$k]['disease_id'] == $diseases[$i]['id']
+                    ) {
                         $rule = $rules[$k]['rule_value'];
                         break;
                     }
@@ -79,6 +82,22 @@ class AppController extends Controller
                 }
             }
         }
-        dd($diseaseRelation);
+        // dd($diseaseRelation);
+
+        $diseaseRelations = $diseaseRelation;
+        $medicinesInfo = Medicine::all();
+        $usersInfo = User::all();
+
+        // if (request('search')){
+        //     $diseaseRelations->where('name', 'like', '%' . request('search') . '%');
+        // }
+
+        return view('components.admin.rules.view', [
+            'diseaseRelations' => $diseaseRelations,
+            'symptomsInfo' => $symptoms,
+            'diseasesInfo' => $diseases,
+            'medicinesInfo' => $medicinesInfo,
+            'usersInfo' => $usersInfo
+        ]);
     }
 }
