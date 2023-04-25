@@ -50,9 +50,3 @@ Route::resources([
     'medicines' => MedicineController::class,
     'users' => UserController::class,
 ]);
-
-
-
-// Route::get('/discussion', function () {
-//     return view('components.view');
-// });

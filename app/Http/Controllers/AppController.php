@@ -102,22 +102,22 @@ class AppController extends Controller
     {
         $symptoms = Symptom::all();
         $rules = Rule::all();
-
         $disease = DB::table('diseases')->where('id', '=', $id)->get()[0];
         
-        $objectBaru = array (
+        $objectBaru = array(
             "id" => "$disease->id",
             "diseases_code" => $disease->diseases_code,
             "name" => $disease->diseases,
             "rules" => [],
         );
-        
+        // dd($objectBaru, $disease->id, $symptoms[0]['id']);
+        // dd($disease->id);
         for ($i = 0; $i < count($symptoms); $i++) {
             $rule = 0;
             for ($j = 0; $j < count($rules); $j++) {
                 if (
                     $rules[$j]['symptoms_id'] == $symptoms[$i]['id'] &&
-                    $rules[$j]['diseases_id'] == $disease['id']
+                    $rules[$j]['diseases_id'] == $disease->id
                 ) {
                     $rule = $rules[$j]['rule_value'];
                     break;
@@ -129,15 +129,8 @@ class AppController extends Controller
                 array_push($objectBaru['rules'], $rule);
             }
         }
-        
-        dd($objectBaru);
 
-        // step 1 kita cari dulu diseases yang dimaksud dari id yang dikirimkan
-        //     lopping sampai ketemu id yang sesuai
-        // step 2 kita cari rulesnya yang udah ditetapin di table db
-        //     lopping gejala dan rules dari id yang dimaksud
-        //     krimkan ke view
-        // step 3 udadeh selesai
+        dd($objectBaru);
 
         //     for ($j = 0; $j < count($symptoms); $j++) {
         //         $rule = 0;
