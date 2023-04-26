@@ -33,20 +33,25 @@
                 </tr>
               </thead>
               <tbody>
-                @foreach ($symptomsInfo as $symptom)
+                @for ($i = 0; $i < count($symptomsInfo); $i++)
                   <tr class="px-6 py-3 text-center">
-                    <td class="border px-6 py-2">{{ $loop->iteration }}</td>
+                    <td class="border px-6 py-2">{{ $i + 1 }}</td>
                     <td class="border px-6 py-2 text-justify"><span
-                        class="font-semibold text-secondary">{{ $symptom['symptoms_code'] }}</span><br>{{ $symptom['symptoms'] }}
+                        class="font-semibold text-secondary">{{ $symptomsInfo[$i]['symptoms_code'] }}</span><br>{{ $symptomsInfo[$i]['symptoms'] }}
                     </td>
                     <td class="border px-6 py-2">
-                      <select id="options" class="w-full rounded-md">
-                        <option value="yes">Yes</option>
-                        <option value="no">No</option>
+                      <select name="options" id="options" class="w-full rounded-md">
+                        @if ($diseaseDetails['rules'][$i] == 0)
+                          <option value="yes">Yes</option>
+                          <option value="no" selected>No</option>
+                        @else
+                          <option value="yes" selected>Yes</option>
+                          <option value="no">No</option>
+                        @endif
                       </select>
                     </td>
                   </tr>
-                @endforeach
+                @endfor
               </tbody>
             </table>
             <button type="submit"
@@ -65,4 +70,20 @@
       </div>
     </div>
   </div>
+
+  <script>
+    const a = @json($diseaseDetails);
+    console.log(a.rules);
+
+    a.rules.map(e => )
+    const options = document.querySelector('#options');
+
+
+
+
+    // console.log(options);
+    options.addEventListener('onChange', () => {
+
+    });
+  </script>
 @endsection

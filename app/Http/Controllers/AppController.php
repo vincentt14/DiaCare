@@ -83,6 +83,7 @@ class AppController extends Controller
                 }
             }
         }
+        // dd($diseaseRelation);
 
         $diseaseRelations = $diseaseRelation;
         $medicinesInfo = Medicine::all();

@@ -307,12 +307,6 @@
   <script>
     const a = @json($disease);
     const typee = document.getElementById('typee');
-    const warna = document.getElementById('warna');
-    console.log(warna);
-
-    const changeColor = (id) => {
-      warna.className = 'warna';
-    }
 
     const changeType = (id) => {
       typee.innerHTML = "";
