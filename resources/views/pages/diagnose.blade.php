@@ -4,7 +4,7 @@
   <section class="pt-28 pb-24 lg:pt-36 lg:pb-32">
     <div class="container">
       <div class="flex flex-col lg:flex-row">
-        <div class="w-full self-center px-4 lg:w-1/3">
+        <div class="w-full self-start self-center px-4 lg:w-1/4">
           <h1 class="text-base font-medium text-primary md:text-xl">
             Welcome to
             <p class="mt-1 block text-4xl font-bold text-secondary lg:text-5xl">Dia<span class="text-primary">Care</span>.
@@ -23,6 +23,11 @@
               To get <span class="font-bold text-primary">Dashboard</span> feature you have to <a href="/login"
                 class="font-bold text-secondary">Login.</a>
             </p>
+          @elseif (auth()->user() !== null && auth()->user()->is_admin == 1)
+            <p class="mb-3 max-w-md text-slate-500">
+              Go to <a href="/dashboard" class="font-bold capitalize text-secondary">
+                dashboard</a>.
+            </p>
           @elseif (auth()->user() !== null)
             <p class="mb-3 max-w-md text-slate-500">
               Go to <a href="/dashboard" class="font-bold capitalize text-secondary">{{ auth()->user()->name }}'s
@@ -31,7 +36,7 @@
           @endif
         </div>
 
-        <div class="w-full self-center px-4 lg:w-2/3">
+        <div class="w-full self-center px-4 lg:w-3/4">
           <h1 class="text-2xl font-bold text-primary lg:text-3xl">
           </h1>
           <div class="mt-8">

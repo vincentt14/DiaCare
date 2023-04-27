@@ -2,8 +2,8 @@
 
 @section('content')
   <div class="w-full self-center px-4">
-    <div class="flex flex-wrap">
-      <div class="self-center lg:w-2/3">
+    {{-- <div class="flex flex-wrap"> --}}
+      <div class="self-center">
         <div class="space-beetween flex">
           <h1 class="text-2xl font-bold text-primary lg:text-3xl">
             Edit <span class="text-secondary">Rule Base</span>
@@ -61,14 +61,14 @@
           </div>
         </form>
       </div>
-      <div class="hidden w-full self-center md:block lg:w-1/3">
+      {{-- <div class="hidden w-full self-center md:block lg:w-1/3">
         <div class="mt-10 lg:right-0">
           <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
           <lottie-player src="https://assets5.lottiefiles.com/private_files/lf30_aw7xbqgf.json" background="transparent"
             speed="1" style="width: 300px; height: 300px;" loop autoplay class="mx-auto"></lottie-player>
         </div>
-      </div>
-    </div>
+      </div> --}}
+    {{-- </div> --}}
   </div>
 
   <script>
