@@ -12,6 +12,10 @@ use Illuminate\Http\Request;
 
 class AppController extends Controller
 {
+    public function __construct(){
+        $this->middleware('admin')->except(['index', 'diagnose', 'medicine', 'about']);
+    }
+
     public function index()
     {
         $user = User::all();

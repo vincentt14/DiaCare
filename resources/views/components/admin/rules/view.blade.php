@@ -10,20 +10,7 @@
           <button type="button"
             class="my-2 mx-3 rounded-sm border-2 border-black bg-black py-3 px-5 text-white duration-300 ease-out hover:bg-white hover:text-black md:my-4">
             <a href="#list">List of Symptoms</a>
-
           </button>
-          {{-- <form action="/users" method="get">
-            <div class="w-full self-center">
-              <div class="flex">
-                <input type="text" id="search" name="search" placeholder="search for users"
-                  class="my-2 w-full rounded-sm border-2 border-[#030723] bg-white p-3 focus:outline-none focus:ring focus:ring-blue-500 md:my-4" />
-                <button type="submit"
-                  class="my-2 mx-3 rounded-sm border-2 border-black bg-black py-3 px-5 text-white duration-300 ease-out hover:bg-white hover:text-black md:my-4">
-                  Search
-                </button>
-              </div>
-            </div>
-          </form> --}}
         </div>
         @if (count($diseaseRelations))
           <table class="mb-3 w-full rounded-xl border text-slate-800">
@@ -68,7 +55,7 @@
         </table>
       </div>
 
-      <h2 id="list" class="font-md pt-24 mb-3 text-lg text-secondary lg:text-2xl">List of Symptoms
+      <h2 id="list" class="font-md mb-3 pt-24 text-lg text-secondary lg:text-2xl">List of Symptoms
       </h2>
       <div class="mt-2 w-full rounded-sm border border-[#BBBBBB] bg-white p-3">
         @if (count($symptomsInfo))

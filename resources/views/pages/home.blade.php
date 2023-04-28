@@ -65,12 +65,20 @@
   <section id="definition" class="bg-[#f2f6fc] pb-16 pt-32 lg:pb-28">
     <div class="container">
       <div class="w-full px-4">
-        <div class="mb-5 max-w-xl">
+        <div class="mb-5">
           <h4 class="mb-2 text-lg font-semibold text-secondary">What is</h4>
-          <h2 class="mt-1 mb-4 text-4xl font-bold text-primary lg:text-5xl">Diabetes?</h2>
-          <p class="text-md font-mono font-medium text-slate-500 lg:text-lg">
-            Also called: <span class="text-secondary">diabetes mellitus</span>
-          </p>
+          <div class="flex justify-between">
+            <div>
+              <h2 class="mt-1 mb-4 text-4xl font-bold text-primary lg:text-5xl">Diabetes?</h2>
+              <p class="text-md font-mono font-medium text-slate-500 lg:text-lg">
+                Also called: <span class="text-secondary">diabetes mellitus</span>
+              </p>
+            </div>
+            <button type="button"
+            class="btnn my-5 mx-3 rounded-sm border-2 border-black bg-black py-3 px-5 text-white duration-300 ease-out hover:bg-white hover:text-black">
+            <a href="#prevent">How to Prevent</a>
+          </button>
+          </div>
         </div>
         <p class="text-justify text-lg font-light text-primary">Diabetes is a chronic (long-lasting) health condition that
           affects how your body turns food into energy. <br></br>
@@ -97,7 +105,7 @@
       <div id="typee"></div>
     </div>
   </section>
-  <section class="pt-16 pb-24 lg:pt-32 lg:pb-32">
+  <section id="prevent" class="pt-16 pb-24 lg:pt-32 lg:pb-32">
     <div class="container">
       <div class="flex flex-wrap">
         <div class="bayangan hidden w-full self-center rounded-sm border-2 border-primary bg-white p-4 md:block lg:w-1/4">
