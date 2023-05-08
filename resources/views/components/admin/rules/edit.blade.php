@@ -64,8 +64,10 @@
 
   <script>
     const data = @json($diseaseDetails);
+    console.log(data);
+    
     const diseaseRules = data.rules
-    // console.log(data);
+    console.log(diseaseRules);
 
     let newDiseaseRules = diseaseRules.map((e) => {
       return e;
@@ -75,30 +77,40 @@
     const options = document.getElementsByTagName('select');
     // console.log(options.length);
 
-    for (let i = 0; i < options.length; i++) {
-      // console.log(options[i]);
-      options[i].addEventListener('change', () => {
-        // console.log(options[i].value)
-        for(let j = 0; j < newDiseaseRules; j++){
-          if (newDiseaseRules[j] == options[i]){
-            // console.log('masoookk banggg')
-            // newDiseaseRules[j].push(options[i].value)
-            console.log(options[i].value)
-          }
-        }
-        console.log(newDiseaseRules)
-      })
-    }
-
-
-    // options.map((e) => {
-    //   console.log(e);
-    //   e.addEventListener('change', () => {
+    // for (let i = 0; i < options.length; i++) {
+    //   // console.log(options[i]);
+    //   options[i].addEventListener('change', () => {
+    //     // console.log(options[i].value)
+    //     for(let j = 0; j < newDiseaseRules; j++){
+    //       if (newDiseaseRules[j] == options[i]){
+    //         // console.log('masoookk banggg')
+    //         newDiseaseRules[j] = options[i].value
+    //         // newDiseaseRules[j].push(options[i].value)
+    //         console.log(options[i].value)
+    //       }
+    //     }
+    //     console.log(newDiseaseRules)
     //   })
-    // })
-    // console.log(options);
-    // options.addEventListener('onChange', () => {
+    // }
 
-    // });
+
+// 1. caritau cara bikin array 2 dimensi
+// 2. caritau cara pakai
+
+
+let a = [
+  [`id penyakit`,`id gejala`]
+]
+
+console.log(a[2][1])
+a[2][1] = 1
+
+
+// a = [
+//   [2,1,1]
+// ]
+
+
+
   </script>
 @endsection
