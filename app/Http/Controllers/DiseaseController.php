@@ -6,6 +6,7 @@ use App\Models\Disease;
 use App\Http\Requests\StoreDiseaseRequest;
 use App\Http\Requests\UpdateDiseaseRequest;
 use App\Models\Medicine;
+use App\Models\Solution;
 use App\Models\Symptom;
 use App\Models\User;
 
@@ -20,6 +21,7 @@ class DiseaseController extends Controller
      */
     public function index()
     {
+        $solutions = Solution::orderBy('disease_id');
         $diseases = Disease::orderBy('diseases_code');
         $diseasesInfo = Disease::all();
         $symptomsInfo = Symptom::all();
@@ -30,8 +32,13 @@ class DiseaseController extends Controller
             $diseases->where('diseases', 'like', '%' . request('search') . '%');
         }
 
+        if (request('searchSol')){
+            $solutions->where('solution', 'like', '%' . request('searchSol') . '%');
+        }
+
         return view('components.admin.diseases.view', [
             'diseases' => $diseases->paginate(10)->withQueryString(),
+            'solutions' => $solutions->paginate(10)->withQueryString(),
             'diseasesInfo' => $diseasesInfo,
             'symptomsInfo' => $symptomsInfo,
             'medicinesInfo' => $medicinesInfo,

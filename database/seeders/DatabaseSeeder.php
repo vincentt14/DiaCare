@@ -16,6 +16,7 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class,
             SymptomSeeder::class,
             DiseaseSeeder::class,
+            SolutionSeeder::class,
             MedicineSeeder::class,
             RuleSeeder::class,
         ]);

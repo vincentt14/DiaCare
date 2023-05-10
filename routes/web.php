@@ -7,6 +7,7 @@ use App\Http\Controllers\DiseaseController;
 use App\Http\Controllers\MedicineController;
 use App\Http\Controllers\MedicinesPage;
 use App\Http\Controllers\RuleController;
+use App\Http\Controllers\SolutionController;
 use App\Http\Controllers\SymptomController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
@@ -47,6 +48,7 @@ Route::get('/rules/{id}/edit', [AppController::class, 'edit']);
 Route::resources([
     'symptoms' => SymptomController::class,
     'diseases' => DiseaseController::class,
+    'solutions' => SolutionController::class,
     'medicines' => MedicineController::class,
     'users' => UserController::class,
 ]);
