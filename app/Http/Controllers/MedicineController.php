@@ -79,8 +79,10 @@ class MedicineController extends Controller
      */
     public function show(Medicine $medicine)
     {
+        $diseases = Disease::all();
         return view('pages.medDetail', [
-            'medicine' => $medicine
+            'medicine' => $medicine,
+            'diseases' => $diseases
         ]);
     }
 

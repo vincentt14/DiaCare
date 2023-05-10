@@ -42,13 +42,15 @@ class AppController extends Controller
     public function medicine()
     {
         $medicines = Medicine::orderby('name');
+        $diseases = Disease::all();
 
         if (request('search')) {
             $medicines->where('name', 'like', '%' . request('search') . '%');
         }
 
         return view('pages.medicinesPage', [
-            'medicines' => $medicines->paginate(8)->withQueryString()
+            'medicines' => $medicines->paginate(8)->withQueryString(),
+            'diseases' => $diseases
         ]);
     }
 

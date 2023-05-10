@@ -9,7 +9,7 @@
           <p class="mt-1 block text-4xl font-bold text-secondary lg:text-5xl">Dia<span class="text-primary">Care</span>.
           </p>
         </h1>
-        <div class="space-beetween flex my-2">
+        <div class="space-beetween my-2 flex">
           <h2 class="my-3 text-lg font-light text-primary lg:text-2xl">Detail medicine</h2>
           @if (auth()->user() == null || auth()->user()->is_admin == 0)
             <button
@@ -33,6 +33,12 @@
               <img src="https://source.unsplash.com/w8p9cQDLX7I" alt="{{ $medicine['name'] }}"
                 class="h-full w-full object-cover" />
             </div>
+            <p class="mt-5 text-justify text-lg font-bold text-primary">This Med is for:</p>
+            @foreach ($diseases as $disease)
+              @if ($medicine['disease_id'] == $disease['id'])
+                <p class="mt-1 text-justify text-lg font-light text-primary">{{ $disease['diseases'] }}</p>
+              @endif
+            @endforeach
             <p class="mt-5 text-justify text-lg font-bold text-primary">Description:</p>
             <p class="mt-1 text-justify text-lg font-light text-primary">{{ $medicine['description'] }}</p>
             <p class="mt-5 text-justify text-lg font-bold text-primary">Composition:</p>

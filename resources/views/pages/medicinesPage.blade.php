@@ -43,6 +43,13 @@
               <p class="my-3 text-justify text-primary">Dose: <span
                   class="font-light text-slate-700">{{ $medicine['dose'] }}</span>
               </p>
+              @foreach ($diseases as $disease)
+                @if ($medicine['disease_id'] == $disease['id'])
+                  <p class="my-3 text-justify text-primary">This Med is for: <span
+                      class="block font-light text-slate-700">{{ $disease['diseases'] }}</span>
+                  </p>
+                @endif
+              @endforeach
               <button
                 class="w-full place-self-end rounded-sm border-2 border-black bg-black py-3 px-5 text-white duration-300 ease-out hover:bg-white hover:text-black hover:shadow-xl md:my-4">
                 <a href="/medicines/{{ $medicine['id'] }}">Detail</a>
