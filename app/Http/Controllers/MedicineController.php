@@ -64,6 +64,7 @@ class MedicineController extends Controller
     {
         $validatedData = $request->validate([
             'name' => 'required',
+            'disease_id' => 'required',
             'description' => 'required',
             'composition' => 'required',
             'dose' => 'required',
@@ -109,6 +110,7 @@ class MedicineController extends Controller
     {
         $rules = [
             'name' => 'required',
+            'disease_id' => 'required',
             'description' => 'required',
             'composition' => 'required',
             'dose' => 'required',

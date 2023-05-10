@@ -110,7 +110,7 @@
       <div class="flex flex-wrap">
         <div class="bayangan hidden w-full self-center rounded-sm border-2 border-primary bg-white p-4 md:block lg:w-1/4">
           {{-- Lottie --}}
-          <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+          {{-- <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script> --}}
           <lottie-player src="https://assets6.lottiefiles.com/private_files/lf30_hz2bzpsx.json" background="transparent"
             speed="1" style="width: 300px; height: 300px;" loop autoplay class="mx-auto"></lottie-player>
         </div>

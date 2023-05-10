@@ -18,6 +18,24 @@
           @csrf
           <div class="w-full lg:mx-auto">
             <div class="mb-4 w-full px-4">
+              <label for="disease_id" class="text-base font-bold text-primary lg:text-xl">
+                Diseases
+              </label>
+              <select name="disease_id" id="disease_id"
+                class="@error('disease_id') border-red-500 @else border-[#BBBBBB] @enderror w-full rounded-sm border bg-white p-3 focus:outline-none focus:ring focus:ring-blue-500">
+                @foreach ($diseasesInfo as $disease)
+                  @if ($disease['id'] == $medicine['disease_id'])
+                    <option value="{{ $disease['id'] }}" selected>{{ $disease['diseases'] }}</option>
+                  @else
+                    <option value="{{ $disease['id'] }}">{{ $disease['diseases'] }}</option>
+                  @endif
+                @endforeach
+              </select>
+              @error('disease_id')
+                <p class="mt-2 text-red-500">{{ $message }}</p>
+              @enderror
+            </div>
+            <div class="mb-4 w-full px-4">
               <label for="name" class="text-base font-bold text-primary lg:text-xl">
                 Name
               </label>

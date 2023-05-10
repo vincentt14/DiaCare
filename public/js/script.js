@@ -60,7 +60,6 @@ const typeWriterEffect = () => {
 };
 typeWriterEffect();
 
-
 // // button di home
 // const pilihan1 = document.querySelector("#pilihan1");
 // const pilihan2 = document.querySelector("#pilihan2");
@@ -83,3 +82,19 @@ typeWriterEffect();
 //     pilihan2.classList.remove("aktif");
 //     pilihan3.classList.add("aktif");
 // });
+
+async function loadJSON() {
+    try {
+        const response = await fetch("part1.json");
+        if (response.ok) {
+            const data = await response.json();
+            console.log(data);
+        } else {
+            throw new Error("Error");
+        }
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+loadJSON();

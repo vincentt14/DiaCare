@@ -1,4 +1,4 @@
-{{-- @dd($medicines); --}}
+{{-- @dd($diseasesInfo); --}}
 @extends('pages.adminDashboard')
 
 @section('content')
@@ -41,6 +41,9 @@
                   Dose
                 </th>
                 <th class="border bg-slate-50 px-6 py-3">
+                  For Disease
+                </th>
+                <th class="border bg-slate-50 px-6 py-3">
                   Action
                 </th>
               </tr>
@@ -52,6 +55,13 @@
                   <td class="border px-6 py-2">{{ $medicine['name'] }}</td>
                   <td class="content-start border px-6 py-2 text-justify">{{ $medicine['composition'] }}</td>
                   <td class="border px-6 py-2 text-justify">{{ $medicine['dose'] }}</td>
+                  <td class="border px-6 py-2 text-justify">
+                    @foreach($diseasesInfo as $disease)
+                      @if($medicine['disease_id'] == $disease['id'])
+                        {{ $disease['diseases'] }}
+                      @endif
+                    @endforeach
+                  </td>
                   <td class="flex content-center justify-center border px-6 py-2">
                     <a class="mx-2 text-blue-400" href="/medicines/{{ $medicine['id'] }}">
                       View

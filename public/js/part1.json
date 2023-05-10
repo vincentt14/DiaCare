@@ -1,0 +1,902 @@
+{
+    "results": {
+        "comments": [
+            {
+                "comment_before_id": 598650247,
+                "comment_before_id_str": "598650247",
+                "disable_link_preview": false,
+                "email": "e23c3f4ec1d191fcfe523848eb43c2cb5b5641a160f2c34816e89539dcc1c2e4c1fc5af4df97de07662ba615e6d9a1eb8aa45e6f4f06f23d2a1edc70f0b83efd",
+                "extras": {
+                    "consultation_id": "KL9628-6278",
+                    "conversation_id": "17051195",
+                    "send_notification": true
+                },
+                "id": 598650708,
+                "id_str": "598650708",
+                "is_deleted": false,
+                "is_public_channel": false,
+                "message": "Kalo gejala ya sama, yg adik buat di kolom gejala itu dah gejala2nya ",
+                "payload": {},
+                "room_avatar": "",
+                "room_id": 17051195,
+                "room_id_str": "17051195",
+                "room_name": "KL9628-6278",
+                "room_type": "group",
+                "status": "sent",
+                "timestamp": "2023-05-09T09:07:31Z",
+                "topic_id": 17051195,
+                "topic_id_str": "17051195",
+                "type": "text",
+                "unique_temp_id": "ios_1683623251538694912",
+                "unix_nano_timestamp": 1683623251627421000,
+                "unix_timestamp": 1683623251,
+                "user_avatar": {
+                    "avatar": {
+                        "url": "https://d1e8la4lqf1h28.cloudfront.net/images/531951_13-7-2021_11-36-49.jpeg"
+                    }
+                },
+                "user_avatar_url": "https://d1e8la4lqf1h28.cloudfront.net/images/531951_13-7-2021_11-36-49.jpeg",
+                "user_id": 8167255,
+                "user_id_str": "8167255",
+                "username": "I Gusti Agung Indra Adi Kusuma"
+            },
+            {
+                "comment_before_id": 598650057,
+                "comment_before_id_str": "598650057",
+                "disable_link_preview": false,
+                "email": "e23c3f4ec1d191fcfe523848eb43c2cb5b5641a160f2c34816e89539dcc1c2e4c1fc5af4df97de07662ba615e6d9a1eb8aa45e6f4f06f23d2a1edc70f0b83efd",
+                "extras": {
+                    "consultation_id": "KL9628-6278",
+                    "conversation_id": "17051195",
+                    "send_notification": true
+                },
+                "id": 598650247,
+                "id_str": "598650247",
+                "is_deleted": false,
+                "is_public_channel": false,
+                "message": "Kalo gestational dia terjadi hanya pada masa kehamilan dengan catatan sebelum kehamilan tidak ada atau tidak pernah gula darahnya tinggi",
+                "payload": {},
+                "room_avatar": "",
+                "room_id": 17051195,
+                "room_id_str": "17051195",
+                "room_name": "KL9628-6278",
+                "room_type": "group",
+                "status": "sent",
+                "timestamp": "2023-05-09T09:06:36Z",
+                "topic_id": 17051195,
+                "topic_id_str": "17051195",
+                "type": "text",
+                "unique_temp_id": "ios_1683623196810620928",
+                "unix_nano_timestamp": 1683623196900536000,
+                "unix_timestamp": 1683623196,
+                "user_avatar": {
+                    "avatar": {
+                        "url": "https://d1e8la4lqf1h28.cloudfront.net/images/531951_13-7-2021_11-36-49.jpeg"
+                    }
+                },
+                "user_avatar_url": "https://d1e8la4lqf1h28.cloudfront.net/images/531951_13-7-2021_11-36-49.jpeg",
+                "user_id": 8167255,
+                "user_id_str": "8167255",
+                "username": "I Gusti Agung Indra Adi Kusuma"
+            },
+            {
+                "comment_before_id": 598649860,
+                "comment_before_id_str": "598649860",
+                "disable_link_preview": false,
+                "email": "e23c3f4ec1d191fcfe523848eb43c2cb5b5641a160f2c34816e89539dcc1c2e4c1fc5af4df97de07662ba615e6d9a1eb8aa45e6f4f06f23d2a1edc70f0b83efd",
+                "extras": {
+                    "consultation_id": "KL9628-6278",
+                    "conversation_id": "17051195",
+                    "send_notification": true
+                },
+                "id": 598650057,
+                "id_str": "598650057",
+                "is_deleted": false,
+                "is_public_channel": false,
+                "message": "Obatnya biasanya dimulai dengan obat oral terlebih dahulu kalo tidak membaik atau gula terlalu tinggi baru start dengan insulin",
+                "payload": {},
+                "room_avatar": "",
+                "room_id": 17051195,
+                "room_id_str": "17051195",
+                "room_name": "KL9628-6278",
+                "room_type": "group",
+                "status": "sent",
+                "timestamp": "2023-05-09T09:06:10Z",
+                "topic_id": 17051195,
+                "topic_id_str": "17051195",
+                "type": "text",
+                "unique_temp_id": "ios_1683623170786826240",
+                "unix_nano_timestamp": 1683623170914469000,
+                "unix_timestamp": 1683623170,
+                "user_avatar": {
+                    "avatar": {
+                        "url": "https://d1e8la4lqf1h28.cloudfront.net/images/531951_13-7-2021_11-36-49.jpeg"
+                    }
+                },
+                "user_avatar_url": "https://d1e8la4lqf1h28.cloudfront.net/images/531951_13-7-2021_11-36-49.jpeg",
+                "user_id": 8167255,
+                "user_id_str": "8167255",
+                "username": "I Gusti Agung Indra Adi Kusuma"
+            },
+            {
+                "comment_before_id": 598649544,
+                "comment_before_id_str": "598649544",
+                "disable_link_preview": false,
+                "email": "e23c3f4ec1d191fcfe523848eb43c2cb5b5641a160f2c34816e89539dcc1c2e4c1fc5af4df97de07662ba615e6d9a1eb8aa45e6f4f06f23d2a1edc70f0b83efd",
+                "extras": {
+                    "consultation_id": "KL9628-6278",
+                    "conversation_id": "17051195",
+                    "send_notification": true
+                },
+                "id": 598649860,
+                "id_str": "598649860",
+                "is_deleted": false,
+                "is_public_channel": false,
+                "message": "Untuk type 2 itu biasanya terjadi pada usia pertengahan, diakibatkan oleh lifestyle",
+                "payload": {},
+                "room_avatar": "",
+                "room_id": 17051195,
+                "room_id_str": "17051195",
+                "room_name": "KL9628-6278",
+                "room_type": "group",
+                "status": "sent",
+                "timestamp": "2023-05-09T09:05:45Z",
+                "topic_id": 17051195,
+                "topic_id_str": "17051195",
+                "type": "text",
+                "unique_temp_id": "ios_1683623145147303936",
+                "unix_nano_timestamp": 1683623145277924000,
+                "unix_timestamp": 1683623145,
+                "user_avatar": {
+                    "avatar": {
+                        "url": "https://d1e8la4lqf1h28.cloudfront.net/images/531951_13-7-2021_11-36-49.jpeg"
+                    }
+                },
+                "user_avatar_url": "https://d1e8la4lqf1h28.cloudfront.net/images/531951_13-7-2021_11-36-49.jpeg",
+                "user_id": 8167255,
+                "user_id_str": "8167255",
+                "username": "I Gusti Agung Indra Adi Kusuma"
+            },
+            {
+                "comment_before_id": 598649469,
+                "comment_before_id_str": "598649469",
+                "disable_link_preview": false,
+                "email": "e23c3f4ec1d191fcfe523848eb43c2cb5b5641a160f2c34816e89539dcc1c2e4c1fc5af4df97de07662ba615e6d9a1eb8aa45e6f4f06f23d2a1edc70f0b83efd",
+                "extras": {
+                    "consultation_id": "KL9628-6278",
+                    "conversation_id": "17051195",
+                    "send_notification": true
+                },
+                "id": 598649544,
+                "id_str": "598649544",
+                "is_deleted": false,
+                "is_public_channel": false,
+                "message": "Pengobatan type 1 itu adalah harus insulin tidak bisa obat oral",
+                "payload": {},
+                "room_avatar": "",
+                "room_id": 17051195,
+                "room_id_str": "17051195",
+                "room_name": "KL9628-6278",
+                "room_type": "group",
+                "status": "sent",
+                "timestamp": "2023-05-09T09:05:05Z",
+                "topic_id": 17051195,
+                "topic_id_str": "17051195",
+                "type": "text",
+                "unique_temp_id": "ios_1683623104937911040",
+                "unix_nano_timestamp": 1683623105053428000,
+                "unix_timestamp": 1683623105,
+                "user_avatar": {
+                    "avatar": {
+                        "url": "https://d1e8la4lqf1h28.cloudfront.net/images/531951_13-7-2021_11-36-49.jpeg"
+                    }
+                },
+                "user_avatar_url": "https://d1e8la4lqf1h28.cloudfront.net/images/531951_13-7-2021_11-36-49.jpeg",
+                "user_id": 8167255,
+                "user_id_str": "8167255",
+                "username": "I Gusti Agung Indra Adi Kusuma"
+            },
+            {
+                "comment_before_id": 598649243,
+                "comment_before_id_str": "598649243",
+                "disable_link_preview": false,
+                "email": "e23c3f4ec1d191fcfe523848eb43c2cb5b5641a160f2c34816e89539dcc1c2e4c1fc5af4df97de07662ba615e6d9a1eb8aa45e6f4f06f23d2a1edc70f0b83efd",
+                "extras": {
+                    "consultation_id": "KL9628-6278",
+                    "conversation_id": "17051195",
+                    "send_notification": true
+                },
+                "id": 598649469,
+                "id_str": "598649469",
+                "is_deleted": false,
+                "is_public_channel": false,
+                "message": "Untuk type 1 dia kelainannya di genetik, jadi dia memang terjadi kelainan di resistensi insulin dan ini type 1 terjadi pada usia muda dan anak2",
+                "payload": {},
+                "room_avatar": "",
+                "room_id": 17051195,
+                "room_id_str": "17051195",
+                "room_name": "KL9628-6278",
+                "room_type": "group",
+                "status": "sent",
+                "timestamp": "2023-05-09T09:04:52Z",
+                "topic_id": 17051195,
+                "topic_id_str": "17051195",
+                "type": "text",
+                "unique_temp_id": "ios_1683623092735617280",
+                "unix_nano_timestamp": 1683623092928589000,
+                "unix_timestamp": 1683623092,
+                "user_avatar": {
+                    "avatar": {
+                        "url": "https://d1e8la4lqf1h28.cloudfront.net/images/531951_13-7-2021_11-36-49.jpeg"
+                    }
+                },
+                "user_avatar_url": "https://d1e8la4lqf1h28.cloudfront.net/images/531951_13-7-2021_11-36-49.jpeg",
+                "user_id": 8167255,
+                "user_id_str": "8167255",
+                "username": "I Gusti Agung Indra Adi Kusuma"
+            },
+            {
+                "comment_before_id": 598649128,
+                "comment_before_id_str": "598649128",
+                "disable_link_preview": false,
+                "email": "e23c3f4ec1d191fcfe523848eb43c2cb5b5641a160f2c34816e89539dcc1c2e4c1fc5af4df97de07662ba615e6d9a1eb8aa45e6f4f06f23d2a1edc70f0b83efd",
+                "extras": {
+                    "consultation_id": "KL9628-6278",
+                    "conversation_id": "17051195",
+                    "send_notification": true
+                },
+                "id": 598649243,
+                "id_str": "598649243",
+                "is_deleted": false,
+                "is_public_channel": false,
+                "message": "Yang membedakan dia type 1 dan type 2 itu biasanya di umur",
+                "payload": {},
+                "room_avatar": "",
+                "room_id": 17051195,
+                "room_id_str": "17051195",
+                "room_name": "KL9628-6278",
+                "room_type": "group",
+                "status": "sent",
+                "timestamp": "2023-05-09T09:04:16Z",
+                "topic_id": 17051195,
+                "topic_id_str": "17051195",
+                "type": "text",
+                "unique_temp_id": "ios_1683623056259773952",
+                "unix_nano_timestamp": 1683623056440365000,
+                "unix_timestamp": 1683623056,
+                "user_avatar": {
+                    "avatar": {
+                        "url": "https://d1e8la4lqf1h28.cloudfront.net/images/531951_13-7-2021_11-36-49.jpeg"
+                    }
+                },
+                "user_avatar_url": "https://d1e8la4lqf1h28.cloudfront.net/images/531951_13-7-2021_11-36-49.jpeg",
+                "user_id": 8167255,
+                "user_id_str": "8167255",
+                "username": "I Gusti Agung Indra Adi Kusuma"
+            },
+            {
+                "comment_before_id": 598648739,
+                "comment_before_id_str": "598648739",
+                "disable_link_preview": false,
+                "email": "e23c3f4ec1d191fcfe523848eb43c2cb5b5641a160f2c34816e89539dcc1c2e4c1fc5af4df97de07662ba615e6d9a1eb8aa45e6f4f06f23d2a1edc70f0b83efd",
+                "extras": {
+                    "consultation_id": "KL9628-6278",
+                    "conversation_id": "17051195",
+                    "send_notification": true
+                },
+                "id": 598649128,
+                "id_str": "598649128",
+                "is_deleted": false,
+                "is_public_channel": false,
+                "message": "Gejala diabetes itu semuanya sama ya",
+                "payload": {},
+                "room_avatar": "",
+                "room_id": 17051195,
+                "room_id_str": "17051195",
+                "room_name": "KL9628-6278",
+                "room_type": "group",
+                "status": "sent",
+                "timestamp": "2023-05-09T09:04:02Z",
+                "topic_id": 17051195,
+                "topic_id_str": "17051195",
+                "type": "text",
+                "unique_temp_id": "ios_1683623042422356992",
+                "unix_nano_timestamp": 1683623042551199000,
+                "unix_timestamp": 1683623042,
+                "user_avatar": {
+                    "avatar": {
+                        "url": "https://d1e8la4lqf1h28.cloudfront.net/images/531951_13-7-2021_11-36-49.jpeg"
+                    }
+                },
+                "user_avatar_url": "https://d1e8la4lqf1h28.cloudfront.net/images/531951_13-7-2021_11-36-49.jpeg",
+                "user_id": 8167255,
+                "user_id_str": "8167255",
+                "username": "I Gusti Agung Indra Adi Kusuma"
+            },
+            {
+                "comment_before_id": 598648729,
+                "comment_before_id_str": "598648729",
+                "disable_link_preview": false,
+                "email": "e23c3f4ec1d191fcfe523848eb43c2cb5b5641a160f2c34816e89539dcc1c2e4c1fc5af4df97de07662ba615e6d9a1eb8aa45e6f4f06f23d2a1edc70f0b83efd",
+                "extras": {
+                    "consultation_id": "KL9628-6278",
+                    "conversation_id": "17051195",
+                    "send_notification": true
+                },
+                "id": 598648739,
+                "id_str": "598648739",
+                "is_deleted": false,
+                "is_public_channel": false,
+                "message": "Oke kemudian?",
+                "payload": {},
+                "room_avatar": "",
+                "room_id": 17051195,
+                "room_id_str": "17051195",
+                "room_name": "KL9628-6278",
+                "room_type": "group",
+                "status": "sent",
+                "timestamp": "2023-05-09T09:02:58Z",
+                "topic_id": 17051195,
+                "topic_id_str": "17051195",
+                "type": "text",
+                "unique_temp_id": "ios_1683622978560577024",
+                "unix_nano_timestamp": 1683622978694737000,
+                "unix_timestamp": 1683622978,
+                "user_avatar": {
+                    "avatar": {
+                        "url": "https://d1e8la4lqf1h28.cloudfront.net/images/531951_13-7-2021_11-36-49.jpeg"
+                    }
+                },
+                "user_avatar_url": "https://d1e8la4lqf1h28.cloudfront.net/images/531951_13-7-2021_11-36-49.jpeg",
+                "user_id": 8167255,
+                "user_id_str": "8167255",
+                "username": "I Gusti Agung Indra Adi Kusuma"
+            },
+            {
+                "comment_before_id": 598648557,
+                "comment_before_id_str": "598648557",
+                "disable_link_preview": false,
+                "email": "0c50761f1e739e98dd7bb75f94ef627e5058346aee7144c613cf5183366e1028692dc0f5a24c6ee648acf1e9b6ae387d499f0c14c8f722b6110a1cea93631bf5",
+                "extras": {},
+                "id": 598648729,
+                "id_str": "598648729",
+                "is_deleted": false,
+                "is_public_channel": false,
+                "message": "saya ingin bertanya dok, untuk penyakit diabetes tipe 1 itu biasanya ditandai dengan gejala apa saja ya dok?",
+                "payload": {},
+                "room_avatar": "",
+                "room_id": 17051195,
+                "room_id_str": "17051195",
+                "room_name": "KL9628-6278",
+                "room_type": "group",
+                "status": "sent",
+                "timestamp": "2023-05-09T09:02:57Z",
+                "topic_id": 17051195,
+                "topic_id_str": "17051195",
+                "type": "text",
+                "unique_temp_id": "17051195-1683622977262",
+                "unix_nano_timestamp": 1683622977441402000,
+                "unix_timestamp": 1683622977,
+                "user_avatar": {
+                    "avatar": {
+                        "url": "http://d2qjkwm11akmwu.cloudfront.net/images/profile_pic.png"
+                    }
+                },
+                "user_avatar_url": "http://d2qjkwm11akmwu.cloudfront.net/images/profile_pic.png",
+                "user_id": 9832037,
+                "user_id_str": "9832037",
+                "username": "Vincent "
+            },
+            {
+                "comment_before_id": 598648449,
+                "comment_before_id_str": "598648449",
+                "disable_link_preview": false,
+                "email": "0c50761f1e739e98dd7bb75f94ef627e5058346aee7144c613cf5183366e1028692dc0f5a24c6ee648acf1e9b6ae387d499f0c14c8f722b6110a1cea93631bf5",
+                "extras": {},
+                "id": 598648557,
+                "id_str": "598648557",
+                "is_deleted": false,
+                "is_public_channel": false,
+                "message": "dari berbagai sumber, namun belum lengkap dan belum tentu tepat kebenarannya",
+                "payload": {},
+                "room_avatar": "",
+                "room_id": 17051195,
+                "room_id_str": "17051195",
+                "room_name": "KL9628-6278",
+                "room_type": "group",
+                "status": "sent",
+                "timestamp": "2023-05-09T09:02:36Z",
+                "topic_id": 17051195,
+                "topic_id_str": "17051195",
+                "type": "text",
+                "unique_temp_id": "17051195-1683622956493",
+                "unix_nano_timestamp": 1683622956623197000,
+                "unix_timestamp": 1683622956,
+                "user_avatar": {
+                    "avatar": {
+                        "url": "http://d2qjkwm11akmwu.cloudfront.net/images/profile_pic.png"
+                    }
+                },
+                "user_avatar_url": "http://d2qjkwm11akmwu.cloudfront.net/images/profile_pic.png",
+                "user_id": 9832037,
+                "user_id_str": "9832037",
+                "username": "Vincent "
+            },
+            {
+                "comment_before_id": 598648404,
+                "comment_before_id_str": "598648404",
+                "disable_link_preview": false,
+                "email": "0c50761f1e739e98dd7bb75f94ef627e5058346aee7144c613cf5183366e1028692dc0f5a24c6ee648acf1e9b6ae387d499f0c14c8f722b6110a1cea93631bf5",
+                "extras": {},
+                "id": 598648449,
+                "id_str": "598648449",
+                "is_deleted": false,
+                "is_public_channel": false,
+                "message": "saya sudah mengumpulkan beberapa gejala dokter",
+                "payload": {},
+                "room_avatar": "",
+                "room_id": 17051195,
+                "room_id_str": "17051195",
+                "room_name": "KL9628-6278",
+                "room_type": "group",
+                "status": "sent",
+                "timestamp": "2023-05-09T09:02:20Z",
+                "topic_id": 17051195,
+                "topic_id_str": "17051195",
+                "type": "text",
+                "unique_temp_id": "17051195-1683622940114",
+                "unix_nano_timestamp": 1683622940307028000,
+                "unix_timestamp": 1683622940,
+                "user_avatar": {
+                    "avatar": {
+                        "url": "http://d2qjkwm11akmwu.cloudfront.net/images/profile_pic.png"
+                    }
+                },
+                "user_avatar_url": "http://d2qjkwm11akmwu.cloudfront.net/images/profile_pic.png",
+                "user_id": 9832037,
+                "user_id_str": "9832037",
+                "username": "Vincent "
+            },
+            {
+                "comment_before_id": 598648241,
+                "comment_before_id_str": "598648241",
+                "disable_link_preview": false,
+                "email": "0c50761f1e739e98dd7bb75f94ef627e5058346aee7144c613cf5183366e1028692dc0f5a24c6ee648acf1e9b6ae387d499f0c14c8f722b6110a1cea93631bf5",
+                "extras": {},
+                "id": 598648404,
+                "id_str": "598648404",
+                "is_deleted": false,
+                "is_public_channel": false,
+                "message": "[file] https://dop8tpg2vlwky.cloudfront.net/halodoc/image/upload/JPwIUzTwNb/gejala.jpg [/file]",
+                "payload": {
+                    "url": "https://dop8tpg2vlwky.cloudfront.net/halodoc/image/upload/JPwIUzTwNb/gejala.jpg",
+                    "caption": "gejala.jpg",
+                    "file_name": "",
+                    "size": 0,
+                    "pages": 1,
+                    "encryption_key": ""
+                },
+                "room_avatar": "",
+                "room_id": 17051195,
+                "room_id_str": "17051195",
+                "room_name": "KL9628-6278",
+                "room_type": "group",
+                "status": "sent",
+                "timestamp": "2023-05-09T09:02:13Z",
+                "topic_id": 17051195,
+                "topic_id_str": "17051195",
+                "type": "file_attachment",
+                "unique_temp_id": "17051195-1683622932000",
+                "unix_nano_timestamp": 1683622933763200000,
+                "unix_timestamp": 1683622933,
+                "user_avatar": {
+                    "avatar": {
+                        "url": "http://d2qjkwm11akmwu.cloudfront.net/images/profile_pic.png"
+                    }
+                },
+                "user_avatar_url": "http://d2qjkwm11akmwu.cloudfront.net/images/profile_pic.png",
+                "user_id": 9832037,
+                "user_id_str": "9832037",
+                "username": "Vincent "
+            },
+            {
+                "comment_before_id": 598648010,
+                "comment_before_id_str": "598648010",
+                "disable_link_preview": false,
+                "email": "e23c3f4ec1d191fcfe523848eb43c2cb5b5641a160f2c34816e89539dcc1c2e4c1fc5af4df97de07662ba615e6d9a1eb8aa45e6f4f06f23d2a1edc70f0b83efd",
+                "extras": {
+                    "consultation_id": "KL9628-6278",
+                    "conversation_id": "17051195",
+                    "send_notification": true
+                },
+                "id": 598648241,
+                "id_str": "598648241",
+                "is_deleted": false,
+                "is_public_channel": false,
+                "message": "Oke baik, kemudian permasalaahnnya apa?",
+                "payload": {},
+                "room_avatar": "",
+                "room_id": 17051195,
+                "room_id_str": "17051195",
+                "room_name": "KL9628-6278",
+                "room_type": "group",
+                "status": "sent",
+                "timestamp": "2023-05-09T09:01:51Z",
+                "topic_id": 17051195,
+                "topic_id_str": "17051195",
+                "type": "text",
+                "unique_temp_id": "ios_1683622911074619904",
+                "unix_nano_timestamp": 1683622911199915000,
+                "unix_timestamp": 1683622911,
+                "user_avatar": {
+                    "avatar": {
+                        "url": "https://d1e8la4lqf1h28.cloudfront.net/images/531951_13-7-2021_11-36-49.jpeg"
+                    }
+                },
+                "user_avatar_url": "https://d1e8la4lqf1h28.cloudfront.net/images/531951_13-7-2021_11-36-49.jpeg",
+                "user_id": 8167255,
+                "user_id_str": "8167255",
+                "username": "I Gusti Agung Indra Adi Kusuma"
+            },
+            {
+                "comment_before_id": 598647745,
+                "comment_before_id_str": "598647745",
+                "disable_link_preview": false,
+                "email": "0c50761f1e739e98dd7bb75f94ef627e5058346aee7144c613cf5183366e1028692dc0f5a24c6ee648acf1e9b6ae387d499f0c14c8f722b6110a1cea93631bf5",
+                "extras": {},
+                "id": 598648010,
+                "id_str": "598648010",
+                "is_deleted": false,
+                "is_public_channel": false,
+                "message": "baik dokter, pada penelitian saya, saya membahas mengenai 3 macam diabetes\n\nyaitu diabetes tipe 1\ndiabetes tipe 2\ndan diabetes gestasional",
+                "payload": {},
+                "room_avatar": "",
+                "room_id": 17051195,
+                "room_id_str": "17051195",
+                "room_name": "KL9628-6278",
+                "room_type": "group",
+                "status": "sent",
+                "timestamp": "2023-05-09T09:01:19Z",
+                "topic_id": 17051195,
+                "topic_id_str": "17051195",
+                "type": "text",
+                "unique_temp_id": "17051195-1683622878944",
+                "unix_nano_timestamp": 1683622879132954000,
+                "unix_timestamp": 1683622879,
+                "user_avatar": {
+                    "avatar": {
+                        "url": "http://d2qjkwm11akmwu.cloudfront.net/images/profile_pic.png"
+                    }
+                },
+                "user_avatar_url": "http://d2qjkwm11akmwu.cloudfront.net/images/profile_pic.png",
+                "user_id": 9832037,
+                "user_id_str": "9832037",
+                "username": "Vincent "
+            },
+            {
+                "comment_before_id": 598647710,
+                "comment_before_id_str": "598647710",
+                "disable_link_preview": false,
+                "email": "e23c3f4ec1d191fcfe523848eb43c2cb5b5641a160f2c34816e89539dcc1c2e4c1fc5af4df97de07662ba615e6d9a1eb8aa45e6f4f06f23d2a1edc70f0b83efd",
+                "extras": {
+                    "consultation_id": "KL9628-6278",
+                    "conversation_id": "17051195",
+                    "send_notification": true
+                },
+                "id": 598647745,
+                "id_str": "598647745",
+                "is_deleted": false,
+                "is_public_channel": false,
+                "message": "Ada yang mau ditanyakan?",
+                "payload": {},
+                "room_avatar": "",
+                "room_id": 17051195,
+                "room_id_str": "17051195",
+                "room_name": "KL9628-6278",
+                "room_type": "group",
+                "status": "sent",
+                "timestamp": "2023-05-09T09:00:36Z",
+                "topic_id": 17051195,
+                "topic_id_str": "17051195",
+                "type": "text",
+                "unique_temp_id": "ios_1683622835938969088",
+                "unix_nano_timestamp": 1683622836061360000,
+                "unix_timestamp": 1683622836,
+                "user_avatar": {
+                    "avatar": {
+                        "url": "https://d1e8la4lqf1h28.cloudfront.net/images/531951_13-7-2021_11-36-49.jpeg"
+                    }
+                },
+                "user_avatar_url": "https://d1e8la4lqf1h28.cloudfront.net/images/531951_13-7-2021_11-36-49.jpeg",
+                "user_id": 8167255,
+                "user_id_str": "8167255",
+                "username": "I Gusti Agung Indra Adi Kusuma"
+            },
+            {
+                "comment_before_id": 598647605,
+                "comment_before_id_str": "598647605",
+                "disable_link_preview": false,
+                "email": "e23c3f4ec1d191fcfe523848eb43c2cb5b5641a160f2c34816e89539dcc1c2e4c1fc5af4df97de07662ba615e6d9a1eb8aa45e6f4f06f23d2a1edc70f0b83efd",
+                "extras": {
+                    "consultation_id": "KL9628-6278",
+                    "conversation_id": "17051195",
+                    "send_notification": true
+                },
+                "id": 598647710,
+                "id_str": "598647710",
+                "is_deleted": false,
+                "is_public_channel": false,
+                "message": "Sipp ",
+                "payload": {},
+                "room_avatar": "",
+                "room_id": 17051195,
+                "room_id_str": "17051195",
+                "room_name": "KL9628-6278",
+                "room_type": "group",
+                "status": "sent",
+                "timestamp": "2023-05-09T09:00:32Z",
+                "topic_id": 17051195,
+                "topic_id_str": "17051195",
+                "type": "text",
+                "unique_temp_id": "ios_1683622832054456832",
+                "unix_nano_timestamp": 1683622832168319000,
+                "unix_timestamp": 1683622832,
+                "user_avatar": {
+                    "avatar": {
+                        "url": "https://d1e8la4lqf1h28.cloudfront.net/images/531951_13-7-2021_11-36-49.jpeg"
+                    }
+                },
+                "user_avatar_url": "https://d1e8la4lqf1h28.cloudfront.net/images/531951_13-7-2021_11-36-49.jpeg",
+                "user_id": 8167255,
+                "user_id_str": "8167255",
+                "username": "I Gusti Agung Indra Adi Kusuma"
+            },
+            {
+                "comment_before_id": 598647461,
+                "comment_before_id_str": "598647461",
+                "disable_link_preview": false,
+                "email": "e23c3f4ec1d191fcfe523848eb43c2cb5b5641a160f2c34816e89539dcc1c2e4c1fc5af4df97de07662ba615e6d9a1eb8aa45e6f4f06f23d2a1edc70f0b83efd",
+                "extras": {
+                    "consultation_id": "KL9628-6278",
+                    "conversation_id": "17051195",
+                    "qiscus_ios_pn": {
+                        "aps": {
+                            "alert": { "body": "Doctor has sent notes" },
+                            "sound": "default"
+                        },
+                        "payload": {
+                            "extras": {
+                                "consultation_id": "KL9628-6278",
+                                "conversation_id": "17051195"
+                            },
+                            "raw_room_name": "KL9628-6278",
+                            "room_id": "17051195",
+                            "room_id_str": "17051195"
+                        },
+                        "qiscus_sdk": true
+                    },
+                    "send_notification": true
+                },
+                "id": 598647605,
+                "id_str": "598647605",
+                "is_deleted": false,
+                "is_public_channel": false,
+                "message": "Doctor has sent notes",
+                "payload": {
+                    "content": {
+                        "advice": "Keperluan tanya jawab untuk keperluan skripsis",
+                        "consultation_id": "KL9628-6278",
+                        "conversation_id": "17051195",
+                        "isProfileSelectedCorrect": true,
+                        "notes": "Kemungkinan diagnosa:\nDM tipe 2\n Konsultasi dan Edukasi \n\nGejala:\nPasien konsultasi mengenai mengenai gejala dari penyakit diabetes melitus berserta dengan solusinya untuk keperluan skripsi\n\nCatat:\nKeperluan tanya jawab untuk keperluan skripsis",
+                        "possible_diagnosis": "DM tipe 2\n Konsultasi dan Edukasi ",
+                        "primary_diagnostic_code": {
+                            "code": "E11",
+                            "createdAt": 0,
+                            "createdBy": "",
+                            "diagnosisCodeAttribute": [
+                                {
+                                    "attributeKey": "patient_description",
+                                    "attributeValue": "Penyakit Kencing Manis yang disebabkan karena resistensi Insulin ",
+                                    "createdAt": 0,
+                                    "createdBy": "",
+                                    "diagnosisCode": "",
+                                    "language": "bahasa_indonesia",
+                                    "updatedAt": 0,
+                                    "updatedBy": ""
+                                },
+                                {
+                                    "attributeKey": "patient_description",
+                                    "attributeValue": "Diabetes disease caused by insulin resistance",
+                                    "createdAt": 0,
+                                    "createdBy": "",
+                                    "diagnosisCode": "",
+                                    "language": "english",
+                                    "updatedAt": 0,
+                                    "updatedBy": ""
+                                },
+                                {
+                                    "attributeKey": "description",
+                                    "attributeValue": "DM tipe 2",
+                                    "createdAt": 0,
+                                    "createdBy": "",
+                                    "diagnosisCode": "",
+                                    "language": "bahasa_indonesia",
+                                    "updatedAt": 0,
+                                    "updatedBy": ""
+                                },
+                                {
+                                    "attributeKey": "description",
+                                    "attributeValue": "Non-insulin-dependent diabetes mellitus",
+                                    "createdAt": 0,
+                                    "createdBy": "",
+                                    "diagnosisCode": "",
+                                    "language": "english",
+                                    "updatedAt": 0,
+                                    "updatedBy": ""
+                                }
+                            ],
+                            "externalId": "995ea903-7468-4aae-bff6-1fa7ef729bca",
+                            "keywords": [
+                                "diabetes, DM, dm tipe 2, kencing manis, gula"
+                            ],
+                            "status": "active",
+                            "updatedAt": 0,
+                            "updatedBy": ""
+                        },
+                        "secondary_diagnostic_code": [
+                            {
+                                "code": "Z71",
+                                "createdAt": 0,
+                                "createdBy": "",
+                                "diagnosisCodeAttribute": [
+                                    {
+                                        "attributeKey": "patient_description",
+                                        "attributeValue": "Konsultasi dan Edukasi ",
+                                        "createdAt": 0,
+                                        "createdBy": "",
+                                        "diagnosisCode": "",
+                                        "language": "bahasa_indonesia",
+                                        "updatedAt": 0,
+                                        "updatedBy": ""
+                                    },
+                                    {
+                                        "attributeKey": "description",
+                                        "attributeValue": "Konsultasi dan Edukasi ",
+                                        "createdAt": 0,
+                                        "createdBy": "",
+                                        "diagnosisCode": "",
+                                        "language": "bahasa_indonesia",
+                                        "updatedAt": 0,
+                                        "updatedBy": ""
+                                    },
+                                    {
+                                        "attributeKey": "description",
+                                        "attributeValue": "PERSONS ENCOUNTERING HEALTH SERVICES FOR OTHER COUNSELLING AND MEDICAL ADVICE, NOT ELSEWHERE CLASSIFIED",
+                                        "createdAt": 0,
+                                        "createdBy": "",
+                                        "diagnosisCode": "",
+                                        "language": "english",
+                                        "updatedAt": 0,
+                                        "updatedBy": ""
+                                    },
+                                    {
+                                        "attributeKey": "patient_description",
+                                        "attributeValue": "Consultation and Education",
+                                        "createdAt": 0,
+                                        "createdBy": "",
+                                        "diagnosisCode": "",
+                                        "language": "english",
+                                        "updatedAt": 0,
+                                        "updatedBy": ""
+                                    }
+                                ],
+                                "externalId": "f3d650dd-a1d2-4ab3-970a-c7e71dd06080",
+                                "keywords": ["konsultasi, edukasi, KIE"],
+                                "status": "active",
+                                "updatedAt": 0,
+                                "updatedBy": ""
+                            }
+                        ],
+                        "symptoms": "Pasien konsultasi mengenai mengenai gejala dari penyakit diabetes melitus berserta dengan solusinya untuk keperluan skripsi",
+                        "version": "2.1.0"
+                    },
+                    "type": "application/hd.consultation.dn"
+                },
+                "room_avatar": "",
+                "room_id": 17051195,
+                "room_id_str": "17051195",
+                "room_name": "KL9628-6278",
+                "room_type": "group",
+                "status": "sent",
+                "timestamp": "2023-05-09T09:00:17Z",
+                "topic_id": 17051195,
+                "topic_id_str": "17051195",
+                "type": "custom",
+                "unique_temp_id": "ios_1683622817472155136",
+                "unix_nano_timestamp": 1683622817692912000,
+                "unix_timestamp": 1683622817,
+                "user_avatar": {
+                    "avatar": {
+                        "url": "https://d1e8la4lqf1h28.cloudfront.net/images/531951_13-7-2021_11-36-49.jpeg"
+                    }
+                },
+                "user_avatar_url": "https://d1e8la4lqf1h28.cloudfront.net/images/531951_13-7-2021_11-36-49.jpeg",
+                "user_id": 8167255,
+                "user_id_str": "8167255",
+                "username": "I Gusti Agung Indra Adi Kusuma"
+            },
+            {
+                "comment_before_id": 598647358,
+                "comment_before_id_str": "598647358",
+                "disable_link_preview": false,
+                "email": "0c50761f1e739e98dd7bb75f94ef627e5058346aee7144c613cf5183366e1028692dc0f5a24c6ee648acf1e9b6ae387d499f0c14c8f722b6110a1cea93631bf5",
+                "extras": {},
+                "id": 598647461,
+                "id_str": "598647461",
+                "is_deleted": false,
+                "is_public_channel": false,
+                "message": "oh baik dokter",
+                "payload": {},
+                "room_avatar": "",
+                "room_id": 17051195,
+                "room_id_str": "17051195",
+                "room_name": "KL9628-6278",
+                "room_type": "group",
+                "status": "sent",
+                "timestamp": "2023-05-09T08:59:59Z",
+                "topic_id": 17051195,
+                "topic_id_str": "17051195",
+                "type": "text",
+                "unique_temp_id": "17051195-1683622799115",
+                "unix_nano_timestamp": 1683622799254809000,
+                "unix_timestamp": 1683622799,
+                "user_avatar": {
+                    "avatar": {
+                        "url": "http://d2qjkwm11akmwu.cloudfront.net/images/profile_pic.png"
+                    }
+                },
+                "user_avatar_url": "http://d2qjkwm11akmwu.cloudfront.net/images/profile_pic.png",
+                "user_id": 9832037,
+                "user_id_str": "9832037",
+                "username": "Vincent "
+            },
+            {
+                "comment_before_id": 598647174,
+                "comment_before_id_str": "598647174",
+                "disable_link_preview": false,
+                "email": "0c50761f1e739e98dd7bb75f94ef627e5058346aee7144c613cf5183366e1028692dc0f5a24c6ee648acf1e9b6ae387d499f0c14c8f722b6110a1cea93631bf5",
+                "extras": {},
+                "id": 598647358,
+                "id_str": "598647358",
+                "is_deleted": false,
+                "is_public_channel": false,
+                "message": "Saya mahasiswa jurusan Informatika dari Universitas Multimedia Nusantara dok, sekarang lagi menjalankan skripsi untuk semester akhir dengan judul \"Rancang bangun sistem pakar diagnosa penyakit diabetes melitus menggunakan metode forward chaining\"",
+                "payload": {},
+                "room_avatar": "",
+                "room_id": 17051195,
+                "room_id_str": "17051195",
+                "room_name": "KL9628-6278",
+                "room_type": "group",
+                "status": "sent",
+                "timestamp": "2023-05-09T08:59:47Z",
+                "topic_id": 17051195,
+                "topic_id_str": "17051195",
+                "type": "text",
+                "unique_temp_id": "17051195-1683622786943",
+                "unix_nano_timestamp": 1683622787119542000,
+                "unix_timestamp": 1683622787,
+                "user_avatar": {
+                    "avatar": {
+                        "url": "http://d2qjkwm11akmwu.cloudfront.net/images/profile_pic.png"
+                    }
+                },
+                "user_avatar_url": "http://d2qjkwm11akmwu.cloudfront.net/images/profile_pic.png",
+                "user_id": 9832037,
+                "user_id_str": "9832037",
+                "username": "Vincent "
+            }
+        ]
+    },
+    "status": 200
+}

@@ -4,7 +4,7 @@
   <section class="pt-28 pb-24 lg:pt-36 lg:pb-32">
     <div class="container">
       <div class="flex flex-col lg:flex-row">
-        <div class="w-full self-start self-center px-4 lg:w-1/4">
+        <div class="w-full self-center px-4 lg:w-1/4">
           <h1 class="text-base font-medium text-primary md:text-xl">
             Welcome to
             <p class="mt-1 block text-4xl font-bold text-secondary lg:text-5xl">Dia<span class="text-primary">Care</span>.
