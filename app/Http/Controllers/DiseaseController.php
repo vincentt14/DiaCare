@@ -13,7 +13,7 @@ use App\Models\User;
 class DiseaseController extends Controller
 {
     public function __construct(){
-        $this->middleware('admin');
+        $this->middleware('admin')->except('show');
     }
 
     /**
@@ -85,8 +85,12 @@ class DiseaseController extends Controller
      */
     public function show(Disease $disease)
     {
+        $solutions = Solution::all();
+        $medicines = Medicine::all();
         return view('pages.diseaseDetail', [
-            'disease' => $disease
+            'disease' => $disease,
+            'solutions' => $solutions,
+            'medicines' => $medicines
         ]);
     }
 

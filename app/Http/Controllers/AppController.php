@@ -41,7 +41,7 @@ class AppController extends Controller
 
     public function medicine()
     {
-        $medicines = Medicine::orderby('name');
+        $medicines = Medicine::orderby('disease_id');
         $diseases = Disease::all();
 
         if (request('search')) {

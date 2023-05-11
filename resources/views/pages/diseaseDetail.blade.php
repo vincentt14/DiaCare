@@ -9,7 +9,7 @@
           <p class="mt-1 block text-4xl font-bold text-secondary lg:text-5xl">Dia<span class="text-primary">Care</span>.
           </p>
         </h1>
-        <div class="space-beetween flex my-2">
+        <div class="space-beetween my-2 flex">
           <h2 class="my-3 text-lg font-light text-primary lg:text-2xl">Detail disease</h2>
           <button
             class="btnnn my-2 ml-5 rounded-sm border-2 border-black bg-black py-2 px-5 text-white duration-300 ease-out hover:bg-white hover:text-black">
@@ -31,6 +31,27 @@
             <p class="mt-1 text-justify text-lg font-light text-primary">{{ $disease['type'] }}</p>
             <p class="mt-5 text-justify text-lg font-bold text-primary">Description:</p>
             <p class="mt-1 text-justify text-lg font-light text-primary">{{ $disease['description'] }}</p>
+            <p class="mt-5 text-justify text-lg font-bold text-primary">Solutions:</p>
+            <ol>
+              @foreach ($solutions as $solution)
+                @if ($solution['disease_id'] == $disease['id'])
+                  <li class="mt-1 text-justify text-lg font-light text-primary">• {{ $solution['solution'] }}
+                  </li>
+                @endif
+              @endforeach
+            </ol>
+            <p class="mt-5 text-justify text-lg font-bold text-primary">Medicines:</p>
+            <ol>
+              @foreach ($medicines as $medicine)
+                @if ($medicine['disease_id'] == $disease['id'])
+                  <li class="mt-1 text-justify text-lg font-light text-primary">• {{ $medicine['name'] }}
+                  </li>
+                {{-- @else
+                  <li class="mt-1 text-justify text-lg font-light text-primary">• There is no medicine
+                  </li> --}}
+                @endif
+              @endforeach
+            </ol>
           </div>
         </div>
       </div>

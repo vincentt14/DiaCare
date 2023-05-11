@@ -46,7 +46,7 @@
               @foreach ($diseases as $disease)
                 @if ($medicine['disease_id'] == $disease['id'])
                   <p class="my-3 text-justify text-primary">This Med is for: <span
-                      class="block font-light text-slate-700">{{ $disease['diseases'] }}</span>
+                      class="block font-base text-secondary">{{ $disease['diseases'] }}</span>
                   </p>
                 @endif
               @endforeach

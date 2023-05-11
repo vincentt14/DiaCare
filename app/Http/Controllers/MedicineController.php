@@ -20,7 +20,7 @@ class MedicineController extends Controller
      */
     public function index()
     {
-        $medicines = Medicine::orderby('name');
+        $medicines = Medicine::orderby('disease_id');
         $medicinesInfo = Medicine::all();
         $diseasesInfo = Disease::all();
         $symptomsInfo = Symptom::all();

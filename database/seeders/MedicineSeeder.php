@@ -57,20 +57,6 @@ class MedicineSeeder extends Seeder
         ]);
         Medicine::create([
             'disease_id' => 3,
-            'name' => 'Amaryl M',
-            'description' => 'AMARYL M TABLET merupakan obat anti diabetes kombinasi yang terdiri dari Metformin (antidiabetes oral golongan biguanid) dan Glimepiride (antidiabetes oral golongan sulfonilurea). Obat ini digunakan untuk pengobatan diabetes mellitus tipe 2.',
-            'composition' => 'Setiap kaplet mengandung Glimepiride 2 mg, Metformin HCl 500 mg.',
-            'dose' => 'Dosis disesuaikan dengan kadar gula pasien, bersifat individual. Diberikan 1 atau 2 kali per hari.'
-        ]);
-        Medicine::create([
-            'disease_id' => 3,
-            'name' => 'Glucophage XR',
-            'description' => 'GLUCOPHAGE XR 1000 MG 8 TABLET mengandung zat aktif berupa Metformin HCl. Metformin merupakan obat antidiabetes tipe 2 yang termasuk golongan biguanida. Metformin bekerja dengan cara menekan produksi glukosa oleh hati.',
-            'composition' => 'Setiap kaplet mengandung Metformin 1000 mg',
-            'dose' => 'Dosis Awal : 1 kali per hari. Dosis dapat disesuaikan setelah penggunaan selama 10-15 hari. Dosis maksimal : 2000 mg per hari.'
-        ]);
-        Medicine::create([
-            'disease_id' => 3,
             'name' => 'Pioglitazone',
             'description' => 'PIOGLITAZONE merupakan obat yang digunakan untuk menangani penyakit diabetes tipe 2. Obat ini digunakan sebagai terapi kombinasi dengan sulfonilurea atau metformin pada pasien diabetes melitus tipe 2 yang tidak terkontrol dengan monoterapi sulfonilurea dan metformin.',
             'composition' => 'Setiap kaplet mengandung Pioglitazone HCl 30 mg',

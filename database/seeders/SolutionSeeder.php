@@ -15,7 +15,35 @@ class SolutionSeeder extends Seeder
     {
         Solution::create([
             'disease_id' => 1,
-            'solution' => 'Istirahat KOCAK!!!!',
+            'solution' => 'Perbanyak istirahat dan minum air putih',
+        ]);
+        Solution::create([
+            'disease_id' => 2,
+            'solution' => 'Jaga pola makan',
+        ]);
+        Solution::create([
+            'disease_id' => 2,
+            'solution' => 'Ganti gula jadi tropicana',
+        ]);
+        Solution::create([
+            'disease_id' => 3,
+            'solution' => 'Jaga pola makan',
+        ]);
+        Solution::create([
+            'disease_id' => 3,
+            'solution' => 'Olahraga setiap hari',
+        ]);
+        Solution::create([
+            'disease_id' => 3,
+            'solution' => 'Ganti gula jadi tropicana',
+        ]);
+        Solution::create([
+            'disease_id' => 4,
+            'solution' => 'Konsumsi banyak buah buahan',
+        ]);
+        Solution::create([
+            'disease_id' => 4,
+            'solution' => 'Ganti gula jadi tropicana',
         ]);
     }
 }

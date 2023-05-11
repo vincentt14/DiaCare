@@ -36,7 +36,7 @@
             <p class="mt-5 text-justify text-lg font-bold text-primary">This Med is for:</p>
             @foreach ($diseases as $disease)
               @if ($medicine['disease_id'] == $disease['id'])
-                <p class="mt-1 text-justify text-lg font-light text-primary">{{ $disease['diseases'] }}</p>
+                <p class="mt-1 text-justify text-lg font-base text-secondary">{{ $disease['diseases'] }}</p>
               @endif
             @endforeach
             <p class="mt-5 text-justify text-lg font-bold text-primary">Description:</p>

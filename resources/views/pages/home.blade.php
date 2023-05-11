@@ -313,19 +313,22 @@
   </section>
 
   <script>
-    const a = @json($disease);
+    const diseases = @json($disease);
     const typee = document.getElementById('typee');
-
+    
     const changeType = (id) => {
       typee.innerHTML = "";
-
+      
       typee.innerHTML += `
         <div class="container mt-5">
           <div class="w-full rounded-sm border border-[#BBBBBB] bg-white p-3">
             <div class="m-3">
-              <p class="font-base mb-3 text-lg text-primary lg:text-2xl">${a[id].diseases}</p>
-              <p class="text-justify text-lg font-light text-primary">${a[id].description}</p>
+              <p class="font-base mb-3 text-lg text-primary lg:text-2xl">${diseases[id].diseases}</p>
+              <p class="text-justify text-lg font-light text-primary">${diseases[id].description}</p>
             </div>
+            <button class="btnnn m-3 rounded-sm border-2 border-black bg-black py-2 px-5 text-white duration-300 ease-out hover:bg-white hover:text-black">
+            <a href="/diseases/${diseases[id].id}">Detail ${diseases[id].diseases}</a>
+          </button>
           </div>
         </div>
       `;
