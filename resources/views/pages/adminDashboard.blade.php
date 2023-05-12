@@ -61,7 +61,7 @@
             </div>
             <div class="rounded-[4px] border border-pink-500 bg-pink-200 p-3 text-center">
               <h1 class="text-4xl font-bold text-primary lg:text-5xl">
-                {{ count($diseasesInfo) }}
+                {{ count($diseasesInfo) - 1 }}
               </h1>
               <p class="font-base text-base text-primary lg:text-xl">
                 Diseases

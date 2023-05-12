@@ -55,7 +55,7 @@
           </table>
           <button type="submit"
             class="w-full rounded-sm border-2 border-black bg-black py-3 px-8 text-white duration-300 ease-out hover:bg-white hover:text-black focus:outline-none focus:ring focus:ring-blue-500">
-            Edit <span class="">{{ $diseaseDetails['name'] }}</span> Rule
+            Edit {{ $diseaseDetails['name'] }} Rule
           </button>
         </div>
       </form>

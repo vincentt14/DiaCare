@@ -1,4 +1,4 @@
-{{-- @dd($medicines); --}}
+{{-- @dd($diagnoseResults); --}}
 @extends('pages.adminDashboard')
 
 @section('content')
@@ -35,7 +35,10 @@
                   Email
                 </th>
                 <th class="border bg-slate-50 px-6 py-3">
-                  Result
+                  Latest Diagnose Date
+                </th>
+                <th class="border bg-slate-50 px-6 py-3">
+                  Latest Result
                 </th>
               </tr>
             </thead>
@@ -45,7 +48,16 @@
                   <td class="border px-6 py-2">{{ $loop->iteration }}</td>
                   <td class="border px-6 py-2">{{ $user['name'] }}</td>
                   <td class="content-start border px-6 py-2 text-justify">{{ $user['email'] }}</td>
-                  <td class="border px-6 py-2 text-justify">{{ $user['result'] }}</td>
+                  @foreach ($diagnoseResults as $diagnoseResult)
+                    @if ($diagnoseResult['user_id'] == $user['id'])
+                      <td class="border px-6 py-2 text-justify">
+                        {{ date('d F Y', strtotime($diagnoseResult['updated_at'])) }}</td>
+                      <td class="border px-6 py-2 text-justify">{{ $diagnoseResult['result'] }}</td>
+                    @else
+                      <td class="border px-6 py-2 text-justify text-slate-400">No Date</td>
+                      <td class="border px-6 py-2 text-justify text-slate-400">No Result</td>
+                    @endif
+                  @endforeach
                 </tr>
               @endforeach
             </tbody>

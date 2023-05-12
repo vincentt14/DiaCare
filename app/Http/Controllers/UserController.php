@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\DiagnoseResult;
 use App\Models\Disease;
 use App\Models\Medicine;
 use App\Models\Symptom;
@@ -18,6 +19,7 @@ class UserController extends Controller
      */
     public function index()
     {
+        $diagnoseResults = DiagnoseResult::all();
         $users = User::orderBy('name');
         $usersInfo = User::all();
         $symptomsInfo = Symptom::all();
@@ -29,6 +31,7 @@ class UserController extends Controller
         }
 
         return view('components.admin.users.view', [
+            'diagnoseResults' => $diagnoseResults,
             'users' => $users->paginate(10)->withQueryString(),
             'symptomsInfo' => $symptomsInfo,
             'diseasesInfo' => $diseasesInfo,

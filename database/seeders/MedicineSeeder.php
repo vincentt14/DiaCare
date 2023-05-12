@@ -29,20 +29,6 @@ class MedicineSeeder extends Seeder
         ]);
         Medicine::create([
             'disease_id' => 3,
-            'name' => 'Pionix',
-            'description' => 'Pionix M merupakan obat dengan kombinasi Pioglitazone dan Metformin. Obat ini digunakan dalam terapi diabetes mellitus tipe 2. Pioglitazone termasuk golongan thiazolidinedione dan metformin termasuk golongan biguanide.',
-            'composition' => 'Setiap kaplet mengandung Pioglitazone HCl 15 mg.',
-            'dose' => 'Dosis awal: 1-2 kali per hari 1 tablet 15 mg/850 mg.'
-        ]);
-        Medicine::create([
-            'disease_id' => 3,
-            'name' => 'Janumet',
-            'description' => 'JANUMET adalah obat yang di gunakan sebagai obat diabetes. Janumet mengandung metformin dan sitagliptin. Metformin adalah obat anti diabetes tipe 2 yang termasuk golongan biguanid. Metformin bekerja dengan cara menekan produksi glukosa oleh hati, meningkatkan sensitivitas insulin, meningkatkan penyerapan glukosa perifer, dan menurunkan penekanan insulin yang diinduksi pada proses oksidasi asam lemak.',
-            'composition' => 'Setiap kaplet mengandung Sitagliptin 50 mg, Metformin HCl 500 mg.',
-            'dose' => 'dosis harian maximal : Sitagliptin 100 mg & Metformin 2 g.'
-        ]);
-        Medicine::create([
-            'disease_id' => 3,
             'name' => 'Acarbose',
             'description' => 'ACARBOSE TABLET merupakan obat yang digunakan untuk pasien diabetes melitus yang tidak dapat diatur hanya dengan diet saja. Obat ini termasuk dalam golongan penghambat alfa glukosidase dan bekerja dengan cara memperlambat penyerapan glukosa dalam usus halus, sehingga memberikan efek menurunkan kadar glukosa darah sesudah makan.',
             'composition' => 'Setiap kaplet mengandung Acarbose 100 mg.',

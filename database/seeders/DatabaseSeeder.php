@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
             SolutionSeeder::class,
             MedicineSeeder::class,
             RuleSeeder::class,
+            DiagnoseResultSeeder::class,
         ]);
     }
 }

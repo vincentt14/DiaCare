@@ -30,12 +30,12 @@ class AppController extends Controller
 
     public function diagnose()
     {
-        $users = User::all();
-        $symptoms = Symptom::all();
         $diseases = Disease::all();
+        $symptoms = Symptom::all();
         return view('pages.diagnose', [
             "symptoms" => $symptoms,
-            "diseases" => $diseases
+            'symptomsInfo' => $symptoms,
+            'diseasesInfo' => $diseases,
         ]);
     }
 
