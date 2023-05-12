@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\DiagnoseResult;
 use Illuminate\Support\Facades\DB;
 use App\Models\Disease;
 use App\Models\Medicine;
@@ -21,10 +22,12 @@ class AppController extends Controller
         $user = User::all();
         $disease = Disease::all();
         $medicine = Medicine::all();
+        $diagnoseResults = DiagnoseResult::all();
         return view('pages.home', [
             "disease" => $disease,
             "user" => $user,
-            "medicine" => $medicine
+            "medicine" => $medicine,
+            "diagnoseResults" => $diagnoseResults
         ]);
     }
 

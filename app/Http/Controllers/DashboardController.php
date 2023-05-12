@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\DiagnoseResult;
 use App\Models\Disease;
 use App\Models\Medicine;
 use App\Models\Symptom;
@@ -12,8 +13,14 @@ class DashboardController extends Controller
 {
     public function user()
     {
-        // $user = User::all();
-        return view('pages.dashboard');
+        $diagnoseResults = DiagnoseResult::all();
+        $diseases = Disease::all();
+        $medicines = Medicine::all();
+        return view('pages.dashboard', [
+            'diagnoseResults' => $diagnoseResults,
+            'diseases' => $diseases,
+            'medicines' => $medicines
+        ]);
     }
 
     public function admin()

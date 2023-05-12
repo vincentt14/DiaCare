@@ -9,11 +9,11 @@
     </div>
   </div>
   <div class="grid grid-cols-3">
-    <div class="col-1 col-span-1 flex items-center justify-center text-2xl font-bold text-primary">{{ count($medicine) }}
+    <div class="col-1 col-span-1 flex items-center justify-center text-2xl font-bold text-primary">{{ count($diagnoseResults) }}
     </div>
     <div class="col-2 col-span-2">
-      <p class="text-xs lg:text-base">Medicine</p>
-      <p class="text-xs lg:text-base">Available</p>
+      <p class="text-xs lg:text-base">Times Users</p>
+      <p class="text-xs lg:text-base">Already Diagnosed</p>
     </div>
   </div>
 </div>

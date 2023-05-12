@@ -17,5 +17,9 @@ class DiagnoseResultSeeder extends Seeder
             'user_id' => 2,
             'result' => 'Negative'
         ]);
+        // DiagnoseResult::create([
+        //     'user_id' => 2,
+        //     'result' => 'Diabetes Mellitus 1'
+        // ]);
     }
 }
