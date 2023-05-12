@@ -15,39 +15,39 @@ class SymptomSeeder extends Seeder
     {
         Symptom::create([
             'symptoms_code' => 'G01',
-            'symptoms' => 'Apakah anda mengalami kelainan pada kulit menjadi kering?'
+            'symptoms' => 'Apakah umur anda dibawah 17 tahun?'
         ]);
         Symptom::create([
             'symptoms_code' => 'G02',
-            'symptoms' => 'Apakah anda sering buang air kecil (polipuria)?'
+            'symptoms' => 'Apakah anda sedang hamil?'
         ]);
         Symptom::create([
             'symptoms_code' => 'G03',
-            'symptoms' => 'Apakah anda sering makan (polifagia)?'
+            'symptoms' => 'Apakah mata anda sering kelelahan?'
         ]);
         Symptom::create([
             'symptoms_code' => 'G04',
-            'symptoms' => 'Apakah anda merasa kesemutan?'
+            'symptoms' => 'Apakah anda mengalami obesitas?'
         ]);
         Symptom::create([
             'symptoms_code' => 'G05',
-            'symptoms' => 'Apakah anda sering mengalami kram pada otot?'
+            'symptoms' => 'Apakah anda mudah merasa haus (polydipsi)?'
         ]);
         Symptom::create([
             'symptoms_code' => 'G06',
-            'symptoms' => 'Apakah tubuh anda sering muncul bisul?'
+            'symptoms' => 'Apakah anda mudah merasa lapar (polifagia)?'
         ]);
         Symptom::create([
             'symptoms_code' => 'G07',
-            'symptoms' => 'Apakah luka yang anda alami sukar sembuh?'
+            'symptoms' => 'Apakah anda sering buang air kecil (polipuria)?'
         ]);
         Symptom::create([
             'symptoms_code' => 'G08',
-            'symptoms' => 'Apakah anda mengalami keputihan karena kelainan pada ginjal?'
+            'symptoms' => 'Apakah anda sering mengalami kesemutan?'
         ]);
         Symptom::create([
             'symptoms_code' => 'G09',
-            'symptoms' => 'Apakah berat badan anda turun secara tiba-tiba tanpa alasan jelas?'
+            'symptoms' => 'Apakah anda sering mengalami pusing?'
         ]);
         Symptom::create([
             'symptoms_code' => 'G10',
@@ -55,19 +55,19 @@ class SymptomSeeder extends Seeder
         ]);
         Symptom::create([
             'symptoms_code' => 'G11',
-            'symptoms' => 'Apakah tubuh anda terasa cepat lebih lemah?'
+            'symptoms' => 'Apakah anda mengalami disfungsi Ereksi (untuk pria)?'
         ]);
         Symptom::create([
             'symptoms_code' => 'G12',
-            'symptoms' => 'Apakah anda sering mengalami gelisah?'
+            'symptoms' => 'Apakah anda mengalami keputihan karena kelainan pada ginjal?'
         ]);
         Symptom::create([
             'symptoms_code' => 'G13',
-            'symptoms' => 'Apakah anda sering mengalami pingsan?'
+            'symptoms' => 'Apakah luka yang anda alami sukar sembuh?'
         ]);
         Symptom::create([
             'symptoms_code' => 'G14',
-            'symptoms' => 'Apakah anda sering mengalami pusing?'
+            'symptoms' => 'Apakah nafas anda seperti wangi buah?'
         ]);
     }
 }

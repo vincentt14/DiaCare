@@ -34,19 +34,28 @@
                 <img src="https://source.unsplash.com/w8p9cQDLX7I" alt="{{ $medicine['name'] }}"
                   class="h-full w-full object-cover" />
               </div>
-              <h3 class="mt-5 mb-3 text-xl font-semibold text-secondary">
-                {{ $medicine['name'] }}
-              </h3>
-              <p class="my-3 text-justify text-primary">Composition: <span
-                  class="font-light text-slate-700">{{ $medicine['composition'] }}</span>
-              </p>
+              @if ($medicine['disease_id'] == 2)
+                <h3 class="mt-5 mb-3 text-xl font-semibold text-secondary">
+                  <span class="text-primary">Type:</span> {{ $medicine['name'] }}
+                </h3>
+                <p class="my-3 text-justify text-primary">Insulin: <span
+                    class="font-light text-slate-700">{{ $medicine['composition'] }}</span>
+                </p>
+              @else
+                <h3 class="mt-5 mb-3 text-xl font-semibold text-secondary">
+                  {{ $medicine['name'] }}
+                </h3>
+                <p class="my-3 text-justify text-primary">Composition: <span
+                    class="font-light text-slate-700">{{ $medicine['composition'] }}</span>
+                </p>
+              @endif
               <p class="my-3 text-justify text-primary">Dose: <span
                   class="font-light text-slate-700">{{ $medicine['dose'] }}</span>
               </p>
               @foreach ($diseases as $disease)
                 @if ($medicine['disease_id'] == $disease['id'])
                   <p class="my-3 text-justify text-primary">This Med is for: <span
-                      class="block font-base text-secondary">{{ $disease['diseases'] }}</span>
+                      class="font-base block text-secondary">{{ $disease['diseases'] }}</span>
                   </p>
                 @endif
               @endforeach

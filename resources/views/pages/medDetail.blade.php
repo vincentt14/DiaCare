@@ -28,7 +28,12 @@
       <div class="container">
         <div class="w-full rounded-sm border border-[#BBBBBB] bg-white p-3">
           <div class="m-3">
-            <p class="mb-3 text-lg font-bold text-primary lg:text-3xl">{{ $medicine['name'] }}</p>
+            @if ($medicine['disease_id'] == 2)
+              <p class="mb-3 text-lg font-bold text-primary lg:text-3xl"><span class="text-secondary">Type:
+                </span>{{ $medicine['name'] }}</p>
+            @else
+              <p class="mb-3 text-lg font-bold text-primary lg:text-3xl">{{ $medicine['name'] }}</p>
+            @endif
             <div class="h-[170px] overflow-hidden rounded-sm border-2 border-secondary shadow-lg">
               <img src="https://source.unsplash.com/w8p9cQDLX7I" alt="{{ $medicine['name'] }}"
                 class="h-full w-full object-cover" />
@@ -36,12 +41,16 @@
             <p class="mt-5 text-justify text-lg font-bold text-primary">This Med is for:</p>
             @foreach ($diseases as $disease)
               @if ($medicine['disease_id'] == $disease['id'])
-                <p class="mt-1 text-justify text-lg font-base text-secondary">{{ $disease['diseases'] }}</p>
+                <p class="font-base mt-1 text-justify text-lg text-secondary">{{ $disease['diseases'] }}</p>
               @endif
             @endforeach
             <p class="mt-5 text-justify text-lg font-bold text-primary">Description:</p>
             <p class="mt-1 text-justify text-lg font-light text-primary">{{ $medicine['description'] }}</p>
-            <p class="mt-5 text-justify text-lg font-bold text-primary">Composition:</p>
+            @if ($medicine['disease_id'] == 2)
+              <p class="mt-5 text-justify text-lg font-bold text-primary">Insulin:</p>
+            @else
+              <p class="mt-5 text-justify text-lg font-bold text-primary">Composition:</p>
+            @endif
             <p class="mt-1 text-justify text-lg font-light text-primary">{{ $medicine['composition'] }}</p>
             <p class="mt-5 text-justify text-lg font-bold text-primary">Dose:</p>
             <p class="mt-1 text-justify text-lg font-light text-primary">{{ $medicine['dose'] }}</p>
