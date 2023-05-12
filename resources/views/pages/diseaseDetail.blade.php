@@ -46,9 +46,6 @@
                 @if ($medicine['disease_id'] == $disease['id'])
                   <li class="mt-1 text-justify text-lg font-light text-primary">• {{ $medicine['name'] }}
                   </li>
-                {{-- @else
-                  <li class="mt-1 text-justify text-lg font-light text-primary">• There is no medicine
-                  </li> --}}
                 @endif
               @endforeach
             </ol>

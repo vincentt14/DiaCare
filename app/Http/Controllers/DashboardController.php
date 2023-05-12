@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\DiagnoseResult;
 use App\Models\Disease;
 use App\Models\Medicine;
+use App\Models\Solution;
 use App\Models\Symptom;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -16,10 +17,12 @@ class DashboardController extends Controller
         $diagnoseResults = DiagnoseResult::all();
         $diseases = Disease::all();
         $medicines = Medicine::all();
+        $solutions = Solution::all();
         return view('pages.dashboard', [
             'diagnoseResults' => $diagnoseResults,
             'diseases' => $diseases,
-            'medicines' => $medicines
+            'medicines' => $medicines,
+            'solutions' => $solutions
         ]);
     }
 

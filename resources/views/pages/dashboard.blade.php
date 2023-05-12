@@ -9,7 +9,7 @@
 @extends('layouts.app')
 
 @section('content')
-  <section class="pt-28 pb-24 lg:pt-36 lg:pb-32">
+  <section class="pt-28 pb-24 lg:pt-36 lg:pb-20">
     <div class="container">
       <div class="flex flex-col lg:flex-row">
         <div class="w-full self-center px-4">
@@ -26,7 +26,6 @@
             Here you can see all your data.
           </p>
         </div>
-
 
         <div class="grid w-full grid-cols-2 gap-1 self-center px-4">
           <div class="rounded-[4px] border border-blue-500 bg-blue-200 px-3 py-6 text-center">
@@ -54,7 +53,6 @@
             </h1>
           </div>
         </div>
-
       </div>
       @include('components.user.result')
     </div>
