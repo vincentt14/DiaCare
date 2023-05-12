@@ -1,4 +1,11 @@
-{{-- @dd($diagnoseResults[1]['result']); --}}
+@php
+  $person = $diagnoseResults->where('user_id', auth()->user()->id);
+  // dd($person);
+  foreach ($person as $p) {
+      // echo $p;
+  }
+@endphp
+
 @extends('layouts.app')
 
 @section('content')
@@ -16,31 +23,27 @@
         </div>
         <div class="grid w-full grid-cols-2 gap-1 self-center px-4">
           <div class="rounded-[4px] border border-blue-500 bg-blue-200 px-3 py-7 text-center">
-            <p class="font-base text-base text-primary lg:text-xl">
-              Diagnosed
+            <p class="font-base pb-2 text-base text-primary lg:text-xl">
+              Already Diagnosed
             </p>
-            <h1 class="text-4xl font-bold text-primary lg:text-4xl">
-              @foreach ($diagnoseResults as $diagnoseResult)
-                @if ($diagnoseResult['user_id'] == auth()->user()->id)
-                  {{ count($diagnoseResults) }}x
-                @else
-                  <span class="text-slate-500">0x</span>
-                @endif
-              @endforeach
+            <h1 class="pt-2 text-4xl font-bold text-primary lg:text-3xl">
+              @if (count($person))
+                {{ count($person) }}x
+              @else
+                <span class="text-slate-500">0x</span>
+              @endif
             </h1>
           </div>
           <div class="rounded-[4px] border border-violet-500 bg-violet-200 p-3 py-7 text-center">
-            <p class="font-base text-base text-primary lg:text-xl">
+            <p class="font-base pb-2 text-base text-primary lg:text-xl">
               Latest Result
             </p>
-            <h1 class="text-3xl font-bold text-primary lg:text-4xl">
-              @foreach ($diagnoseResults as $diagnoseResult)
-                @if ($diagnoseResult['user_id'] == auth()->user()->id)
-                  {{ $diagnoseResult['result'] }}
-                @else
-                  <span class="text-slate-500">No Result</span>
-                @endif
-              @endforeach
+            <h1 class="pt-2 text-3xl font-bold text-primary lg:text-3xl">
+              @if (count($person))
+                {{ $p['result'] }}
+              @else
+                <span class="text-slate-500">No Result</span>
+              @endif
             </h1>
           </div>
         </div>

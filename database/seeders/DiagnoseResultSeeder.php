@@ -13,13 +13,25 @@ class DiagnoseResultSeeder extends Seeder
      */
     public function run(): void
     {
+        // DiagnoseResult::create([
+        //     'user_id' => 1,
+        //     'result' => 'Diabetes Mellitus 1'
+        // ]);
         DiagnoseResult::create([
             'user_id' => 2,
             'result' => 'Negative'
         ]);
-        // DiagnoseResult::create([
-        //     'user_id' => 2,
-        //     'result' => 'Diabetes Mellitus 1'
-        // ]);
+        DiagnoseResult::create([
+            'user_id' => 2,
+            'result' => 'Diabetes Gestational'
+        ]);
+        DiagnoseResult::create([
+            'user_id' => 2,
+            'result' => 'Diabetes Mellitus 1'
+        ]);
+        DiagnoseResult::create([
+            'user_id' => 2,
+            'result' => 'Negative'
+        ]);
     }
 }

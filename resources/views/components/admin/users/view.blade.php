@@ -1,8 +1,8 @@
-{{-- @dd($diagnoseResults); --}}
+{{-- @dd($diagnoseResults->where('user_id', 2)); --}}
+
 @extends('pages.adminDashboard')
 
 @section('content')
-
   <div class="w-full lg:mx-auto">
     <div class="mb-10 w-full">
       <div class="w-full rounded-sm border border-[#BBBBBB] bg-white p-3">
@@ -48,16 +48,21 @@
                   <td class="border px-6 py-2">{{ $loop->iteration }}</td>
                   <td class="border px-6 py-2">{{ $user['name'] }}</td>
                   <td class="content-start border px-6 py-2 text-justify">{{ $user['email'] }}</td>
-                  @foreach ($diagnoseResults as $diagnoseResult)
-                    @if ($diagnoseResult['user_id'] == $user['id'])
-                      <td class="border px-6 py-2 text-justify">
-                        {{ date('d F Y', strtotime($diagnoseResult['updated_at'])) }}</td>
-                      <td class="border px-6 py-2 text-justify">{{ $diagnoseResult['result'] }}</td>
-                    @else
-                      <td class="border px-6 py-2 text-justify text-slate-400">No Date</td>
-                      <td class="border px-6 py-2 text-justify text-slate-400">No Result</td>
-                    @endif
-                  @endforeach
+                  @php
+                    $person = $diagnoseResults->where('user_id', $user['id']);
+                    // dd($person);
+                    foreach ($person as $p) {
+                        // echo $p;
+                    }
+                  @endphp
+                  @if (count($person))
+                    <td class="border px-6 py-2 text-justify">
+                      {{ date('d F Y', strtotime($p['updated_at'])) }}</td>
+                    <td class="border px-6 py-2 text-justify">{{ $p['result'] }}</td>
+                  @else
+                    <td class="border px-6 py-2 text-justify text-slate-400">No Date</td>
+                    <td class="border px-6 py-2 text-justify text-slate-400">No Result</td>
+                  @endif
                 </tr>
               @endforeach
             </tbody>
