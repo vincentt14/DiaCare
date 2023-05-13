@@ -76,6 +76,8 @@ class DiseaseController extends Controller
             'description' => 'required',
         ]);
 
+        $validatedData['img'] = 'https://source.unsplash.com/bkc-m0iZ4Sk';
+
         Disease::create($validatedData);
         return redirect('/diseases')->with('success', 'Diseases was added successfully');
     }

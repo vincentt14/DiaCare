@@ -63,7 +63,7 @@
             @foreach ($results as $result)
               <p class="font-base mb-3 text-lg text-primary lg:text-2xl">{{ $result['diseases'] }}</p>
               <div class="h-[170px] overflow-hidden rounded-sm border-2 border-secondary shadow-lg">
-                <img src="https://source.unsplash.com/bkc-m0iZ4Sk" alt="{{ $result['diseases'] }}"
+                <img src="{{ $result['img'] }}" alt="{{ $result['diseases'] }}"
                   class="h-full w-full object-cover" />
               </div>
               <p class="mt-5 text-justify text-lg font-bold text-primary">Type:</p>
