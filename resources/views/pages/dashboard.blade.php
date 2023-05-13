@@ -32,7 +32,7 @@
             <p class="font-base pb-2 text-base text-primary lg:text-xl">
               Already Diagnosed
             </p>
-            <h1 class="text-4xl font-bold text-primary lg:text-3xl">
+            <h1 class="text-2xl font-bold text-primary">
               @if (count($person))
                 {{ count($person) }}x
               @else
@@ -44,7 +44,7 @@
             <p class="font-base pb-2 text-base text-primary lg:text-xl">
               Latest Result
             </p>
-            <h1 class="text-4xl font-bold text-primary lg:text-3xl">
+            <h1 class="text-2xl font-bold text-primary">
               @if (count($person))
                 {{ $p['result'] }}
               @else

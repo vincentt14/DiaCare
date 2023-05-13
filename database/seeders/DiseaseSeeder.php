@@ -16,7 +16,7 @@ class DiseaseSeeder extends Seeder
         Disease::create([
             'diseases_code' => 'P00',
             'diseases' => 'Negative',
-            'img' => 'https://source.unsplash.com/yOSHqKxyz-g',
+            'img' => 'https://source.unsplash.com/-mMoKrWFBjw',
             'type' => 'Negative',
             'description' => "You don't have diabetes mellitus."
         ]);

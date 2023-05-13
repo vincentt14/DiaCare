@@ -63,31 +63,33 @@
             @foreach ($results as $result)
               <p class="font-base mb-3 text-lg text-primary lg:text-2xl">{{ $result['diseases'] }}</p>
               <div class="h-[170px] overflow-hidden rounded-sm border-2 border-secondary shadow-lg">
-                <img src="{{ $result['img'] }}" alt="{{ $result['diseases'] }}"
-                  class="h-full w-full object-cover" />
+                <img src="{{ $result['img'] }}" alt="{{ $result['diseases'] }}" class="h-full w-full object-cover" />
               </div>
               <p class="mt-5 text-justify text-lg font-bold text-primary">Type:</p>
               <p class="mt-1 text-justify text-lg font-light text-primary">{{ $result['type'] }}</p>
               <p class="mt-5 text-justify text-lg font-bold text-primary">Description:</p>
               <p class="mt-1 text-justify text-lg font-light text-primary">{{ $result['description'] }}</p>
-              <p class="mt-5 text-justify text-lg font-bold text-primary">Solutions:</p>
-              <ol>
-                @foreach ($solutions as $solution)
-                  @if ($solution['disease_id'] == $result['id'])
-                    <li class="mt-1 text-justify text-lg font-light text-primary">• {{ $solution['solution'] }}
-                    </li>
-                  @endif
-                @endforeach
-              </ol>
-              <p class="mt-5 text-justify text-lg font-bold text-primary">Medicines:</p>
-              <ol>
-                @foreach ($medicines as $medicine)
-                  @if ($medicine['disease_id'] == $result['id'])
-                    <li class="mt-1 text-justify text-lg font-light text-primary">• {{ $medicine['name'] }}
-                    </li>
-                  @endif
-                @endforeach
-              </ol>
+              @if ($result['diseases'] == 'Negative')
+              @else
+                <p class="mt-5 text-justify text-lg font-bold text-primary">Solutions:</p>
+                <ol>
+                  @foreach ($solutions as $solution)
+                    @if ($solution['disease_id'] == $result['id'])
+                      <li class="mt-1 text-justify text-lg font-light text-primary">• {{ $solution['solution'] }}
+                      </li>
+                    @endif
+                  @endforeach
+                </ol>
+                <p class="mt-5 text-justify text-lg font-bold text-primary">Medicines:</p>
+                <ol>
+                  @foreach ($medicines as $medicine)
+                    @if ($medicine['disease_id'] == $result['id'])
+                      <li class="mt-1 text-justify text-lg font-light text-primary">• {{ $medicine['name'] }}
+                      </li>
+                    @endif
+                  @endforeach
+                </ol>
+              @endif
             @endforeach
           @else
             <h1 class="mt-1 mb-3 text-center text-lg font-light text-primary lg:text-2xl">There is no
@@ -97,6 +99,14 @@
       </div>
     </div>
   </div>
+  @if (count($person))
+    @if ($p['result'] == 'Negative')
+      @include('components.prevent')
+    @else
+    @endif
+  @else
+    @include('components.prevent')
+  @endif
 </div>
 <script>
   const buttonTrigger = document.getElementById('buttonTrigger');
