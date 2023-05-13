@@ -35,7 +35,7 @@
               <p class="mb-3 text-lg font-bold text-primary lg:text-3xl">{{ $medicine['name'] }}</p>
             @endif
             <div class="h-[170px] overflow-hidden rounded-sm border-2 border-secondary shadow-lg">
-              <img src="https://source.unsplash.com/w8p9cQDLX7I" alt="{{ $medicine['name'] }}"
+              <img src="{{ $medicine['img'] }}" alt="{{ $medicine['name'] }}"
                 class="h-full w-full object-cover" />
             </div>
             <p class="mt-5 text-justify text-lg font-bold text-primary">This Med is for:</p>

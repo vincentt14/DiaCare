@@ -31,7 +31,7 @@
           @foreach ($medicines as $medicine)
             <div class="mb-5 flex flex-col justify-between rounded-sm border-2 border-primary bg-white p-4 shadow-lg">
               <div class="h-[170px] overflow-hidden rounded-sm border-2 border-secondary shadow-lg">
-                <img src="https://source.unsplash.com/w8p9cQDLX7I" alt="{{ $medicine['name'] }}"
+                <img src="{{ $medicine['img'] }}" alt="{{ $medicine['name'] }}"
                   class="h-full w-full object-cover" />
               </div>
               @if ($medicine['disease_id'] == 2)

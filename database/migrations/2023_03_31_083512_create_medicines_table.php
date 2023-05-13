@@ -16,6 +16,7 @@ return new class extends Migration
             $table->timestamps();
             $table->foreignId('disease_id')->constrained()->onDelete('cascade')->onUpdate('cascade');
             $table->string('name');
+            $table->string('img');
             $table->text('description');
             $table->string('composition');
             $table->string('dose');

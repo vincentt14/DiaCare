@@ -58,7 +58,7 @@
       <div class="hidden w-full self-center md:block lg:w-1/3">
         <div class="mt-10 lg:right-0">
           <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-          <lottie-player src="https://assets5.lottiefiles.com/private_files/lf30_mvurfbs7.json" background="transparent"
+          <lottie-player src="https://assets1.lottiefiles.com/private_files/lf30_pzpxyd5w.json" background="transparent"
             speed="1" style="width: 300px; height: 300px;" loop autoplay class="mx-auto"></lottie-player>
         </div>
       </div>

@@ -70,6 +70,8 @@ class MedicineController extends Controller
             'dose' => 'required',
         ]);
 
+        $validatedData['img'] = 'https://source.unsplash.com/w8p9cQDLX7I';
+
         Medicine::create($validatedData);
         return redirect('/medicines')->with('success', 'Medicine was added successfully');
     }
