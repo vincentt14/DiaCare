@@ -75,9 +75,9 @@
               </p>
             </div>
             <button type="button"
-            class="btnn my-5 mx-3 rounded-sm border-2 border-black bg-black py-3 px-5 text-white duration-300 ease-out hover:bg-white hover:text-black">
-            <a href="#prevent">How to Prevent</a>
-          </button>
+              class="btnn my-5 mx-3 rounded-sm border-2 border-black bg-black py-3 px-5 text-white duration-300 ease-out hover:bg-white hover:text-black">
+              <a href="#prevent">How to Prevent</a>
+            </button>
           </div>
         </div>
         <p class="text-justify text-lg font-light text-primary">Diabetes is a chronic (long-lasting) health condition that
@@ -315,10 +315,10 @@
   <script>
     const diseases = @json($disease);
     const typee = document.getElementById('typee');
-    
+
     const changeType = (id) => {
       typee.innerHTML = "";
-      
+
       typee.innerHTML += `
         <div class="container mt-5">
           <div class="w-full rounded-sm border border-[#BBBBBB] bg-white p-3">
@@ -333,5 +333,46 @@
         </div>
       `;
     }
+
+    // typeWrite
+    const typeWriterEffect = () => {
+      const words = ["Diagnose.", "Track History.", "View Medicines.", "Learn."];
+      let wordCount = 0;
+      let letterCount = 0;
+
+      let currentText = "";
+      let currentWord = "";
+
+      let timeOut = 200;
+
+      let isDeleting = false;
+
+      const type = () => {
+        if (wordCount === words.length) {
+          wordCount = 0;
+        }
+        currentWord = words[wordCount];
+        if (isDeleting) {
+          currentText = currentWord.slice(0, --letterCount);
+        } else {
+          currentText = currentWord.slice(0, ++letterCount);
+        }
+
+        document.querySelector(".typewrite").textContent = currentText;
+        timeOut = isDeleting ? 100 : 200;
+
+        if (!isDeleting && currentText.length === currentWord.length) {
+          timeOut = 800;
+          isDeleting = true;
+        } else if (isDeleting && currentText.length === 0) {
+          timeOut = 800;
+          isDeleting = false;
+          wordCount++;
+        }
+        setTimeout(type, timeOut);
+      };
+      type();
+    };
+    typeWriterEffect();
   </script>
 @endsection

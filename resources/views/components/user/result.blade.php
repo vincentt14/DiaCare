@@ -3,7 +3,7 @@
   <div class="flex flex-wrap">
     <div class="bayangan_field mt-5 mb-6 self-center rounded-sm border-2 border-black bg-white text-slate-500 lg:w-2/3">
       @if (count($person))
-        <button type="button" id="buttonTrigger"
+        <button type="button" id="buttonTrigger" onclick="showHistory()"
           class="w-full border-2 border-black bg-black py-3 px-8 text-white duration-300 ease-out hover:bg-white hover:text-black focus:outline-none focus:ring focus:ring-blue-500">
           Diagnose History
         </button>
@@ -109,20 +109,11 @@
   @endif
 </div>
 <script>
-  const buttonTrigger = document.getElementById('buttonTrigger');
-  const buttonTrigger2 = document.getElementById('buttonTrigger2');
   const historyTable = document.getElementById('historyTable');
-  const solutionTable = document.getElementById('solutionTable');
   const lottieHistory = document.getElementById('lottieHistory');
-  const lottiesolution = document.getElementById('lottiesolution');
 
-  buttonTrigger.addEventListener('click', function() {
+  const showHistory = () => {
     historyTable.classList.toggle('hidden')
     lottieHistory.classList.toggle('hidden')
-  });
-
-  buttonTrigger2.addEventListener('click', function() {
-    solutionTable.classList.toggle('hidden')
-    lottiesolution.classList.toggle('hidden')
-  });
+  }
 </script>

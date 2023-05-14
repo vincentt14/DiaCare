@@ -72,7 +72,7 @@
                     </a>
                   </div>
                 </div>
-                <form class="mt-5" method="post" action="/">
+                <form class="mt-5" method="post" action="/diagnose">
                   @csrf
                   @if ($symptoms->count())
                     <table class="mt-3 mb-3 w-full rounded-xl border text-slate-800">
@@ -95,10 +95,10 @@
                             <td class="border px-6 py-2">{{ $loop->iteration }}</td>
                             <td class="content-start border px-6 py-2 text-justify">{{ $symptom['symptoms'] }}</td>
                             <td class="border px-6 py-2">
-                              <select name="options" id="options" class="w-full rounded-md">
+                              <select name="options" id="options-{{ $symptom['id'] }}" class="w-full rounded-md" onchange="storeAnswers(this, {{ $symptom['id'] }})">
                                 <option hidden disabled selected value> -- Select an Option -- </option>
-                                <option value="yes">Yes</option>
-                                <option value="no">No</option>
+                                <option value="1">Yes</option>
+                                <option value="0">No</option>
                               </select>
                             </td>
                           </tr>
@@ -123,5 +123,40 @@
       </div>
   </section>
 
-  <script></script>
+  <script>
+    const answers = [];
+
+    const storeAnswers = (e, id) => {
+      console.log(e, id);
+    }
+
+
+
+
+// const selects = document.getElementsByTagName('select');
+    // // const arrayOfSelects = Array.from(selects);
+    // // console.log(arrayOfSelects)
+
+    // const answers = [];
+
+    // for (let i = 0; i < selects.length; i++) {
+    //   // console.log(selects[i].value);
+    //   selects[i].addEventListener('change', function() {
+    //     // for (let j = 0; j < arrayOfSelects.length; j++) {
+    //     // if (i === j) {
+
+    //     answers.push(selects[i].value)
+    //     // answers.push(selects[i].value);
+
+    //     // console.log(i, j);
+    //     console.log(answers);
+    //     // }
+    //     // }
+    //   });
+    //   // selects[i].addEventListener('change', function(){
+    //   //   answers.push(selects[i].value);
+    //   //   console.log(answers);
+    //   // });
+    // }
+  </script>
 @endsection
