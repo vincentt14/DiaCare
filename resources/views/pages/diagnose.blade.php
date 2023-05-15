@@ -73,7 +73,6 @@
                   </div>
                 </div>
                 <form class="mt-5" method="post" action="/diagnose">
-                  @csrf
                   @if ($symptoms->count())
                     <table class="mt-3 mb-3 w-full rounded-xl border text-slate-800">
                       <thead class="text-slate-700">
@@ -90,20 +89,21 @@
                         </tr>
                       </thead>
                       <tbody>
-                        @foreach ($symptoms as $symptom)
+                        @for ($i = 0; $i < count($symptoms); $i++)
                           <tr class="px-6 py-3 text-center">
-                            <td class="border px-6 py-2">{{ $loop->iteration }}</td>
-                            <td class="content-start border px-6 py-2 text-justify">{{ $symptom['symptoms'] }}</td>
+                            {{-- <td class="border px-6 py-2">{{ $loop->iteration }}</td> --}}
+                            <td class="border px-6 py-2">{{ $i + 1 }}</td>
+                            <td class="content-start border px-6 py-2 text-justify">{{ $symptoms[$i]['symptoms'] }}</td>
                             <td class="border px-6 py-2">
-                              <select name="options" id="options-{{ $symptom['id'] }}" class="w-full rounded-md" onchange="storeAnswers(this, {{ $symptom['id'] }})">
+                              <select name="options" id="options-{{ $symptoms[$i]['id'] }}" class="w-full rounded-md"
+                                onchange="storeAnswers(this, {{ $symptoms[$i]['id'] }})">
                                 <option hidden disabled selected value> -- Select an Option -- </option>
                                 <option value="1">Yes</option>
                                 <option value="0">No</option>
                               </select>
                             </td>
                           </tr>
-                        @endforeach
-
+                        @endfor
                       </tbody>
                     @else
                       <h1 class="mt-2 mb-4 border p-3 text-center text-lg font-light text-primary lg:text-2xl">There is no
@@ -111,7 +111,7 @@
                       </h1>
                   @endif
                   </table>
-                  <button type="submit"
+                  <button type="button" id="submitButton"
                     class="w-full rounded-sm border-2 border-black bg-black py-3 px-8 text-white duration-300 ease-out hover:bg-white hover:text-black focus:outline-none focus:ring focus:ring-blue-500">
                     Submit Answer
                   </button>
@@ -124,39 +124,51 @@
   </section>
 
   <script>
-    const answers = [];
+    const submitButton = document.getElementById('submitButton');
+    const symptoms = @json($symptoms);
+    const symptomsCopy = symptoms.map((e) => {
+      return e;
+    });
 
-    const storeAnswers = (e, id) => {
-      console.log(e, id);
+    const answers = [];
+    const notAnswered = [];
+    const alreadyAnswered = [];
+
+    const storeAnswers = (e, symptomId) => {
+      const value = e.value;
+
+      // console.log(e);
+      // console.log(symptomId, value);
+      for (let i = 0; i < answers.length; i++) {
+        if (answers[i].symptomId === symptomId) {
+          answers.splice(i, 1);
+        }
+      }
+      e.classList.add('bg-blue-100')
+      e.classList.add('border-blue-500')
+      answers.push({
+        symptomId,
+        value
+      });
+      // console.log(answers);
     }
 
+    submitButton.addEventListener('click', () => {
+      // console.log(answers);
+      for (let i = 0; i < symptomsCopy.length; i++) {
+        // console.log(symptoms[i].id)
+        for (let j = 0; j < answers.length; j++) {
+          if (symptomsCopy[i].id === answers[j].symptomId) {
+            alreadyAnswered.push(answers[j])
+          }else {
+            // aku menghapus symptoms[i] dengan id yang sudah ada di answers[j].symptomId
+            notAnswered.push(symptomsCopy.splice(symptomsCopy[i].id, 1))
+          }
+        }
+      }
+      console.log(alreadyAnswered)
+      console.log(notAnswered)
 
-
-
-// const selects = document.getElementsByTagName('select');
-    // // const arrayOfSelects = Array.from(selects);
-    // // console.log(arrayOfSelects)
-
-    // const answers = [];
-
-    // for (let i = 0; i < selects.length; i++) {
-    //   // console.log(selects[i].value);
-    //   selects[i].addEventListener('change', function() {
-    //     // for (let j = 0; j < arrayOfSelects.length; j++) {
-    //     // if (i === j) {
-
-    //     answers.push(selects[i].value)
-    //     // answers.push(selects[i].value);
-
-    //     // console.log(i, j);
-    //     console.log(answers);
-    //     // }
-    //     // }
-    //   });
-    //   // selects[i].addEventListener('change', function(){
-    //   //   answers.push(selects[i].value);
-    //   //   console.log(answers);
-    //   // });
-    // }
+    });
   </script>
 @endsection

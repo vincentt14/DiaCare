@@ -1,3 +1,4 @@
+{{-- @dd($symptomsInfo); --}}
 @extends('pages.adminDashboard')
 
 @section('content')
