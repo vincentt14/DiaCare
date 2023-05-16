@@ -55,19 +55,11 @@ class SymptomSeeder extends Seeder
         ]);
         Symptom::create([
             'symptoms_code' => 'G11',
-            'symptoms' => 'Apakah anda mengalami disfungsi Ereksi (untuk pria)?'
-        ]);
-        Symptom::create([
-            'symptoms_code' => 'G12',
             'symptoms' => 'Apakah anda mengalami keputihan karena kelainan pada ginjal?'
         ]);
         Symptom::create([
-            'symptoms_code' => 'G13',
+            'symptoms_code' => 'G12',
             'symptoms' => 'Apakah luka yang anda alami sukar sembuh?'
-        ]);
-        Symptom::create([
-            'symptoms_code' => 'G14',
-            'symptoms' => 'Apakah nafas anda seperti wangi buah?'
         ]);
     }
 }

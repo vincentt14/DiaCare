@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-  <section class="pt-28 pb-24 lg:pt-36 lg:pb-32">
+  <section class="pt-28 pb-24 lg:pt-36">
     <div class="container">
       <div class="w-full self-center px-4">
         <h1 class="text-base font-medium text-primary md:text-xl">

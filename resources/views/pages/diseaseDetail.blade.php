@@ -24,31 +24,32 @@
           <div class="m-3">
             <p class="mb-3 text-lg font-bold text-primary lg:text-3xl">{{ $disease['diseases'] }}</p>
             <div class="h-[170px] overflow-hidden rounded-sm border-2 border-secondary shadow-lg">
-              <img src="{{ $disease['img'] }}" alt="{{ $disease['diseases'] }}"
-                class="h-full w-full object-cover" />
+              <img src="{{ $disease['img'] }}" alt="{{ $disease['diseases'] }}" class="h-full w-full object-cover" />
             </div>
             <p class="mt-5 text-justify text-lg font-bold text-primary">Type:</p>
             <p class="mt-1 text-justify text-lg font-light text-primary">{{ $disease['type'] }}</p>
             <p class="mt-5 text-justify text-lg font-bold text-primary">Description:</p>
             <p class="mt-1 text-justify text-lg font-light text-primary">{{ $disease['description'] }}</p>
-            <p class="mt-5 text-justify text-lg font-bold text-primary">Solutions:</p>
-            <ol>
-              @foreach ($solutions as $solution)
-                @if ($solution['disease_id'] == $disease['id'])
-                  <li class="mt-1 text-justify text-lg font-light text-primary">• {{ $solution['solution'] }}
-                  </li>
-                @endif
-              @endforeach
-            </ol>
-            <p class="mt-5 text-justify text-lg font-bold text-primary">Medicines:</p>
-            <ol>
-              @foreach ($medicines as $medicine)
-                @if ($medicine['disease_id'] == $disease['id'])
-                  <li class="mt-1 text-justify text-lg font-light text-primary">• {{ $medicine['name'] }}
-                  </li>
-                @endif
-              @endforeach
-            </ol>
+            @if ($disease['diseases'] !== 'Negative')
+              <p class="mt-5 text-justify text-lg font-bold text-primary">Solutions:</p>
+              <ol>
+                @foreach ($solutions as $solution)
+                  @if ($solution['disease_id'] == $disease['id'])
+                    <li class="mt-1 text-justify text-lg font-light text-primary">• {{ $solution['solution'] }}
+                    </li>
+                  @endif
+                @endforeach
+              </ol>
+              <p class="mt-5 text-justify text-lg font-bold text-primary">Medicines:</p>
+              <ol>
+                @foreach ($medicines as $medicine)
+                  @if ($medicine['disease_id'] == $disease['id'])
+                    <li class="mt-1 text-justify text-lg font-light text-primary">• {{ $medicine['name'] }}
+                    </li>
+                  @endif
+                @endforeach
+              </ol>
+            @endif
           </div>
         </div>
       </div>

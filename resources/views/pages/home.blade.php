@@ -62,7 +62,7 @@
       </div>
     </div>
   </section>
-  <section id="definition" class="bg-[#f2f6fc] pb-16 pt-32 lg:pb-28">
+  <section id="definition" class="bg-[#f2f6fc] pb-16 pt-32 lg:pb-20">
     <div class="container">
       <div class="w-full px-4">
         <div class="mb-5">
@@ -105,7 +105,7 @@
       <div id="typee"></div>
     </div>
   </section>
-  <section id="prevent" class="pt-16 pb-24 lg:pt-32 lg:pb-32">
+  <section id="prevent" class="pt-16">
     <div class="container">
       <div class="flex flex-wrap">
         <div class="bayangan hidden w-full self-center rounded-sm border-2 border-primary bg-white p-4 md:block lg:w-1/4">

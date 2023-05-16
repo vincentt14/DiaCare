@@ -40,13 +40,14 @@
                       class="font-semibold text-secondary">{{ $symptomsInfo[$i]['symptoms_code'] }}</span><br>{{ $symptomsInfo[$i]['symptoms'] }}
                   </td>
                   <td class="border px-6 py-2">
-                    <select name="options" id="options-{{ $i }}" class="w-full rounded-md">
+                    <select name="options" id="options-{{ $i }}" class="w-full rounded-md" 
+                    onchange="updateRuleListener(this, {{ $diseaseDetails['id'] }}, {{ $symptomsInfo[$i]['id'] }})">
                       @if ($diseaseDetails['rules'][$i] == 0)
-                        <option value="yes">Yes</option>
-                        <option value="no" selected>No</option>
+                        <option value="1">Yes</option>
+                        <option value="0" selected>No</option>
                       @else
-                        <option value="yes" selected>Yes</option>
-                        <option value="no">No</option>
+                        <option value="1" selected>Yes</option>
+                        <option value="0">No</option>
                       @endif
                     </select>
                   </td>
@@ -64,42 +65,80 @@
   </div>
 
   <script>
+    const rules = [];
+
+    const updateRuleListener = (e, diseaseId, symptomId) => {
+      const value = e.value;
+
+      for (let i = 0; i < rules.length; i++){
+        if(rules[i].diseaseId === diseaseId && rules[i].symptomId === symptomId){
+          e.classList.remove('bg-green-100');
+          e.classList.remove('border-green-500');
+          rules.splice(i, 1);
+          console.table(rules);
+          return;
+        }
+      }
+
+      e.classList.add('bg-green-100');
+      e.classList.add('border-green-500');
+      rules.push({
+        diseaseId,
+        symptomId,
+        value
+      });
+      console.table(rules);
+    }
+
+    document.getElementById('submit-rule').addEventListener('click', () => {
+      fetch(api, {
+        method: "POST",
+        headers: {
+          'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        },
+        body: JSON.stringify(rules)
+      })
+      .then(response => {
+        return response.text();
+      })
+    });
 
 
-
-
-
-   // const data = @json($diseaseDetails);
-    // console.log(data);
-    
+    // const data = @json($diseaseDetails);
     // const diseaseRules = data.rules
-    // console.log(diseaseRules);
+    // console.log(data);
 
     // let newDiseaseRules = diseaseRules.map((e) => {
     //   return e;
     // })
-    // // console.log(newDiseaseRules);
+    // console.log(newDiseaseRules);
 
     // const options = document.getElementsByTagName('select');
-    // // console.log(options.length);
+    // console.log(options.length);
 
-    // // for (let i = 0; i < options.length; i++) {
-    // //   // console.log(options[i]);
-    // //   options[i].addEventListener('change', () => {
-    // //     // console.log(options[i].value)
-    // //     for(let j = 0; j < newDiseaseRules; j++){
-    // //       if (newDiseaseRules[j] == options[i]){
-    // //         // console.log('masoookk banggg')
-    // //         newDiseaseRules[j] = options[i].value
-    // //         // newDiseaseRules[j].push(options[i].value)
-    // //         console.log(options[i].value)
-    // //       }
-    // //     }
-    // //     console.log(newDiseaseRules)
-    // //   })
-    // // }
+    // for (let i = 0; i < options.length; i++) {
+    //   // console.log(options[i]);
+    //   options[i].addEventListener('change', () => {
+    //     // console.log(options[i].value)
+    //     for (let j = 0; j < newDiseaseRules; j++) {
+    //       if (newDiseaseRules[j] == options[i]) {
+    //         // console.log('masoookk banggg')
+    //         // newDiseaseRules[j].push(options[i].value)
+    //         console.log(options[i].value)
+    //       }
+    //     }
+    //     console.log(newDiseaseRules)
+    //   })
+    // }
 
 
+    // options.map((e) => {
+    //   console.log(e);
+    //   e.addEventListener('change', () => {
+    //   })
+    // })
+    // console.log(options);
+    // options.addEventListener('onChange', () => {
 
   </script>
 @endsection

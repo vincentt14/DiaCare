@@ -22,9 +22,15 @@
               class="font-bold capitalize">
               <span class="font-bold capitalize">{{ auth()->user()->name }}</span>.
           </h2>
-          <p class="mb-3 max-w-md text-slate-500">
-            Here you can see all your data.
+          @if(count($person))
+          <p class="mb-3 text-red-500">
+            *Disclaimer* The results of this diagnosis are only based on the rules from the expert
           </p>
+          @else
+          <p class="mb-3 text-slate-500">
+            You can see all your details here.
+          </p>
+          @endif
         </div>
 
         <div class="grid w-full grid-cols-2 gap-1 self-center px-4">

@@ -31,18 +31,14 @@ class DiagnoseResultSeeder extends Seeder
         ]);
         DiagnoseResult::create([
             'user_id' => 2,
-            'result' => 'Negative'
-        ]);
-        DiagnoseResult::create([
-            'user_id' => 2,
-            'result' => 'Diabetes Mellitus 1'
-        ]);
-        DiagnoseResult::create([
-            'user_id' => 2,
             'result' => 'Diabetes Mellitus 2'
         ]);
         DiagnoseResult::create([
-            'user_id' => 2,
+            'user_id' => 3,
+            'result' => 'Diabetes Mellitus 1'
+        ]);
+        DiagnoseResult::create([
+            'user_id' => 3,
             'result' => 'Negative'
         ]);
     }

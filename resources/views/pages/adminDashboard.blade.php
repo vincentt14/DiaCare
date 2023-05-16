@@ -35,7 +35,7 @@
     </div>
   @endif
   <main>
-    <section class="pt-28 pb-24 lg:pt-36 lg:pb-32">
+    <section class="pt-28 pb-16 lg:pt-36">
       <div class="container">
         <div class="flex flex-col lg:flex-row">
           <div class="w-full self-center px-4">

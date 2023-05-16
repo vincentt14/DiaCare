@@ -14,36 +14,36 @@ class SolutionSeeder extends Seeder
     public function run(): void
     {
         Solution::create([
-            'disease_id' => 1,
-            'solution' => 'Perbanyak istirahat dan minum air putih',
+            'disease_id' => 2,
+            'solution' => 'Learn ways to lower your stress. Try deep breathing, gardening, taking a walk, meditating, working on your hobby, or listening to your favorite music.',
         ]);
         Solution::create([
             'disease_id' => 2,
-            'solution' => 'Jaga pola makan',
+            'solution' => 'Choose foods that are lower in calories, saturated fat, trans fat, sugar, and salt.',
         ]);
         Solution::create([
             'disease_id' => 2,
-            'solution' => 'Ganti gula jadi tropicana',
+            'solution' => 'Eat foods with more fiber, such as whole grain cereals, breads, crackers, rice, or pasta.',
         ]);
         Solution::create([
             'disease_id' => 3,
-            'solution' => 'Jaga pola makan',
+            'solution' => 'Learn ways to lower your stress. Try deep breathing, gardening, taking a walk, meditating, working on your hobby, or listening to your favorite music.',
         ]);
         Solution::create([
             'disease_id' => 3,
-            'solution' => 'Olahraga setiap hari',
+            'solution' => 'Choose foods that are lower in calories, saturated fat, trans fat, sugar, and salt.',
         ]);
         Solution::create([
             'disease_id' => 3,
-            'solution' => 'Ganti gula jadi tropicana',
+            'solution' => 'Drink water instead of juice and regular soda.',
+        ]);
+        Solution::create([
+            'disease_id' => 3,
+            'solution' => 'Work out at least 150 minutes of exercise each week, divided into 5 sessions or days, 30 minutes per session. Use stretch bands, do yoga, heavy gardening (digging and planting with tools), or try push-ups.',
         ]);
         Solution::create([
             'disease_id' => 4,
-            'solution' => 'Konsumsi banyak buah buahan',
-        ]);
-        Solution::create([
-            'disease_id' => 4,
-            'solution' => 'Ganti gula jadi tropicana',
+            'solution' => 'Choose foods such as fruits, vegetables, whole grains, bread and cereals, and low-fat or skim milk and cheese.',
         ]);
     }
 }
