@@ -101,6 +101,7 @@
                                 <option value="1">Yes</option>
                                 <option value="0">No</option>
                               </select>
+                              {{-- <p class="text-red-500 text-justify">Select an Option</p> --}}
                             </td>
                           </tr>
                         @endfor
@@ -125,49 +126,65 @@
 
   <script>
     const submitButton = document.getElementById('submitButton');
+    const selects = document.getElementsByTagName('select');
     const symptoms = @json($symptoms);
     const symptomsCopy = symptoms.map((e) => {
       return e;
     });
 
+    // console.log(selects)
+
     const answers = [];
-    const notAnswered = [];
-    const alreadyAnswered = [];
 
     const storeAnswers = (e, symptomId) => {
       const value = e.value;
 
-      // console.log(e);
-      // console.log(symptomId, value);
       for (let i = 0; i < answers.length; i++) {
         if (answers[i].symptomId === symptomId) {
           answers.splice(i, 1);
         }
       }
-      e.classList.add('bg-blue-100')
-      e.classList.add('border-blue-500')
+      e.classList.remove('bg-red-100');
+      e.classList.remove('border-red-500');
+      e.classList.add('bg-blue-100');
+      e.classList.add('border-blue-500');
+
       answers.push({
         symptomId,
         value
       });
-      // console.log(answers);
     }
 
     submitButton.addEventListener('click', () => {
-      // console.log(answers);
-      for (let i = 0; i < symptomsCopy.length; i++) {
-        // console.log(symptoms[i].id)
-        for (let j = 0; j < answers.length; j++) {
-          if (symptomsCopy[i].id === answers[j].symptomId) {
-            alreadyAnswered.push(answers[j])
-          }else {
-            // aku menghapus symptoms[i] dengan id yang sudah ada di answers[j].symptomId
-            notAnswered.push(symptomsCopy.splice(symptomsCopy[i].id, 1))
-          }
+      // for (let i = 0; i < symptomsCopy.length; i++) {
+      //   for (let j = 0; j < answers.length; j++) {
+      //     if (symptomsCopy[i].id === answers[j].symptomId) {
+      //       symptomsCopy.splice(i, 1);
+      //       continue;
+      //     }
+      //   }
+      // }
+
+      let indexFocus = -1;
+      answers.map((e) => {
+        indexFocus = symptomsCopy.findIndex((currentValue) => currentValue.id === e.symptomId);
+        if(indexFocus !== -1){
+          symptomsCopy.splice(indexFocus, 1);
         }
+      })
+
+      for (let k = 0; k < symptomsCopy.length; k++) {
+        const notSelect = document.getElementById(`options-${symptomsCopy[k].id}`);
+        notSelect.classList.add('bg-red-100');
+        notSelect.classList.add('border-red-500');
       }
-      console.log(alreadyAnswered)
-      console.log(notAnswered)
+
+      console.table(answers);
+      console.table(symptomsCopy);
+
+      if(symptomsCopy.length === 0){
+        console.log('oke, kirim ke FC')
+      }
 
     });
   </script>

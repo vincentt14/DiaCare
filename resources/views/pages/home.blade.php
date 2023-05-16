@@ -369,6 +369,7 @@
           isDeleting = false;
           wordCount++;
         }
+
         setTimeout(type, timeOut);
       };
       type();

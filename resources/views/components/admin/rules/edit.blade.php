@@ -40,7 +40,7 @@
                       class="font-semibold text-secondary">{{ $symptomsInfo[$i]['symptoms_code'] }}</span><br>{{ $symptomsInfo[$i]['symptoms'] }}
                   </td>
                   <td class="border px-6 py-2">
-                    <select name="options" id="options" class="w-full rounded-md">
+                    <select name="options" id="options-{{ $i }}" class="w-full rounded-md">
                       @if ($diseaseDetails['rules'][$i] == 0)
                         <option value="yes">Yes</option>
                         <option value="no" selected>No</option>
@@ -54,7 +54,7 @@
               @endfor
             </tbody>
           </table>
-          <button type="submit"
+          <button id="submit-rule" type="button"
             class="w-full rounded-sm border-2 border-black bg-black py-3 px-8 text-white duration-300 ease-out hover:bg-white hover:text-black focus:outline-none focus:ring focus:ring-blue-500">
             Edit {{ $diseaseDetails['name'] }} Rule
           </button>
@@ -64,52 +64,40 @@
   </div>
 
   <script>
-    const data = @json($diseaseDetails);
-    console.log(data);
+
+
+
+
+
+   // const data = @json($diseaseDetails);
+    // console.log(data);
     
-    const diseaseRules = data.rules
-    console.log(diseaseRules);
+    // const diseaseRules = data.rules
+    // console.log(diseaseRules);
 
-    let newDiseaseRules = diseaseRules.map((e) => {
-      return e;
-    })
-    // console.log(newDiseaseRules);
+    // let newDiseaseRules = diseaseRules.map((e) => {
+    //   return e;
+    // })
+    // // console.log(newDiseaseRules);
 
-    const options = document.getElementsByTagName('select');
-    // console.log(options.length);
+    // const options = document.getElementsByTagName('select');
+    // // console.log(options.length);
 
-    // for (let i = 0; i < options.length; i++) {
-    //   // console.log(options[i]);
-    //   options[i].addEventListener('change', () => {
-    //     // console.log(options[i].value)
-    //     for(let j = 0; j < newDiseaseRules; j++){
-    //       if (newDiseaseRules[j] == options[i]){
-    //         // console.log('masoookk banggg')
-    //         newDiseaseRules[j] = options[i].value
-    //         // newDiseaseRules[j].push(options[i].value)
-    //         console.log(options[i].value)
-    //       }
-    //     }
-    //     console.log(newDiseaseRules)
-    //   })
-    // }
-
-
-// 1. caritau cara bikin array 2 dimensi
-// 2. caritau cara pakai
-
-
-let a = [
-  [`id penyakit`,`id gejala`]
-]
-
-console.log(a[2][1])
-a[2][1] = 1
-
-
-// a = [
-//   [2,1,1]
-// ]
+    // // for (let i = 0; i < options.length; i++) {
+    // //   // console.log(options[i]);
+    // //   options[i].addEventListener('change', () => {
+    // //     // console.log(options[i].value)
+    // //     for(let j = 0; j < newDiseaseRules; j++){
+    // //       if (newDiseaseRules[j] == options[i]){
+    // //         // console.log('masoookk banggg')
+    // //         newDiseaseRules[j] = options[i].value
+    // //         // newDiseaseRules[j].push(options[i].value)
+    // //         console.log(options[i].value)
+    // //       }
+    // //     }
+    // //     console.log(newDiseaseRules)
+    // //   })
+    // // }
 
 
 
