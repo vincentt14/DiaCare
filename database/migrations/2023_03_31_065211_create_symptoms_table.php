@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('symptoms', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('symptoms_code');
-            $table->string('symptoms');
+            $table->string('symptoms_code', 30);
+            $table->string('symptoms', 100);
         });
     }
 

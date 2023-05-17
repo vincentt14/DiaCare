@@ -14,10 +14,10 @@ return new class extends Migration
         Schema::create('diseases', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('img');
-            $table->string('diseases_code');
-            $table->string('diseases');
-            $table->string('type');
+            $table->string('img', 50);
+            $table->string('diseases_code', 10);
+            $table->string('diseases', 50);
+            $table->string('type', 30);
             $table->text('description');
         });
     }

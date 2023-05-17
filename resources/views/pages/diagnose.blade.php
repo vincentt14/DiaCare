@@ -131,9 +131,6 @@
     const symptomsCopy = symptoms.map((e) => {
       return e;
     });
-
-    // console.log(selects)
-
     const answers = [];
 
     const storeAnswers = (e, symptomId) => {
@@ -156,15 +153,6 @@
     }
 
     submitButton.addEventListener('click', () => {
-      // for (let i = 0; i < symptomsCopy.length; i++) {
-      //   for (let j = 0; j < answers.length; j++) {
-      //     if (symptomsCopy[i].id === answers[j].symptomId) {
-      //       symptomsCopy.splice(i, 1);
-      //       continue;
-      //     }
-      //   }
-      // }
-
       let indexFocus = -1;
       answers.map((e) => {
         indexFocus = symptomsCopy.findIndex((currentValue) => currentValue.id === e.symptomId);
@@ -179,8 +167,8 @@
         notSelect.classList.add('border-red-500');
       }
 
-      console.table(answers);
-      console.table(symptomsCopy);
+      console.table(answers)
+      console.table(symptomsCopy)
 
       if(symptomsCopy.length === 0){
         console.log('oke, kirim ke FC')

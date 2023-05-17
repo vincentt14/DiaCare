@@ -15,11 +15,11 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->foreignId('disease_id')->constrained()->onDelete('cascade')->onUpdate('cascade');
-            $table->string('name');
-            $table->string('img');
+            $table->string('name', 50);
+            $table->string('img', 50);
             $table->text('description');
-            $table->string('composition');
-            $table->string('dose');
+            $table->string('composition', 100);
+            $table->string('dose', 200);
         });
     }
 
