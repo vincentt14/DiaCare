@@ -44,6 +44,7 @@ Route::get('/adminDashboard', [DashboardController::class, 'admin'])->middleware
 
 Route::get('/rules', [AppController::class, 'logicRelation']);
 Route::get('/rules/{id}/edit', [AppController::class, 'edit']);
+Route::post('/rules-change', [AppController::class, 'update']);
 
 Route::resources([
     'symptoms' => SymptomController::class,

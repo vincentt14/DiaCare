@@ -13,7 +13,8 @@ use Illuminate\Http\Request;
 
 class AppController extends Controller
 {
-    public function __construct(){
+    public function __construct()
+    {
         $this->middleware('admin')->except(['index', 'diagnose', 'medicine', 'about']);
     }
 
@@ -113,7 +114,7 @@ class AppController extends Controller
         $rules = Rule::all();
         $diseases = Disease::all();
         $disease = DB::table('diseases')->where('id', '=', $id)->get()[0];
-        
+
         $diseaseDetail = array(
             "id" => "$disease->id",
             "diseases_code" => $disease->diseases_code,
@@ -155,18 +156,22 @@ class AppController extends Controller
         ]);
     }
 
-// public function update( $request, $disease)
-// {
-//     $rules = [
-//         'diseases_code' => 'required',
-//         'diseases' => 'required',
-//         'type' => 'required',
-//         'description' => 'required',
-//     ];
+    public function update(Request $request)
+    {
 
-//     $validatedData = $request->validate($rules);
+        $data = $request->data;
 
-//     $disease->update($validatedData);
-//     return redirect('/diseases')->with('success', 'Diseases was updated successfully');
-// }4
+        for ($i = 0; $i < count($data); $i++) {
+            Rule::where('disease_id', $data[$i]['diseaseId'])
+                ->where('symptom_id', $data[$i]['symptomId'])
+                ->update(['rule_value' => $data[$i]['value']]);
+        }
+
+        // return response()->json([
+        //     'status' => 200,
+        //     'message' => 'Rule base was updated successfully',
+        // ], 200);
+
+        return redirect('/rules')->with('success', 'Rule base was updated successfully');
+    }
 }

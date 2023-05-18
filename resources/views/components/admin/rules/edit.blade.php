@@ -13,9 +13,7 @@
           <a href="/rules">Back</a>
         </button>
       </div>
-      <form class="mt-5" method="post" action="/">
-        @method('put')
-        @csrf
+      <div class="mt-5">
         <div class="w-full rounded-sm border border-[#BBBBBB] bg-white p-4">
           <table class="mb-3 w-full rounded-xl border text-slate-800">
             <thead class="text-slate-700">
@@ -40,8 +38,8 @@
                       class="font-semibold text-secondary">{{ $symptomsInfo[$i]['symptoms_code'] }}</span><br>{{ $symptomsInfo[$i]['symptoms'] }}
                   </td>
                   <td class="border px-6 py-2">
-                    <select name="options" id="options-{{ $i }}" class="w-full rounded-md" 
-                    onchange="updateRuleListener(this, {{ $diseaseDetails['id'] }}, {{ $symptomsInfo[$i]['id'] }})">
+                    <select name="options" id="options-{{ $i }}" class="w-full rounded-md"
+                      onchange="updateRuleListener(this, {{ $diseaseDetails['id'] }}, {{ $symptomsInfo[$i]['id'] }})">
                       @if ($diseaseDetails['rules'][$i] == 0)
                         <option value="1">Yes</option>
                         <option value="0" selected>No</option>
@@ -60,85 +58,89 @@
             Edit {{ $diseaseDetails['name'] }} Rule
           </button>
         </div>
-      </form>
+        </form>
+      </div>
     </div>
-  </div>
 
-  <script>
-    const rules = [];
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
-    const updateRuleListener = (e, diseaseId, symptomId) => {
-      const value = e.value;
+    <script>
+      const rules = [];
 
-      for (let i = 0; i < rules.length; i++){
-        if(rules[i].diseaseId === diseaseId && rules[i].symptomId === symptomId){
-          e.classList.remove('bg-green-100');
-          e.classList.remove('border-green-500');
-          rules.splice(i, 1);
-          console.table(rules);
-          return;
+      const updateRuleListener = (e, diseaseId, symptomId) => {
+        const value = e.value;
+
+        for (let i = 0; i < rules.length; i++) {
+          if (rules[i].diseaseId === diseaseId && rules[i].symptomId === symptomId) {
+            e.classList.remove('bg-green-100');
+            e.classList.remove('border-green-500');
+            rules.splice(i, 1);
+            // console.table(rules);
+            return;
+          }
         }
+
+        e.classList.add('bg-green-100');
+        e.classList.add('border-green-500');
+        rules.push({
+          diseaseId,
+          symptomId,
+          value
+        });
+        // console.table(rules);
       }
 
-      e.classList.add('bg-green-100');
-      e.classList.add('border-green-500');
-      rules.push({
-        diseaseId,
-        symptomId,
-        value
-      });
-      console.table(rules);
-    }
 
-    document.getElementById('submit-rule').addEventListener('click', () => {
-      fetch(api, {
-        method: "POST",
-        headers: {
-          'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-        },
-        body: JSON.stringify(rules)
+      $(document).on('click', '#submit-rule', (e) => {
+        e.preventDefault();
+
+        // console.log(rules);
+
+        $.ajaxSetup({
+          headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+          }
+        });
+
+        $.ajax({
+          type: "POST",
+          url: "/rules-change",
+          dataType: "json",
+          data: {
+            'data' : rules
+          },
+          success: (response, status) => {
+            console.log(response, status);
+            if (response.status === 200) {
+              // window.location.replace("/rules");
+            } else {
+              alert("Gagal Boss");
+            }
+            // console.log(response);
+          },
+          error: (response) => {
+            console.log(response);
+          }
+        });
       })
-      .then(response => {
-        return response.text();
-      })
-    });
 
+      // document.getElementById('submit-rule').addEventListener('click', (e) => {
+      //   e.preventDefault();
 
-    // const data = @json($diseaseDetails);
-    // const diseaseRules = data.rules
-    // console.log(data);
-
-    // let newDiseaseRules = diseaseRules.map((e) => {
-    //   return e;
-    // })
-    // console.log(newDiseaseRules);
-
-    // const options = document.getElementsByTagName('select');
-    // console.log(options.length);
-
-    // for (let i = 0; i < options.length; i++) {
-    //   // console.log(options[i]);
-    //   options[i].addEventListener('change', () => {
-    //     // console.log(options[i].value)
-    //     for (let j = 0; j < newDiseaseRules; j++) {
-    //       if (newDiseaseRules[j] == options[i]) {
-    //         // console.log('masoookk banggg')
-    //         // newDiseaseRules[j].push(options[i].value)
-    //         console.log(options[i].value)
-    //       }
-    //     }
-    //     console.log(newDiseaseRules)
-    //   })
-    // }
-
-
-    // options.map((e) => {
-    //   console.log(e);
-    //   e.addEventListener('change', () => {
-    //   })
-    // })
-    // console.log(options);
-    // options.addEventListener('onChange', () => {
-
-  </script>
-@endsection
+      //   fetch('/rules-change', {
+      //       method: "POST",
+      //       headers: {
+      //         'X-CSRF-TOKEN': ('meta[name="csrf-token"]').attr('content')
+      //       },
+      //       body: JSON.stringify(rules)
+      //     })
+      //     .then(response => {
+      //       return response.json();
+      //     })
+      //     .then(data => {
+      //       console.log(data);
+      //     })
+      // });
+    </script>
+  @endsection
