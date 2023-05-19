@@ -15,7 +15,7 @@ class AppController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('admin')->except(['index', 'diagnose', 'medicine', 'about']);
+        $this->middleware('admin')->except(['index', 'diagnose', 'medicine', 'about', 'forwardChaining', 'forwardChainingGuest']);
     }
 
     public function index()
@@ -93,7 +93,6 @@ class AppController extends Controller
                 }
             }
         }
-        // dd($diseaseRelation);
 
         $diseaseRelations = $diseaseRelation;
         $medicinesInfo = Medicine::all();
@@ -158,20 +157,47 @@ class AppController extends Controller
 
     public function update(Request $request)
     {
-
         $data = $request->data;
-
         for ($i = 0; $i < count($data); $i++) {
-            Rule::where('disease_id', $data[$i]['diseaseId'])
-                ->where('symptom_id', $data[$i]['symptomId'])
-                ->update(['rule_value' => $data[$i]['value']]);
+
+            Rule::updateOrCreate(
+                [
+                    'disease_id' => $data[$i]['diseaseId'],
+                    'symptom_id' => $data[$i]['symptomId'],
+                ],
+                [
+                    'rule_value' => $data[$i]['value']
+                ]
+            );
         }
 
-        // return response()->json([
-        //     'status' => 200,
-        //     'message' => 'Rule base was updated successfully',
-        // ], 200);
+        return response()->json([
+            'status' => 200,
+            'message' => 'Rule base was updated successfully',
+        ], 200);
 
-        return redirect('/rules')->with('success', 'Rule base was updated successfully');
+        // return redirect('/rules')->with('success', 'Rule base was updated successfully');
+    }
+
+    public function forwardChaining(Request $request, string $id)
+    {
+        $rules = Rule::all();
+        dd($rules);
+
+        return response()->json([
+            'status' => 200,
+            'user_id' => $id,
+            'message' => 'masuk user',
+            'data' => $request['data']
+        ], 200);
+    }
+
+    public function forwardChainingGuest(Request $request)
+    {
+        return response()->json([
+            'status' => 200,
+            'message' => 'masuk guest',
+            'data' => $request['data']
+        ], 200);
     }
 }

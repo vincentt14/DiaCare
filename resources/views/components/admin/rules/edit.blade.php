@@ -88,14 +88,11 @@
           symptomId,
           value
         });
-        // console.table(rules);
       }
 
 
       $(document).on('click', '#submit-rule', (e) => {
         e.preventDefault();
-
-        // console.log(rules);
 
         $.ajaxSetup({
           headers: {
@@ -110,37 +107,18 @@
           data: {
             'data' : rules
           },
-          success: (response, status) => {
-            console.log(response, status);
+          success: (response) => {
+            console.log(response);
             if (response.status === 200) {
-              // window.location.replace("/rules");
+              window.location.replace("/rules")
             } else {
-              alert("Gagal Boss");
+              alert("Gagal");
             }
-            // console.log(response);
           },
           error: (response) => {
             console.log(response);
           }
         });
       })
-
-      // document.getElementById('submit-rule').addEventListener('click', (e) => {
-      //   e.preventDefault();
-
-      //   fetch('/rules-change', {
-      //       method: "POST",
-      //       headers: {
-      //         'X-CSRF-TOKEN': ('meta[name="csrf-token"]').attr('content')
-      //       },
-      //       body: JSON.stringify(rules)
-      //     })
-      //     .then(response => {
-      //       return response.json();
-      //     })
-      //     .then(data => {
-      //       console.log(data);
-      //     })
-      // });
     </script>
   @endsection

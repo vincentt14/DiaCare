@@ -124,9 +124,14 @@
       </div>
   </section>
 
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
   <script>
     const submitButton = document.getElementById('submitButton');
     const selects = document.getElementsByTagName('select');
+    const user = @json(auth()->user());
+    // console.log(user.id);
     const symptoms = @json($symptoms);
     const symptomsCopy = symptoms.map((e) => {
       return e;
@@ -153,10 +158,11 @@
     }
 
     submitButton.addEventListener('click', () => {
+
       let indexFocus = -1;
       answers.map((e) => {
         indexFocus = symptomsCopy.findIndex((currentValue) => currentValue.id === e.symptomId);
-        if(indexFocus !== -1){
+        if (indexFocus !== -1) {
           symptomsCopy.splice(indexFocus, 1);
         }
       })
@@ -167,13 +173,59 @@
         notSelect.classList.add('border-red-500');
       }
 
-      console.table(answers)
-      console.table(symptomsCopy)
+      // console.table(answers)
+      // console.table(symptomsCopy)
 
-      if(symptomsCopy.length === 0){
-        console.log('oke, kirim ke FC')
+
+      if (symptomsCopy.length === 0) {
+        $.ajaxSetup({
+          headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+          }
+        });
+
+        if (!user) {
+          $.ajax({
+            type: "POST",
+            url: "/submit-answer-guest",
+            dataType: "json",
+            data: {
+              'data': answers
+            },
+            success: (response, status) => {
+              console.log(response, status);
+              if (response.status === 200) {
+                // window.location.replace("/rules") 
+              } else {
+                alert("Gagal");
+              }
+            },
+            error: (response) => {
+              console.log(response);
+            }
+          });
+        } else {
+          $.ajax({
+            type: "POST",
+            url: `/submit-answer/${user.id}`,
+            dataType: "json",
+            data: {
+              'data': answers
+            },
+            success: (response, status) => {
+              console.log(response, status);
+              if (response.status === 200) {
+                // window.location.replace("/rules") 
+              } else {
+                alert("Gagal");
+              }
+            },
+            error: (response) => {
+              console.log(response);
+            }
+          });
+        }
       }
-
     });
   </script>
 @endsection

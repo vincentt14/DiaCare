@@ -46,6 +46,9 @@ Route::get('/rules', [AppController::class, 'logicRelation']);
 Route::get('/rules/{id}/edit', [AppController::class, 'edit']);
 Route::post('/rules-change', [AppController::class, 'update']);
 
+Route::post('/submit-answer/{id}', [AppController::class, 'forwardChaining']);
+Route::post('/submit-answer-guest', [AppController::class, 'forwardChainingGuest']);
+
 Route::resources([
     'symptoms' => SymptomController::class,
     'diseases' => DiseaseController::class,

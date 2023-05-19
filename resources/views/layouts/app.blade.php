@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   @vite('resources/css/app.css')
 
+  <link rel="shortcut icon" href="{{ asset('favicon.png') }}" />
   <title>DiaCare</title>
 
   <!-- Fonts -->
