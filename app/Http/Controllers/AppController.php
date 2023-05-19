@@ -183,21 +183,22 @@ class AppController extends Controller
     {
         $data = $request->data;
         $rules = Rule::all();
+
+        // cara 1
+        // rules['disease_id'] di splice supaya ga ada duplikat, lalu di count
+        // $rules.
+
+        // setelah di count, di looping pertama, supaya pengecekannya sebanyak x kali
         for($i = 0; $i < count($rules); $i++){
-            for($j = 0; $j < count($data); $j++){
-                if($rules[$i]['symptom_id'] == $data[$j]['symptomId'] && $rules[$i]['rule_value'] == $data[$j]['value']){
-                    return DiagnoseResult::create([
-                        'user_id' => $id,
-                        'result' => $rules[$i]['disease_id']
-                    ]);
-                } else {
-                    return DiagnoseResult::create([
-                        'user_id' => $id,
-                        'result' => 'Negative'
-                    ]);
-                };
+            if($rules[$i]['disease_id'] == $i){ 
+                // disini di cek kalau misalnya dia ketemu sama disease id, maka di push ke array of object
+                
             }
         }
+
+
+        // cara 2
+        // pakai array filter, jadi disetiap rules[$i] di filter kas pengkondisian rules[$i]['disease_id'] == 1 dst 
 
         return response()->json([
             'status' => 200,
@@ -210,6 +211,11 @@ class AppController extends Controller
 
     public function forwardChainingGuest(Request $request)
     {
+
+
+
+
+        
         return response()->json([
             'status' => 200,
             'message' => 'masuk guest',
