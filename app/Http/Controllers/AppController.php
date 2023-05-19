@@ -181,14 +181,30 @@ class AppController extends Controller
 
     public function forwardChaining(Request $request, string $id)
     {
+        $data = $request->data;
         $rules = Rule::all();
-        dd($rules);
+        for($i = 0; $i < count($rules); $i++){
+            for($j = 0; $j < count($data); $j++){
+                if($rules[$i]['symptom_id'] == $data[$j]['symptomId'] && $rules[$i]['rule_value'] == $data[$j]['value']){
+                    return DiagnoseResult::create([
+                        'user_id' => $id,
+                        'result' => $rules[$i]['disease_id']
+                    ]);
+                } else {
+                    return DiagnoseResult::create([
+                        'user_id' => $id,
+                        'result' => 'Negative'
+                    ]);
+                };
+            }
+        }
 
         return response()->json([
             'status' => 200,
             'user_id' => $id,
             'message' => 'masuk user',
-            'data' => $request['data']
+            'data' => $request['data'],
+            'rules' => $rules
         ], 200);
     }
 
