@@ -177,7 +177,7 @@
       // console.table(symptomsCopy)
 
 
-      if (symptomsCopy.length === 0) {
+      // if (symptomsCopy.length === 0) {
         $.ajaxSetup({
           headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -225,7 +225,7 @@
             }
           });
         }
-      }
+      // }
     });
   </script>
 @endsection

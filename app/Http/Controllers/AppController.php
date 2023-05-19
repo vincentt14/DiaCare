@@ -98,6 +98,7 @@ class AppController extends Controller
         $medicinesInfo = Medicine::all();
         $usersInfo = User::all();
 
+
         return view('components.admin.rules.view', [
             'diseaseRelations' => $diseaseRelations,
             'symptomsInfo' => $symptoms,
@@ -158,8 +159,8 @@ class AppController extends Controller
     public function update(Request $request)
     {
         $data = $request->data;
-        for ($i = 0; $i < count($data); $i++) {
 
+        for ($i = 0; $i < count($data); $i++) {
             Rule::updateOrCreate(
                 [
                     'disease_id' => $data[$i]['diseaseId'],
@@ -183,29 +184,84 @@ class AppController extends Controller
     {
         $data = $request->data;
         $rules = Rule::all();
+        $diseases = Disease::all();
+        $symptoms = Symptom::all();
 
         // cara 1
         // rules['disease_id'] di splice supaya ga ada duplikat, lalu di count
         // $rules.
 
         // setelah di count, di looping pertama, supaya pengecekannya sebanyak x kali
-        for($i = 0; $i < count($rules); $i++){
-            if($rules[$i]['disease_id'] == $i){ 
-                // disini di cek kalau misalnya dia ketemu sama disease id, maka di push ke array of object
-                
-            }
-        }
+        // for($i = 0; $i < count($rules); $i++){
+        // if($rules[$i]['disease_id'] == $i){ 
+        // disini di cek kalau misalnya dia ketemu sama disease id, maka di push ke array of object
+        // }
+        // }
 
+        // $dm1 = [];
+
+        // $dm2 = [];
+
+        // $dm3 = [];
+
+        // $test = [];
 
         // cara 2
         // pakai array filter, jadi disetiap rules[$i] di filter kas pengkondisian rules[$i]['disease_id'] == 1 dst 
+
+        // for($i = 0; $i < count($rules); $i++){
+
+        // $group = [];
+
+        // if($rules[$i]['disease_id'] ==  $i){
+        //     array_push($group, $rules[$i]['disease_id'], $rules[$i]['rule_value']);
+        // }
+        // }
+
+        // cara rucci
+
+        // looping berdsaarkan disease
+        // looping berdsaarkan symptom
+        // buat pengkondisian di ke 2, tiap rule dengan disease i dan symptom j === data['symptom']['j'] value == 1 
+        // flag = penamaan variabel untuk memberi tahu, woi iterasi INI, berarti per diseases, eh bro, di diseases yg ini, semua input user != dengan symptomnya, kalau semua ga sama, maka lanjut ke looping ke 2
+
+        // flag = status, ['berhenti', 'seelsai']
+
+        // for ($i = 0; $i < count($rules); $i++) {
+        //     for ($j = 0; $j < count($data); $j++) {
+        //         if ($rules[$i]['symptom_id'] == $data[$j]['symptomId'] && $rules[$i]['rule_value'] == $data[$j]['value']) {
+        //             // DiagnoseResult::create([
+        //             //     'user_id' => $id,
+        //             //     'result' => $rules[$i]['disease_id']
+        //             // ]);
+        //             // break;
+        //         } else {
+        //             // DiagnoseResult::create([
+        //             //     'user_id' => $id,
+        //             //     'result' => 'Negative'
+        //             // ]);
+        //         }
+        //     }
+        // }
+
+        // rule dari disesase ke i, dannnnnnn symptom ke j, apakaaahhhh ====== dengan data
+
+        for ($i = 0; $i < count($diseases); $i++) {
+            for ($j = 0; $j < count($symptoms); $j++) {
+                if (
+                    $rules[$j]['disease_id'] && $rules[$j]['symptom_id'] 
+                ) {
+
+                }
+            }
+        }
+
 
         return response()->json([
             'status' => 200,
             'user_id' => $id,
             'message' => 'masuk user',
-            'data' => $request['data'],
-            'rules' => $rules
+            'data' => $request['data']
         ], 200);
     }
 
@@ -215,7 +271,7 @@ class AppController extends Controller
 
 
 
-        
+
         return response()->json([
             'status' => 200,
             'message' => 'masuk guest',

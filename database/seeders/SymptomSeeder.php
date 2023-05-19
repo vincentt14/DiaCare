@@ -43,23 +43,23 @@ class SymptomSeeder extends Seeder
         ]);
         Symptom::create([
             'symptoms_code' => 'G08',
-            'symptoms' => 'Apakah anda sering mengalami kesemutan?'
+            'symptoms' => 'Apakah anda mengalami kesemutan?'
         ]);
         Symptom::create([
             'symptoms_code' => 'G09',
-            'symptoms' => 'Apakah anda sering mengalami pusing?'
+            'symptoms' => 'Apakah anda mengalami pusing?'
         ]);
         Symptom::create([
             'symptoms_code' => 'G10',
-            'symptoms' => 'Apakah anda mengalami rasa gatal disekitar kemaluan?'
+            'symptoms' => 'Apakah anda pernah mengalami rasa gatal disekitar kemaluan?'
         ]);
         Symptom::create([
             'symptoms_code' => 'G11',
-            'symptoms' => 'Apakah anda mengalami keputihan karena kelainan pada ginjal?'
+            'symptoms' => 'Apakah anda pernah mengalami diare?'
         ]);
         Symptom::create([
             'symptoms_code' => 'G12',
-            'symptoms' => 'Apakah luka yang anda alami sukar sembuh?'
+            'symptoms' => 'Apakah luka yang anda alami sungkar sembuh?'
         ]);
     }
 }

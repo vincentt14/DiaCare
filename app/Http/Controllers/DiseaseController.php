@@ -9,6 +9,7 @@ use App\Models\Medicine;
 use App\Models\Solution;
 use App\Models\Symptom;
 use App\Models\User;
+use App\Models\Rule;
 
 class DiseaseController extends Controller
 {
@@ -78,7 +79,16 @@ class DiseaseController extends Controller
 
         $validatedData['img'] = 'https://source.unsplash.com/bkc-m0iZ4Sk';
 
-        Disease::create($validatedData);
+        $diseases = Disease::create($validatedData);
+        $symptoms = Symptom::all();
+
+        for($i = 0; $i < count($symptoms); $i++){
+            Rule::create([
+                'disease_id' => $diseases->id,
+                'symptom_id' => $symptoms[$i]->id,
+                'rule_value' => 0
+            ]);
+        }
         return redirect('/diseases')->with('success', 'Diseases was added successfully');
     }
 
