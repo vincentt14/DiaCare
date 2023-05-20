@@ -244,15 +244,26 @@ class AppController extends Controller
         //     }
         // }
 
-        // rule dari disesase ke i, dannnnnnn symptom ke j, apakaaahhhh ====== dengan data
 
+        // rule dari disesase ke i, dannnnnnn symptom ke j, apakaaahhhh ====== dengan data
         for ($i = 0; $i < count($diseases); $i++) {
+            $results = '';
+            $status = '';
             for ($j = 0; $j < count($symptoms); $j++) {
                 if (
-                    $rules[$j]['disease_id'] && $rules[$j]['symptom_id'] 
+                    $rules[$j]['symptom_id'] == $data[$j]['symptomId'] &&
+                    $rules[$j]['rule_value'] == $data[$j]['value']
                 ) {
-
+                    $status = 'udah ketemu';
+                } else {
+                    $status = 'stop, ga ketemu';
+                    break;
                 }
+            }
+            if ($status == 'udah ketemu') {
+                $results = $diseases[$i]['diseases'];
+            } else {
+                continue;
             }
         }
 
@@ -261,6 +272,7 @@ class AppController extends Controller
             'status' => 200,
             'user_id' => $id,
             'message' => 'masuk user',
+            'results' => $results,
             'data' => $request['data']
         ], 200);
     }
