@@ -43,7 +43,7 @@ class SymptomSeeder extends Seeder
         ]);
         Symptom::create([
             'symptoms_code' => 'G08',
-            'symptoms' => 'Apakah anda mengalami kesemutan?'
+            'symptoms' => 'Apakah anda pernah mengalami kesemutan?'
         ]);
         Symptom::create([
             'symptoms_code' => 'G09',

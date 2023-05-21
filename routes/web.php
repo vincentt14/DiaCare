@@ -23,11 +23,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
-
-
 Route::get('/', [AppController::class, 'index']);
-Route::get('/diagnose', [AppController::class, 'diagnose']);
+Route::get('/diagnose', [AppController::class, 'diagnose'])->middleware('auth');
 Route::get('/about', [AppController::class, 'about']);
 Route::get('/medicinesPage', [AppController::class, 'medicine']);
 
@@ -48,6 +45,7 @@ Route::post('/rules-change', [AppController::class, 'update']);
 
 Route::post('/submit-answer/{id}', [AppController::class, 'forwardChaining']);
 Route::post('/submit-answer-guest', [AppController::class, 'forwardChainingGuest']);
+
 
 Route::resources([
     'symptoms' => SymptomController::class,

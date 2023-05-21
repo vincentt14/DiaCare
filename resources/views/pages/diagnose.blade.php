@@ -177,55 +177,33 @@
       // console.table(symptomsCopy)
 
 
-      // if (symptomsCopy.length === 0) {
+      if (symptomsCopy.length === 0) {
         $.ajaxSetup({
           headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
           }
         });
 
-        if (!user) {
-          $.ajax({
-            type: "POST",
-            url: "/submit-answer-guest",
-            dataType: "json",
-            data: {
-              'data': answers
-            },
-            success: (response, status) => {
-              console.log(response, status);
-              if (response.status === 200) {
-                // window.location.replace("/rules") 
-              } else {
-                alert("Gagal");
-              }
-            },
-            error: (response) => {
-              console.log(response);
+        $.ajax({
+          type: "POST",
+          url: `/submit-answer/${user.id}`,
+          dataType: "json",
+          data: {
+            'data': answers
+          },
+          success: (response, status) => {
+            console.log(response, status);
+            if (response.status === 200) {
+              window.location.replace("/dashboard") 
+            } else {
+              alert("Gagal");
             }
-          });
-        } else {
-          $.ajax({
-            type: "POST",
-            url: `/submit-answer/${user.id}`,
-            dataType: "json",
-            data: {
-              'data': answers
-            },
-            success: (response, status) => {
-              console.log(response, status);
-              if (response.status === 200) {
-                // window.location.replace("/rules") 
-              } else {
-                alert("Gagal");
-              }
-            },
-            error: (response) => {
-              console.log(response);
-            }
-          });
-        }
-      // }
+          },
+          error: (response) => {
+            console.log(response);
+          }
+        });
+      }
     });
   </script>
 @endsection

@@ -185,109 +185,175 @@ class AppController extends Controller
         $data = $request->data;
         $rules = Rule::all();
         $diseases = Disease::all();
-        $symptoms = Symptom::all();
 
-        // cara 1
-        // rules['disease_id'] di splice supaya ga ada duplikat, lalu di count
-        // $rules.
+        usort($data, function ($a, $b) {
+            return $a['symptomId'] - $b['symptomId'];
+        });
 
-        // setelah di count, di looping pertama, supaya pengecekannya sebanyak x kali
-        // for($i = 0; $i < count($rules); $i++){
-        // if($rules[$i]['disease_id'] == $i){ 
-        // disini di cek kalau misalnya dia ketemu sama disease id, maka di push ke array of object
-        // }
-        // }
-
-        // $dm1 = [];
-
-        // $dm2 = [];
-
-        // $dm3 = [];
-
-        // $test = [];
-
-        // cara 2
-        // pakai array filter, jadi disetiap rules[$i] di filter kas pengkondisian rules[$i]['disease_id'] == 1 dst 
-
-        // for($i = 0; $i < count($rules); $i++){
-
-        // $group = [];
-
-        // if($rules[$i]['disease_id'] ==  $i){
-        //     array_push($group, $rules[$i]['disease_id'], $rules[$i]['rule_value']);
-        // }
-        // }
-
-        // cara rucci
-
-        // looping berdsaarkan disease
-        // looping berdsaarkan symptom
-        // buat pengkondisian di ke 2, tiap rule dengan disease i dan symptom j === data['symptom']['j'] value == 1 
-        // flag = penamaan variabel untuk memberi tahu, woi iterasi INI, berarti per diseases, eh bro, di diseases yg ini, semua input user != dengan symptomnya, kalau semua ga sama, maka lanjut ke looping ke 2
-
-        // flag = status, ['berhenti', 'seelsai']
-
-        // for ($i = 0; $i < count($rules); $i++) {
-        //     for ($j = 0; $j < count($data); $j++) {
-        //         if ($rules[$i]['symptom_id'] == $data[$j]['symptomId'] && $rules[$i]['rule_value'] == $data[$j]['value']) {
-        //             // DiagnoseResult::create([
-        //             //     'user_id' => $id,
-        //             //     'result' => $rules[$i]['disease_id']
-        //             // ]);
-        //             // break;
-        //         } else {
-        //             // DiagnoseResult::create([
-        //             //     'user_id' => $id,
-        //             //     'result' => 'Negative'
-        //             // ]);
-        //         }
-        //     }
-        // }
-
-
-        // rule dari disesase ke i, dannnnnnn symptom ke j, apakaaahhhh ====== dengan data
+        $result = '';
         for ($i = 0; $i < count($diseases); $i++) {
-            $results = '';
-            $status = '';
-            for ($j = 0; $j < count($symptoms); $j++) {
+            $stats = '';
+            $test = [];
+            for ($j = 0; $j < count($rules); $j++) {
+                if ($diseases[$i]['id'] == $rules[$j]['disease_id']) {
+                    array_push($test, [
+                        'symptomId' => $rules[$j]['symptom_id'],
+                        'value' => $rules[$j]['rule_value']
+                    ]);
+                }
+            }
+            for ($k = 0; $k < count($test); $k++) {
                 if (
-                    $rules[$j]['symptom_id'] == $data[$j]['symptomId'] &&
-                    $rules[$j]['rule_value'] == $data[$j]['value']
+                    $test[$k]['symptomId'] == $data[$k]['symptomId'] &&
+                    $test[$k]['value'] == $data[$k]['value']
                 ) {
-                    $status = 'udah ketemu';
+                    $stats = 'berhasil';
                 } else {
-                    $status = 'stop, ga ketemu';
+                    $stats = 'gagal';
                     break;
                 }
             }
-            if ($status == 'udah ketemu') {
-                $results = $diseases[$i]['diseases'];
+            if ($stats == 'berhasil') {
+                $result = $diseases[$i]['diseases'];
+                break;
             } else {
-                continue;
+                $result = 'Negative';
             }
         }
 
+        DiagnoseResult::create([
+            'user_id' => $id,
+            'result' => $result
+        ]);
 
         return response()->json([
             'status' => 200,
             'user_id' => $id,
-            'message' => 'masuk user',
-            'results' => $results,
-            'data' => $request['data']
+            'stats' => $stats,
+            'result' => $result,
+            'test' => $test,
+            'data' => $data
         ], 200);
     }
 
-    public function forwardChainingGuest(Request $request)
-    {
-
-
-
-
-
-        return response()->json([
-            'status' => 200,
-            'message' => 'masuk guest',
-            'data' => $request['data']
-        ], 200);
-    }
+    //     public function forwardChainingGuest(Request $request)
+//     {
+//         return response()->json([
+//             'status' => 200,
+//             'message' => 'masuk guest',
+//             'data' => $request['data']
+//         ], 200);
+//     }
 }
+
+// $sortedData = $data->sortBy('symptomId');
+
+// untuk mencari kesamaan antara answers dan rule base
+// 1. looping sebanyak jumlah penyakit
+// 2. di dalam looping penyakit, looping sebanyak jumlah gejala
+// 3. di dalamnya buat pengkondisian dimana jika diseases ke $i dan gejala ke $j 
+// ?. apakah sama dengan inputan user
+// ?. mempunyai value apa? kemudian sama ga dgn answer user
+
+// buat pengkondisian di ke 2, tiap rule dengan disease i dan symptom j === data['symptom']['j'] value == 1 
+// flag = penamaan variabel untuk memberi tahu, woi iterasi INI, berarti per diseases, eh bro, di diseases yg ini, semua input user != dengan symptomnya, kalau semua ga sama, maka lanjut ke looping ke 2
+
+// flag = status, ['berhenti', 'seelsai']
+
+// DiagnoseResult::create([
+//     'user_id' => $id,
+//     'result' => $rules[$i]['disease_id']
+// ]);
+
+// DiagnoseResult::create([
+//     'user_id' => $id,
+//     'result' => 'Negative'
+
+// for ($j = 0; $j < count($symptoms); $j++){
+//     for($k = 0; $k < count($rules); $k++){
+//         if($rules[$k]['disease_id'] == $diseases[$i]['id']){
+//             if($rules[$k]['symptom_id'] == $data[$j]['symptomId']){
+//                 if($rules[$k]['rule_value'] == $data[$k]['value']){
+//                     $stats = 'berhasil';
+//                 }else {
+//                     $stats = 'gagal';
+//                     break;
+//                 }
+//             }
+//         }
+//     }
+// }
+// if($stats == 'berhasil'){
+//     $result = $diseases[$i]['diseases'];
+//     break;
+// }
+
+
+// for ($j = 0; $j < count($symptoms); $j++) {
+//     $stats = '';
+//     for ($k = 0; $k < count($rules); $k++) {
+//         if (
+//             $rules[$k]['diseases_id'] == $diseases[$i]['id'] 
+//         ) {
+//             if ($data[$j]['symptomId'] == $rules[$k]['symptom_id']) {
+//                 if ($data[$j]['value'] !== $rules[$k]['rule_value']) {
+//                     $stats = 'udah beda, skip, lanjut ke iterasi penyakit ke 2';
+//                     break;
+//                 }
+//             break;
+//             }
+//         }
+//     }
+// }
+// if ($stats == 'oke, lanjut') {
+//     $result = $diseases[$i]['diseases'];
+// } else {
+//     continue;
+// }
+
+
+// for ($k = 0; $k < count($rules); $k++) {
+//     if ($diseases[$i]['id'] == $rules[$k]['disease_id'] && $symptoms[$j]['id'] == $rules[$k]['symptom_id']) {
+//         $check = $rules[$k]['rule_value'];
+//         array_push($test, [
+//             'diseaseId' => $rules[$k]['disease_id'],
+//             'symptomId' => $rules[$k]['symptom_id'],
+//             'value' => $rules[$k]['rule_value']
+//         ]);
+//     }
+//     if ($data[$j]['symptomId'] == $rules[$k]['symptom_id'] && $data[$j]['value'] == $check) {
+//         $stats = 'ketemu';
+//         // $result = $diseases[$i]['diseases'];
+//     } else {
+//         $stats = 'berhenti';
+//         // continue;
+//     }
+// }
+
+
+// if (
+//     $rules[$j]['symptom_id'] == $data[$j]['symptomId'] &&
+//     $rules[$j]['rule_value'] == $data[$j]['value']
+// ) {
+//     $stats = 'ketemu';
+//     array_push(
+//         $test,
+//         [
+//             'symptomId' => $data[$j]['symptomId'],
+//             'value' => $data[$j]['value']
+//         ]
+//     );
+// } else {
+//     $stats = 'berhenti';
+//     continue;
+// }
+
+// if($rules[$j]['symptom_id'] == $data[$j]['symptomId']){
+//     if($rules[$j]['rule_value'] == $data[$j]['value']){
+//         $stats = 'jawabannya sesuai';
+//         continue;
+//     }else {
+//         $stats = 'jawabannya ga sesuai';
+//         break;
+//     }
+// }
