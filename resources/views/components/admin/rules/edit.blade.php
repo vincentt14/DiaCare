@@ -90,35 +90,40 @@
         });
       }
 
-
-      $(document).on('click', '#submit-rule', (e) => {
-        e.preventDefault();
-
-        $.ajaxSetup({
-          headers: {
-            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-          }
-        });
-
-        $.ajax({
-          type: "POST",
-          url: "/rules-change",
-          dataType: "json",
-          data: {
-            'data' : rules
-          },
-          success: (response) => {
-            console.log(response);
-            if (response.status === 200) {
-              window.location.replace("/rules")
-            } else {
-              alert("Gagal");
+      if(rules.length === 0){
+        $(document).on('click', '#submit-rule', () => {
+          window.location.replace('/rules');
+        })
+      }else {
+        $(document).on('click', '#submit-rule', (e) => {
+          e.preventDefault();
+  
+          $.ajaxSetup({
+            headers: {
+              'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             }
-          },
-          error: (response) => {
-            console.log(response);
-          }
-        });
-      })
+          });
+  
+          $.ajax({
+            type: "POST",
+            url: "/rules-change",
+            dataType: "json",
+            data: {
+              'data' : rules
+            },
+            success: (response) => {
+              console.log(response);
+              if (response.status === 200) {
+                window.location.replace("/rules")
+              } else {
+                alert("Gagal");
+              }
+            },
+            error: (response) => {
+              console.log(response);
+            }
+          });
+        })
+      }
     </script>
   @endsection
