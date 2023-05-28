@@ -32,7 +32,7 @@ class UserController extends Controller
 
         return view('components.admin.users.view', [
             'diagnoseResults' => $diagnoseResults,
-            'users' => $users->paginate(10)->withQueryString(),
+            'users' => $users->paginate(15)->withQueryString(),
             'symptomsInfo' => $symptomsInfo,
             'diseasesInfo' => $diseasesInfo,
             'medicinesInfo' => $medicinesInfo,

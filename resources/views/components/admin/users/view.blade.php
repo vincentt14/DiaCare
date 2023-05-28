@@ -46,8 +46,8 @@
               @foreach ($users as $user)
                 <tr class="px-6 py-3 text-center">
                   <td class="border px-6 py-2">{{ $loop->iteration }}</td>
-                  <td class="border px-6 py-2">{{ $user['name'] }}</td>
-                  <td class="content-start border px-6 py-2 text-justify">{{ $user['email'] }}</td>
+                  <td class="border px-6 py-2 text-justify capitalize">{{ $user['name'] }}</td>
+                  <td class="content-start border px-6 py-2 text-justify lowercase">{{ $user['email'] }}</td>
                   @php
                     $person = $diagnoseResults->where('user_id', $user['id']);
                     // dd($person);
