@@ -7,6 +7,6 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+## [Hosted App](https://diacare.site/ )
 
 DiaCare is a web-based diagnose application to help people diagnose diabetes mellitus disease. Admin can set the diseases, symptoms med and rule base which will be used for the forward chaining method. This application also gives user bunch of information from medicine until advice to avoid or threat the disease. – Build using PHP Laravel and Tailwind CSS, Host using Hostinger | features : login, register, diagnose, track history, dashboards, crud symptoms, diseases, solutions, medicines, rule base.
