@@ -23,8 +23,9 @@
               <span class="font-bold capitalize">{{ auth()->user()->name }}</span>.
           </h2>
           @if(count($person))
-          <p class="mb-3 text-red-500">
-            *Disclaimer* The results of this diagnosis are only based on the rules from the expert
+          <p class="mb-1 text-red-500">
+            *Disclaimer* The results of this diagnosis are only based on Qualitative
+            . It is recommended to go to the hospital to get Quantitative results
           </p>
           @else
           <p class="mb-3 text-slate-500">

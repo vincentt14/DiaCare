@@ -12,19 +12,15 @@
           </h1>
           <h2 class="mb-5 mt-2 text-lg font-light text-primary lg:text-2xl">A place that provides all about Diabetes
             Mellitus.</h2>
-          <p class="mb-5 max-w-md text-xl font-light text-slate-500">
-            <span class="text-primary">DiaCare</span> is a <span class="text-primary">web-based</span> <span
-              class="text-secondary">diagnose application</span> to help people <span class="text-primary">diagnose
-              diabetes mellitus disease</span>.
+          <p class="mb-5 max-w-md text-xl font-base">
+            <span class="text-primary">DiaCare</span> is a web-based <span 
+              class="text-secondary">diagnose application</span> to help people diagnose
+              diabetes mellitus disease.
           </p>
-          <p class="mb-5 max-w-md text-xl font-light text-slate-500"> <span class="text-primary">This application also
-              provides</span> a <span class="text-secondary">dashboard</span> for users to be able to <span
-              class="text-primary">check the diagnosis history</span>.
+          <p class="mb-5 max-w-md text-xl font-base"> The results of this diagnosis are only based on rule base which created and arranged by <a class="text-secondary" target="blank" href="https://www.halodoc.com/tanya-dokter/dr-i-gusti-agung-indra-adi-kusuma-sp-pd"> Dr. I Gusti Agung Indra Adi Kusuma </a>.
           </p>
-          <p class="mb-10 max-w-md text-xl font-light text-slate-500">There is also <span
-              class="text-secondary">information</span> about diabetes as a <span class="text-primary">whole along with
-              its management</span> and <span class="text-primary">how to prevent it</span>.
-          </p>
+
+          <p class="mb-5 max-w-md text-xl font-light text-slate-500"> Click the expert's name above for more detail.</p>
         </div>
         <div
           class="bayangan hidden w-full self-center rounded-sm border-2 border-primary bg-white px-4 md:block lg:w-1/2">
