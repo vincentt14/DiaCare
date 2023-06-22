@@ -20,7 +20,7 @@ class UserController extends Controller
     public function index()
     {
         $diagnoseResults = DiagnoseResult::all();
-        $users = User::orderBy('name');
+        $users = User::orderBy('id');
         $usersInfo = User::all();
         $symptomsInfo = Symptom::all();
         $diseasesInfo = Disease::all();
