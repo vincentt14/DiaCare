@@ -11,8 +11,8 @@
 - Go back to browser.
 
 Jika ingin menggunakan database hasil dari export Hostinger (user asli, hasil diagnosa asli, jumlah user asli)
-- download diacare.sql in root directory
-- go to phpmyadmin
-- import database
-- choose diacare.sql
-- done
+- Download diacare.sql in root directory
+- Go to phpmyadmin
+- Import database
+- Choose diacare.sql
+- Go back to browser.
